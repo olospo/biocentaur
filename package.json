@@ -2,16 +2,13 @@
   "name": "WordPress",
   "version": "1.0.0",
   "description": "Starter WordPress Theme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olospo/biocentaur.git"
   },
   "author": "Tom Brooks",
   "license": "ISC",
-  "homepage": "https://github.com/Futurekings/wordpress-theme#readme",
+  "homepage": "https://github.com/olospo/biocentaur#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
