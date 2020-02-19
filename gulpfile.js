@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minify = require('gulp-clean-css');
 
-var svgSprite = require('gulp-svg-sprite');
-
 var plugins = require("gulp-load-plugins")({
   pattern: ['gulp-*', 'gulp.*'],
   replaceString: /\bgulp[\-.]/
