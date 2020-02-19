@@ -1,0 +1,24 @@
+// Fonts 
+
+@font-face {
+    font-family: 'hk_groteskbold';
+    src: url('../fonts/hkgrotesk-bold-webfont.eot');
+    src: url('../fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+        url('../fonts/hkgrotesk-bold-webfont.woff') format('woff'),
+        url('../fonts/hkgrotesk-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_groteskmedium';
+    src: url('../fonts/hkgrotesk-medium-webfont.eot');
+    src: url('../fonts/hkgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hkgrotesk-medium-webfont.woff2') format('woff2'),
+         url('../fonts/hkgrotesk-medium-webfont.woff') format('woff'),
+         url('../fonts/hkgrotesk-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
