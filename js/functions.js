@@ -42,13 +42,6 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
     	return false;
     });
 
-$(function () {
-  $(document).scroll(function () {
-    var $nav = $("header");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-  });
-});
-
 $('.news-slider').slick({
   autoplay:true,
   dots: true,
