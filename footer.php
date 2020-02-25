@@ -3,7 +3,7 @@
 <footer>
   <div class="container">
     <div class="about six columns">
-      <img src="<?php bloginfo('template_directory'); ?>/img/logo-footer.svg" alt="Moorland Fuels Logo"/>
+      <img src="<?php bloginfo('template_directory'); ?>/img/logo-footer.svg" alt="Biocentaur Logo"/>
       
     </div>
   

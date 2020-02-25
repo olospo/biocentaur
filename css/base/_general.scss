@@ -9,16 +9,20 @@ $bold: 600;
 // Colours
 $white: #fff;
 $black: #0A1418;
+
+$blue: #00365e;
+$light-blue: #f6f7fb;
+$coral: #ef918e;
+
+
+
 $green: #87C849;
-$blue: #277BE3;
 $darkGreen: #00733B;
+
 // Decoration
 $border: #DCE0E4;
 $buff: #F1F2F2;
 $info: #FBFCFC;
-
-// To Remove
-$red: #D3205C;
 
 // Breakpoints
 $breakpoint-mobile: 400px;
@@ -292,26 +296,6 @@ section {
   }
 }
 
-// Small CTA
-
-.small_cta {
-  text-align: center;
-  padding: 20px;
-  background: $green;
-  color: $white;
-  h3 {
-    display: inline-block;
-    margin-right: 30px;
-    margin-top: 10px;
-  }
-  a.button {
-    margin-top: 10px;
-    @media (min-width: $breakpoint-tablet) {
-    margin-top: -10px;
-    }
-  }
-}
-
 // Aside
 aside {
   .services-list {
@@ -358,26 +342,6 @@ aside {
             }
           }
         }
-      }
-    }
-  }
-  .more-help {
-    background: $green;
-    @include border-radius(10px);
-    @media (max-width: $breakpoint-tablet) {
-      margin-bottom: $padding-half;
-    }
-    .content {
-      padding: 30px;
-      color: $white;
-      word-wrap: break-word;
-      h4 {
-        font: $normal 2.6rem/3.6rem $regular;
-        margin-bottom: 20px;
-      }
-      a {
-        color: $white;
-        text-decoration: underline;
       }
     }
   }
@@ -470,28 +434,6 @@ section.hero{
   } 
 }
 
-.map {
-  margin-top: $padding-half;
-  .find_us {
-    background: $green url('../img/arrow/round.svg') right 20px center no-repeat;
-    h4 {
-      font: $normal 2.4rem/3.2rem $regular;
-      padding: 20px;
-      text-decoration: none;
-      color: $white;
-    }
-  }
-  a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-    h4 {
-      text-decoration: none;
-    }
-  }
-}
-
 @keyframes bgZoom {
   0% {
     transform: scale(1);
@@ -500,7 +442,6 @@ section.hero{
     transform: scale(1.1);
   }
 }
-
 
 @keyframes opacity {
 	to {
