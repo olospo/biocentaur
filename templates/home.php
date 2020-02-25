@@ -11,14 +11,14 @@ while ( have_posts() ) : the_post(); ?>
 
 <section class="home_cta">
   <div class="container">
-    <div class="individuals six columns">
+    <div class="cta__block individuals six columns">
       <div class="content">
         <h2>Individuals</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="<?php echo get_site_url(); ?>/individuals" target="_blank" class="button primary">Learn more</a>
       </div>
     </div>
-    <div class="clinicians six columns">
+    <div class="cta__block clinicians six columns">
       <div class="content">
         <h2>Clinicians</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

@@ -40,7 +40,7 @@ footer {
       &.fb {
         color: $black;
         display: inline-block;
-        background: $green url('../img/fb_icon.svg') no-repeat 15px center;
+        background: $blue url('../img/fb_icon.svg') no-repeat 15px center;
         padding: 15px 30px 15px 50px;
         &:hover {
           background: #3a5899 url('../img/fb_icon_hover.svg') no-repeat 15px center;
@@ -78,7 +78,7 @@ a.back_to_top {
 	z-index: 999;
 	right: 0px;
 	top: 75%;
-	background: $green url("../img/arrow/back_to_top.svg") no-repeat center center;	
+	background: $blue url("../img/arrow/back_to_top.svg") no-repeat center center;	
 	@media (max-width: $breakpoint-tablet) {
   	display: none !important;
   }

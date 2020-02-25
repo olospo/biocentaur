@@ -3,26 +3,22 @@ $regular: 'Dosis', Helvetica, Arial, sans-serif;
 
 // Weights
 $normal: 400;
-$semi-bold: 600;
-$bold: 700;
+$bold: 600;
 
 // Colours
 $white: #fff;
 $black: #0A1418;
 
-$blue: #00365e;
+$blue: #00365F;
+$mid-blue: #355F80;
 $light-blue: #f6f7fb;
-$coral: #ef918e;
+$coral: #EF928E;
+$coral-tint: #FBDFDD;
 
-
-
-$green: #87C849;
-$darkGreen: #00733B;
-
-// Decoration
-$border: #DCE0E4;
-$buff: #F1F2F2;
-$info: #FBFCFC;
+$grey: #A5B3C4;
+$border: #E6EAEF;
+$ui: #A5B3C4;
+$white-bg: #F6F8FC;
 
 // Breakpoints
 $breakpoint-mobile: 400px;
@@ -73,7 +69,7 @@ body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.8;
   font-family: $regular;
-  color: $black;
+  color: $mid-blue;
   -webkit-font-smoothing: antialiased; // Fix fonts looking rubbish in Chrome
   background: $white;
 }
@@ -135,15 +131,15 @@ section {
     font-family: $regular;
   }
   h1 {
-    font: $normal 3.6rem/5rem $regular;
+    font: $bold 3.6rem/5rem $regular;
     margin-bottom: 0.5em;
     font-size: 3.6rem;
   }
   h2 {
-    font: $normal 3.6rem/5rem $regular;
-    margin-bottom: 1em;
+    font: $normal 3.6rem/4rem $regular;
+    margin-bottom: 0.5em;
     font-size: 3.6rem;
-    line-height: 5rem;
+    line-height: 4rem;
     
   }
   h3 {
@@ -209,16 +205,16 @@ section {
     font: $normal 1.6rem/2.6rem $regular;
     tr {
       &:first-child {
-        border: 1px solid $green;
-        background: $green;
+        border: 1px solid $blue;
+        background: $blue;
         td {
-          background: $green;
+          background: $blue;
           border: 1px solid $black;
           font-weight: bold;
         }
       }
       td {
-        background: $info;
+        background: $white-bg;
         padding: 10px 20px;
         border: 1px solid $black;
       }
@@ -266,7 +262,7 @@ section {
         border: 1px solid $black;
         padding: 10px;
         &:focus {
-          border: 1px solid $green;
+          border: 1px solid $blue;
         }
       }
       select {
@@ -299,7 +295,7 @@ section {
 // Aside
 aside {
   .services-list {
-    color: $green;
+    color: $blue;
     margin-bottom: 60px;
     .content {
       h3 {
@@ -334,7 +330,7 @@ aside {
           }
           &.current, &.current_page_item, &.current_page_parent, &:hover {
             a {
-              color: $green;
+              color: $blue;
               font: $normal 1.8rem/2.6rem $regular;
               @media (min-width: $breakpoint-tablet) {
                 font: $normal 2.2rem/3.6rem $regular;
@@ -367,18 +363,18 @@ section.hero{
   .content {
     h1 {
       text-align: center;
-      font: $normal 3.6rem/3.6rem $regular;
+      font: $bold 3.6rem/3.6rem $regular;
       font-size: 3.6rem;
       line-height: 4.6rem;
       color: $white;
       margin-bottom: 0.5em;
       @media (min-width: $breakpoint-tablet) {
-        font: $normal 4.0rem/4.5rem $regular;
+        font: $bold 4.0rem/4.5rem $regular;
         font-size: 4rem;
         line-height: 4.5rem;
       }
       @media (min-width: $breakpoint-desktop) {
-        font: $normal 4.6rem/5.0rem $regular;
+        font: $bold 4.6rem/5.0rem $regular;
         font-size: 4.6rem;
         line-height: 5.0rem;
         margin-bottom: 50px;
@@ -402,7 +398,7 @@ section.hero{
     }
     .content {
       h1 {
-        color: $green;
+        color: $blue;
       }
       p {
         color: $black;

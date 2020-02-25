@@ -12,20 +12,20 @@
   display: inline-block;
   vertical-align: middle;
   padding: 15px 100px 15px 20px;
-  font: $normal 1.6rem/1.6rem $regular;
+  font: $bold 1.6rem/1.6rem $regular;
   text-decoration: none;
   text-transform: uppercase;
   &.primary {
     background: $white;
-    color: $blue;
-    border: 1px solid $blue;
+    color: $mid-blue;
+    border: 2px solid $blue;
     @include border-radius(10px);
 
   }
   &.secondary {
     background: transparent;
     color: $white;
-    border: 1px solid $white;
+    border: 2px solid $white;
     @include border-radius(10px); 
   }
 }

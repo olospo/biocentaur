@@ -99,58 +99,6 @@ header {
         transform: translateX(-50%);
       }
     }
-   
-    ul.extra {
-      @media (max-width: $breakpoint-tablet) {
-        display: block;
-      } 
-      
-      // position: absolute;
-      float: right;
-      right: 0;
-      text-decoration: none;
-      li {
-        a {
-          margin: 0;
-          padding: 35px 30px;
-          @media (max-width: $breakpoint-tablet) {
-            padding: 0;
-            width: 70px;
-            height: 70px;
-            border: none;
-            &:hover {
-              border: none;
-            }
-          }
-          text-decoration: none;
-          text-transform: none;
-        }
-        &.quote {
-          background: $blue;
-          @media (max-width: $breakpoint-tablet) {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            right: 60px;
-            top: 0;
-            background: $blue url('../img/quote_icon.svg') center center no-repeat;
-            text-indent: -9999px;
-          } 
-        }
-        &.login {
-          background: $darkGreen;
-          @media (max-width: $breakpoint-tablet) {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background: $darkGreen url('../img/login_icon.svg') center center no-repeat;
-            text-indent: -9999px;
-          } 
-        }
-      }
-    }
     
   }
   a.menu-toggle {
@@ -223,28 +171,17 @@ nav.mobile {
         @include transition(all 0.2s ease-out);
         line-height: 1.4rem;
         display: block;
-        color: $green;
+        color: $blue;
         text-decoration: none;
         margin: 0px 10px;
         padding: 15px 0px;
-        border-bottom: 1px solid $green;
+        border-bottom: 1px solid $blue;
       }
       &:last-child {
         a {
           border-bottom: none;
         }
       }
-    }
-  }
-  .facebook {
-    padding: 30px 30px 30px 30px;
-    background: $green;
-    a {
-      padding-left: 30px;
-      display: block;
-      background: $green url('../img/fb_header.svg') no-repeat left center;
-      color: $white;
-      text-decoration: none;
     }
   }
 }
@@ -272,21 +209,6 @@ nav.primary ul li:hover > ul {
     text-align: left;
     border-bottom: 1px solid #e8eaed;
     margin: 0px 25px;
-    &.tank {
-      background: $green;
-      margin: 0px;
-      padding: 0px 25px;
-      @include border-radius(0px 0px 10px 10px);
-      a {
-        color: $black;
-      }
-      &:hover a {
-        color: $white;
-      }
-      &.current-menu-item a, &.current_page_item a {
-        color: $white;
-      }
-    }
     a {
       text-transform: none;
       font: $normal 1.8rem/2rem $regular;
@@ -295,14 +217,14 @@ nav.primary ul li:hover > ul {
       margin: 0;
       border-bottom: none;
       &:hover {
-        color: $green;
+        color: $blue;
       }
     }
     &:last-child {
       border-bottom: none;
     }
     &.current-menu-item a, &.current_page_item a {
-      color: $green;
+      color: $blue;
     }
   }
 }

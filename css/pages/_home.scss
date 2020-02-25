@@ -82,68 +82,18 @@
 
 // CTA
 .home_cta {
-  margin-bottom: $padding-half;
+  margin-top: -$padding-half;
+  margin-bottom: $padding;
   display: block;
-  @media (min-width: $breakpoint-desktop) {
-    display: flex;
-  }
-  
-  .cta_bg {
-    // flex: 1;
-    content: "";
-    height: auto;
-    min-height: 540px;
-    width: 100%;
-    @media (min-width: $breakpoint-desktop) {
-      width: 60%;
-    }
-  }
-  .cta_content {
-    // flex: 1;
-    width: 100%;
-    text-align: center;
-    @media (min-width: $breakpoint-desktop) {
-      width: 40%;
-      text-align: left;
-    }
-    background: $green;
-    color: $white;
-    margin-left: 0;
-    .slide {
-      padding: 0;
-      background: $green;
-      .content {
-        padding: 20px 20px $padding 20px;
-        
-        max-width: 100%;
-        @media (min-width: $breakpoint-mobile) {
-          padding: $padding ;
-        }
-        @media (min-width: $breakpoint-desktop) {
-          max-width: 600px;
-          
-        }
-        h3 {
-          font: $normal 3.4rem/4.2rem $regular;
-          margin-bottom: 30px;
-        }
-        p {
-          font: $normal 1.8rem/2.8rem $regular;
-        }
-      }
-    }
-    .slick-dots {
-      width: 100%;
-      margin-left: 0px;
-      bottom: 30px;
-      text-align: left;
+  .cta__block {
+    -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+-moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+box-shadow: 0px 15px 20px -3px #e6ecf0;
+    background: $white;
+    @include border-radius(10px);
+    .content {
+      padding: $padding-half;
       text-align: center;
-      @media (min-width: $breakpoint-mobile) {
-        width: 80%;
-        bottom: 40px;
-        margin-left: $padding;
-        margin-right: -$padding;
-      }
     }
   }
 }
