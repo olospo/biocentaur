@@ -182,22 +182,22 @@ function custom_post_type() {
   
   // Services Post Type
 	$labels = array(
-		'name'                => _x( 'Services', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Service', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Services', 'text_domain' ),
-		'all_items'           => __( 'All Services', 'text_domain' ),
-		'view_item'           => __( 'View Service', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Service', 'text_domain' ),
+		'name'                => _x( 'Conditions', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Condition', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Conditions', 'text_domain' ),
+		'all_items'           => __( 'All Conditions', 'text_domain' ),
+		'view_item'           => __( 'View Condition', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Condition', 'text_domain' ),
 		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Service', 'text_domain' ),
-		'update_item'         => __( 'Update Service', 'text_domain' ),
-		'search_items'        => __( 'Search Services', 'text_domain' ),
+		'edit_item'           => __( 'Edit Condition', 'text_domain' ),
+		'update_item'         => __( 'Update Condition', 'text_domain' ),
+		'search_items'        => __( 'Search Conditions', 'text_domain' ),
 		'not_found'           => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
 	$args = array(
-		'label'               => __( 'Services', 'text_domain' ),
-		'description'         => __( 'Moorland Fuels Services', 'text_domain' ),
+		'label'               => __( 'Conditions', 'text_domain' ),
+		'description'         => __( 'Conditions', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom fields' ),
 		'hierarchical'        => false,
@@ -207,82 +207,17 @@ function custom_post_type() {
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 20,
-		'menu_icon'           => 'dashicons-admin-tools',
+		'menu_icon'           => 'dashicons-groups',
 		'can_export'          => true,
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
 	);
-	register_post_type( 'services', $args );
-	
-	// Tanks Post Type
-	$labels = array(
-		'name'                => _x( 'Tanks', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Tank', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Tanks', 'text_domain' ),
-		'all_items'           => __( 'All Tank', 'text_domain' ),
-		'view_item'           => __( 'View Tank', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Tank', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Tank', 'text_domain' ),
-		'update_item'         => __( 'Update Tank', 'text_domain' ),
-		'search_items'        => __( 'Search Tanks', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
-	);
-	$args = array(
-		'label'               => __( 'Tanks', 'text_domain' ),
-		'description'         => __( 'Moorland Fuels Tanks', 'text_domain' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom fields' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 21,
-		'menu_icon'           => 'dashicons-filter',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-	);
-	register_post_type( 'tanks', $args );
-		
+	register_post_type( 'condition', $args );		
 }
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 );
-
-add_action( 'init', 'custom_taxonomy', 0 );
-
-function custom_taxonomy() {
- 
-  $labels = array(
-    'name' => _x( 'Types', 'taxonomy general name' ),
-    'singular_name' => _x( 'Type', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Types' ),
-    'all_items' => __( 'All Types' ),
-    'parent_item' => __( 'Parent Type' ),
-    'parent_item_colon' => __( 'Parent Type:' ),
-    'edit_item' => __( 'Edit Type' ), 
-    'update_item' => __( 'Update Type' ),
-    'add_new_item' => __( 'Add New Type' ),
-    'new_item_name' => __( 'New Type Name' ),
-    'menu_name' => __( 'Types' ),
-  ); 	
- 
-  register_taxonomy('types',array('tanks'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'type' ),
-  ));
-}
 
 // CPT Menu Item
 
