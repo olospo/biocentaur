@@ -91,46 +91,60 @@
     box-shadow: 0px 15px 20px -3px #e6ecf0;
     background: $white;
     @include border-radius(10px);
+    border: 1px solid $border;
     .content {
       padding: $padding-half;
       text-align: center;
+      h2 {
+        font-weight: $bold;
+      }
+      p {
+        font: $normal 2.4rem/3.6rem $regular;
+      }
     }
   }
 }
 
 .home_conditions {
-  padding: $padding 0;
-} 
-.block__conditions {
-  @include border-radius(10px);
-  padding: 20px;
-  border: 1px solid $border;
-  -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
-  -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
-  box-shadow: 0px 15px 20px -3px #e6ecf0;
-  article {
+  padding: $padding-half 0;
+  .container {
+    border-top: 1px solid $border;
+  }
+  .block__title {
+    padding: $padding-half 0;
+    text-align: center;
+    h3 {
+      font: $bold 4.2rem/4.4rem $regular;
+      margin-bottom: 20px;
+    }
+    p {
+      font: $normal 2.4rem/3.6rem $regular;
+    }
+  }
+}
+
+.home_help {
+  background: $white-bg;
+  padding: $padding-half 0 $padding 0;
+  .help_intro {
     clear: both;
-    border-bottom: 1px solid $border;
-    padding: 15px 0px;
-    .title {
-      
-      font: $normal 2.6rem/4.4rem $regular;
-      overflow: hidden;
-      svg {
-        @include border-radius(50%);
-        background: $coral-tint;
-        float: left;
-        height: 50px;
-        width: 50px;
-        margin-right: 20px;
-      }
+    padding: 0 0 $padding-half 0;
+    h4 {
+      font: $bold 4.2rem/4.4rem $regular;
+      text-align: center;
     }
-    &:first-child {
-      padding: 0 0 15px 0;
-    }
-    &:last-child {
-      padding: 15px 0 0 0;
-      border-bottom: none;
+  }
+  .help_block {
+    @include border-radius(10px);
+    padding: 40px;
+    background: $white;
+    border: 1px solid $border;
+    -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    box-shadow: 0px 15px 20px -3px #e6ecf0;
+    text-align: center;
+    h5 {
+      font: $bold 2.6rem/4.4rem $regular;
     }
   }
 }
