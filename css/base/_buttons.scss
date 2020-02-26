@@ -16,11 +16,15 @@
   text-decoration: none;
   text-transform: uppercase;
   &.primary {
-    background: $white;
     color: $mid-blue;
     border: 2px solid $mid-blue;
     @include border-radius(10px);
-    background: url('../img/blue_arrow.svg') right 15px center no-repeat;
+    background: url('../img/blue_arrow.svg') right 15px center no-repeat $white;
+    &:hover {
+      color: $white;
+      background: url('../img/white_arrow.svg') right 15px center no-repeat $mid-blue;
+      text-decoration: none;
+    }
   }
   &.secondary {
     background: transparent;
@@ -28,5 +32,10 @@
     border: 2px solid $white;
     @include border-radius(10px);
     background: url('../img/white_arrow.svg') right 15px center no-repeat;
+    &:hover {
+      color: $mid-blue;
+      background: url('../img/blue_arrow.svg') right 15px center no-repeat $white;
+      text-decoration: none;
+    }
   }
 }
