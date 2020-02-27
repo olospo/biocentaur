@@ -16,6 +16,17 @@ while ( have_posts() ) : the_post(); ?>
   </div>
 </section>
 
+<section class="test_cta">
+  <div class="container">
+    <div class="seven columns offset-by-one">
+    Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
+    </div>
+    <div class="three columns">
+      <a href="#" class="button secondary">Order a test</a>
+    </div>
+  </div>
+</section>
+
 <?php endwhile; // end of the loop. ?>
 
 <?php get_footer(); ?>

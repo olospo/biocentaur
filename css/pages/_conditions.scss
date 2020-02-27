@@ -39,3 +39,9 @@
   @include border-radius(50%);
   background: $coral-tint;
 }
+
+.test_cta {
+  background: $blue;
+  color: $white;
+  padding: $padding 0;
+}
