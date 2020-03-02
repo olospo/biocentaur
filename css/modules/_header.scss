@@ -98,6 +98,42 @@ header {
     }
     
   }
+  
+  nav.secondary {
+    font: $normal 1.8em/3rem $regular;
+    letter-spacing: 0.1rem;
+    float: right;
+    padding: 15px 0px;
+    ul {
+      display: none;
+      float: right;
+      line-height:1em;
+      @media (min-width: $breakpoint-desktop) {
+        display: inline-block;
+      } 
+      li {
+        display: inline-block;
+        &.current_page_item a, &.current-menu-item a, &.current-page-ancestor a, &.current-post-ancestor a, &.current-menu-parent a, &.current-category-ancestor a, &.current_page_parent a, &:hover a {
+          color: $blue;
+          padding: 15px;
+        }
+
+        a {
+          font: $normal 1.8rem/3.0rem $regular;
+          @include transition(all 0.2s ease-out);
+          line-height:1em;
+          display: block;
+          color: $blue;
+          text-decoration: none;
+          padding: 15px;
+        }
+      }
+    }
+    a.button {
+      float: right;
+      margin-left: 15px;
+    }
+  }
   a.menu-toggle {
     display: block;
     @media (min-width: $breakpoint-desktop) {

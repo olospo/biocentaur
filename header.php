@@ -32,10 +32,10 @@
       <?php if ( is_front_page() ) { echo '</h1>'; } else { echo '</p>'; } ?>
     </div>
     <nav class="secondary nine columns">
+      <a href="#" class="button primary">Order a test</a>
       <ul>
         <li><a href="#">Individuals</a></li>
         <li><a href="#">Clinicians</a></li>
-        <li class="test"><a href="#" class="button primary">Order a test</a></li>
       </ul>
     </nav>
     
