@@ -54,7 +54,7 @@ while ( have_posts() ) : the_post(); ?>
             'order_by'       => 'title',
             'order'          => 'ASC',
             'post_status'    => 'publish',
-            'post_per_page'  => '-1'
+            'posts_per_page' => -1
           ); 
           query_posts($args); ?>
       <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>

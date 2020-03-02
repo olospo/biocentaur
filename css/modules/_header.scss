@@ -7,15 +7,15 @@
   z-index: 9999;
 }
 header {
-  background: $blue;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  &.open {
-    box-shadow: none;
+  &.menu {
+    background: $blue;
   }
-  .container {
-    max-width: 100%;
-    width: 100%;
+  &.logo_secondary_menu {
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   }
+
   .logo {
     .site-title {
       margin: 10px 0px 10px 20px;
@@ -39,10 +39,10 @@ header {
   
   nav.primary {
     font: $normal 1.8em/3rem $regular;
+    letter-spacing: 0.1rem;
     ul {
       display: none;
       line-height:1em;
-      text-align: center;
       @media (min-width: $breakpoint-desktop) {
         display: block;
       } 
@@ -50,25 +50,22 @@ header {
         display: inline-block;
         // padding: 45px 5px;
         &.current_page_item a, &.current-menu-item a, &.current-page-ancestor a, &.current-post-ancestor a, &.current-menu-parent a, &.current-category-ancestor a, &.current_page_parent a, &:hover a {
-          color: $white;
-          border-bottom: 2px solid $white;
-          margin: 25px 5px;
-          padding: 10px 5px;
+          color: $blue;
+          background: $white;
+          padding: 15px;
         }
         &.menu-item-has-children a {
           // background: url('../img/dropdown_icon.svg') center right no-repeat;
           // padding: 15px 22px 15px 5px;
         }
         a {
-          font: $normal 1.8rem/3.0rem $regular;
+          font: $normal 1.6rem/3.0rem $regular;
           @include transition(all 0.2s ease-out);
           line-height:1em;
           display: block;
           color: $white;
           text-decoration: none;
-          margin: 25px 5px;
-          padding: 10px 5px;
-          border-bottom: 2px solid transparent;
+          padding: 15px;
           text-transform: uppercase;
         }
         &.button {

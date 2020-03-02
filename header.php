@@ -14,12 +14,16 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="fixed_header">
-<header>
+<header class="menu">
   <div class="container">
     <!-- Main Menu -->
     <nav class="primary nine columns">
-      <?php // wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
-    </nav> 
+      <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
+    </nav>
+  </div>
+</header>
+<header class="logo_secondary_menu">
+  <div class="container">
     <div class="logo three columns">  
       <?php if ( is_front_page() ) { echo '<h1 class="site-title">'; } else { echo '<p class="site-title">'; } ?>
       <a href="<?php echo get_site_url(); ?>">
@@ -27,6 +31,14 @@
       </a>
       <?php if ( is_front_page() ) { echo '</h1>'; } else { echo '</p>'; } ?>
     </div>
+    <nav class="secondary nine columns">
+      <ul>
+        <li><a href="#">Individuals</a></li>
+        <li><a href="#">Clinicians</a></li>
+        <li class="test"><a href="#" class="button primary">Order a test</a></li>
+      </ul>
+    </nav>
+    
     <!-- Mobile Menu Trigger -->
     <a class="menu-toggle mobile_menu" aria-controls="primary-menu">
       <span></span>
@@ -34,6 +46,7 @@
       <span></span>
       <span></span>
     </a>
+    
   </div>
 </header>
 </div>
