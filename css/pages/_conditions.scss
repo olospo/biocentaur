@@ -1,4 +1,11 @@
 // Conditions
+.condition {
+  margin-top: 120px;
+  padding: $padding 0;
+  p:first-child {
+    font: $normal 2.4rem/3.4rem $regular;
+  }
+}
 
 // Block for listing all conditions
 .block__conditions {
@@ -12,7 +19,7 @@
     clear: both;
     border-bottom: 1px solid $border;
     padding: 15px 0px;
-    background: url('../img/grey_arrow.svg') right center no-repeat;
+    background: url('../img/grey_arrow.svg') right 15px no-repeat;
     .title {
       font: $normal 2.6rem/4.4rem $regular;
       overflow: hidden;

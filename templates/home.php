@@ -1,10 +1,6 @@
 <?php /* Template Name: Home */
 get_header();
 
-// Vars
-$serviceText = get_field('services_text');
-$ctaBG = get_field('cta_background_image');
-
 while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'inc/hero' ); ?>

@@ -1,6 +1,6 @@
 {
     "key": "group_5d275694c2f12",
-    "title": "Home",
+    "title": "Hero",
     "fields": [
         {
             "key": "field_5d5e7af508c2d",
@@ -292,6 +292,20 @@
                 "operator": "==",
                 "value": "templates\/home.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/individuals.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/clinicians.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -302,5 +316,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1582634715
+    "modified": 1583250069
 }
