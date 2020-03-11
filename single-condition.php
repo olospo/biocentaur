@@ -22,32 +22,12 @@ while ( have_posts() ) : the_post(); ?>
     Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
     </div>
     <div class="three columns">
-      <a href="#" class="button secondary">Order a test</a>
+      <a href="#" class="button primary">Order a test</a>
     </div>
   </div>
 </section>
 
-<section class="know_more">
-  <div class="container">
-    <div class="know_intro twelve columns">
-      <h4>We're here to help</h4>
-    </div>
-    <div class="row">
-      <div class="know_block one-third column">
-        <h5>Conditions</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="know_block one-third column">
-        <h5>Health features</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="know_block one-third column">
-        <h5>About Biocentaur</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<?php get_template_part('inc/know_more'); ?>
 
 <?php endwhile; // end of the loop. ?>
 

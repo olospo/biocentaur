@@ -54,7 +54,6 @@ get_header(); ?>
         </div>
       </div>
       <?php endif; endif; ?>
-      <?php get_template_part('inc/help'); ?>
     </aside>
     <div class="content nine columns extra_gutter">
        <h1><?php the_title(); ?></h1>

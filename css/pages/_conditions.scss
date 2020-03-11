@@ -69,14 +69,21 @@
   background: $coral-tint;
 }
 
+// Test CTA
+
 .test_cta {
   background: $blue;
   color: $white;
-  padding: $padding 0;
+  padding: $padding-half 0;
+  font: $normal 2.6rem/3.6rem $regular;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 // Health Conditions Accordion
-
 .accordionItemHeading {
   color: $black;
   font: $normal 2.0rem/3.4rem $regular;
