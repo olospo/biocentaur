@@ -27,7 +27,7 @@
     <div class="logo three columns">  
       <?php if ( is_front_page() ) { echo '<h1 class="site-title">'; } else { echo '<p class="site-title">'; } ?>
       <a href="<?php echo get_site_url(); ?>">
-        <img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="Biocentaur Logo">
+        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo.svg" alt="Biocentaur Logo">
       </a>
       <?php if ( is_front_page() ) { echo '</h1>'; } else { echo '</p>'; } ?>
     </div>
