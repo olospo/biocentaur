@@ -1,12 +1,12 @@
 // Conditions
 
 .health_conditions {
-  padding: $padding-half 0;
+  padding: $padding 0;
   .container {
     border-top: 1px solid $border;
   }
   .block__title {
-    padding: $padding-half 0;
+    padding: $padding 0 $padding-half;
     text-align: center;
     h3 {
       font: $bold 4.2rem/4.4rem $regular;

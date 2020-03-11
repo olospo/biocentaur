@@ -19,10 +19,10 @@
     color: $mid-blue;
     border: 2px solid $mid-blue;
     @include border-radius(10px);
-    background: url('../img/blue_arrow.svg') right 15px center no-repeat $white;
+    background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
     &:hover {
       color: $white;
-      background: url('../img/white_arrow.svg') right 15px center no-repeat $mid-blue;
+      background: $mid-blue url('../img/white_arrow.svg') right 15px center no-repeat ;
       text-decoration: none;
     }
   }
@@ -34,7 +34,7 @@
     background: url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
       color: $mid-blue;
-      background: url('../img/blue_arrow.svg') right 15px center no-repeat $white;
+      background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
       text-decoration: none;
     }
   }

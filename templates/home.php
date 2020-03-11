@@ -48,10 +48,14 @@ while ( have_posts() ) : the_post(); ?>
       <div class="help_block six columns">
         <h5>Individuals</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read_more">Conditions</a>
+        <br />
+        <a href="#" class="read_more">Health features</a>
       </div>
       <div class="help_block six columns">
         <h5>Clinicians</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read_more">See tests</a>
       </div>
     </div>
   </div>

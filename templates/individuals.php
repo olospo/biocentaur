@@ -27,7 +27,7 @@ while ( have_posts() ) : the_post(); ?>
       <div class="step_text six columns">
         <strong>02</strong>
         <h2>Order a test</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </article>
     <article class="step ten columns offset-by-one">
@@ -64,6 +64,31 @@ while ( have_posts() ) : the_post(); ?>
 </section>
 
 <?php get_template_part('inc/health_conditions'); ?>
+
+<section class="know_more">
+  <div class="container">
+    <div class="more_intro twelve columns">
+      <h4>Want to know more?</h4>
+    </div>
+    <div class="row">
+      <div class="more_block one-third column">
+        <h5>Conditions</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read_more">See all conditions</a>
+      </div>
+      <div class="more_block one-third column">
+        <h5>Health features</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read_more">Explore health features</a>
+      </div>
+      <div class="more_block one-third column">
+        <h5>About Biocentaur</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read_more">About Biocentaur</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

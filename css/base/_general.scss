@@ -174,10 +174,19 @@ section {
   }
   a {
     color: $blue;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid $coral;
     &:hover {
-      color: $black;
-      text-decoration: underline;
+      color: $coral;
+      border-bottom: 1px solid $coral;
+    }
+    &.read_more{
+      margin: 5px 0;
+      display: inline-block;
+      font: $normal 1.8rem/2.8rem $regular;
+      content: "";
+      background: $white url('../img/blue_arrow.svg') right center no-repeat ;
+      padding-right: 15px;
     }
   }
   ul {
@@ -375,8 +384,8 @@ section.hero{
         line-height: 4.5rem;
       }
       @media (min-width: $breakpoint-desktop) {
-        font: $bold 4.6rem/5.0rem $regular;
-        font-size: 4.6rem;
+        font: $bold 4.2rem/5.0rem $regular;
+        font-size: 4.2rem;
         line-height: 5.0rem;
         margin-bottom: 50px;
       }
