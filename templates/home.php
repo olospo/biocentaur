@@ -32,7 +32,7 @@ while ( have_posts() ) : the_post(); ?>
       <a href="#" class="button primary">Learn more</a>
     </div>
     <div class="six columns">
-      
+      <p>Video here</p>
     </div>
   </div>
 </section>

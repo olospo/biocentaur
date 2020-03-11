@@ -1,8 +1,8 @@
 <section class="health_conditions">
   <div class="container">
     <div class="block__title ten columns offset-by-one">
-      <h3>Predictive genetic testing</h3>
-      <p>Learn more about your health and take care of your lifestyle choices</p>
+      <h3>Health conditions</h3>
+      <p>Our predictive tests can help determine your risk of developing the following diseases:</p>
     </div>
     <div class="block__conditions ten columns offset-by-one">
       <?php 

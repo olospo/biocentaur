@@ -101,6 +101,7 @@ h4 {
 // Page 
 section {
   &.page, &.post, &.search {
+    margin-top: 140px;
     padding: $padding-half 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;

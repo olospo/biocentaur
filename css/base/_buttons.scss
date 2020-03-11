@@ -19,7 +19,7 @@
     color: $mid-blue;
     border: 2px solid $mid-blue;
     @include border-radius(10px);
-    background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
+    background: url('../img/blue_arrow.svg') right 15px center no-repeat ;
     &:hover {
       color: $white;
       background: $mid-blue url('../img/white_arrow.svg') right 15px center no-repeat ;

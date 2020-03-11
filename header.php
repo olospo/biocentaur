@@ -34,8 +34,10 @@
     <nav class="secondary nine columns">
       <a href="#" class="button primary">Order a test</a>
       <ul>
-        <li><a href="#">Individuals</a></li>
-        <li><a href="#">Clinicians</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals">Our process</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/predictive-test">Predictive test</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/support">Support</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/faqs">FAQs</a></li>
       </ul>
     </nav>
     
