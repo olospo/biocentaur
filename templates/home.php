@@ -37,45 +37,7 @@ while ( have_posts() ) : the_post(); ?>
   </div>
 </section>
 
-<section class="home_conditions">
-  <div class="container">
-    <div class="block__title ten columns offset-by-one">
-      <h3>Predictive genetic testing</h3>
-      <p>Learn more about your health and take care of your lifestyle choices</p>
-    </div>
-    <div class="block__conditions ten columns offset-by-one">
-      <?php 
-          $args = array(
-            'post_type'      => 'condition',
-            'order_by'       => 'title',
-            'order'          => 'ASC',
-            'post_status'    => 'publish',
-            'posts_per_page' => -1
-          ); 
-          query_posts($args); ?>
-      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-      
-      <article>
-        <div class="title">
-          <img src="<?php the_post_thumbnail_url( 'featured-img' ); ?>" />
-          <?php the_title(); ?>
-        </div>
-<!--
-        <div class="content">
-          <?php the_excerpt(); ?>
-          <a href="<?php the_permalink(); ?>" class="button primary">Learn more</a>
-        </div>
--->
-      </article>
-      
-      <?php endwhile; ?>
-      
-      <?php else : ?>
-      <!-- No posts found -->
-      <?php endif; wp_reset_query(); ?>
-    </div>
-  </div>
-</section>
+<?php get_template_part('inc/health_conditions'); ?>
 
 <section class="home_help">
   <div class="container">

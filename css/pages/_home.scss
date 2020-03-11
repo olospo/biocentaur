@@ -105,24 +105,6 @@
   }
 }
 
-.home_conditions {
-  padding: $padding-half 0;
-  .container {
-    border-top: 1px solid $border;
-  }
-  .block__title {
-    padding: $padding-half 0;
-    text-align: center;
-    h3 {
-      font: $bold 4.2rem/4.4rem $regular;
-      margin-bottom: 20px;
-    }
-    p {
-      font: $normal 2.4rem/3.6rem $regular;
-    }
-  }
-}
-
 .home_help {
   background: $white-bg;
   padding: $padding-half 0 $padding 0;
