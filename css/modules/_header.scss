@@ -36,7 +36,7 @@ header {
     font: $normal 1.8em/3rem $regular;
     letter-spacing: 0.1rem;
     ul {
-      display: none;
+      // display: none;
       line-height:1em;
       @media (min-width: $breakpoint-desktop) {
         display: block;
@@ -81,17 +81,6 @@ header {
         }
       }
     }
-    
-    #menu-main {
-      @media (min-width: 1400px) {
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-      }
-    }
-    
   }
   
   nav.secondary {
