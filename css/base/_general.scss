@@ -1,24 +1,24 @@
 // Avenir
-$regular: 'hk_groteskmedium', Helvetica, Arial, sans-serif;
-$headline: 'hk_groteskbold', Helvetica, Arial, sans-serif; 
+$regular: 'Dosis', Helvetica, Arial, sans-serif;
 
 // Weights
-$normal: 300;
+$normal: 400;
 $bold: 600;
 
 // Colours
 $white: #fff;
 $black: #0A1418;
-$green: #87C849;
-$blue: #277BE3;
-$darkGreen: #00733B;
-// Decoration
-$border: #DCE0E4;
-$buff: #F1F2F2;
-$info: #FBFCFC;
 
-// To Remove
-$red: #D3205C;
+$blue: #00365F;
+$mid-blue: #355F80;
+$light-blue: #f6f7fb;
+$coral: #EF928E;
+$coral-tint: #FBDFDD;
+
+$grey: #A5B3C4;
+$border: #E6EAEF;
+$ui: #A5B3C4;
+$white-bg: #F6F8FC;
 
 // Breakpoints
 $breakpoint-mobile: 400px;
@@ -34,13 +34,13 @@ $padding-quarter: 20px;
 
 ::selection {
   color: $white;
-  background: $green !important;
+  background: $blue !important;
   text-shadow: none !important;
 }
     
 ::-moz-selection {
   color: $white;
-  background: $green;
+  background: $blue;
   text-shadow: none !important;
 }
 
@@ -69,14 +69,15 @@ body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.8;
   font-family: $regular;
-  color: $black;
+  color: $mid-blue;
   -webkit-font-smoothing: antialiased; // Fix fonts looking rubbish in Chrome
   background: $white;
 }
 
 h1, h2, h3 {
-  font-family: $headline;
+  font-family: $regular;
   font-kerning: normal;
+  letter-spacing: 0.1rem;
 }
 
 h4 {
@@ -100,6 +101,7 @@ h4 {
 // Page 
 section {
   &.page, &.post, &.search {
+    margin-top: 140px;
     padding: $padding-half 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;
@@ -128,22 +130,22 @@ section {
     }
   }
   h1, h2, h3 {
-    font-family: $headline;
+    font-family: $regular;
   }
   h1 {
-    font: $normal 3.6rem/5rem $headline;
+    font: $bold 3.6rem/5rem $regular;
     margin-bottom: 0.5em;
     font-size: 3.6rem;
   }
   h2 {
-    font: $normal 3.6rem/5rem $headline;
-    margin-bottom: 1em;
+    font: $normal 3.6rem/4rem $regular;
+    margin-bottom: 0.5em;
     font-size: 3.6rem;
-    line-height: 5rem;
+    line-height: 4rem;
     
   }
   h3 {
-    font: $normal 2.4rem/3.0rem $headline;
+    font: $normal 2.4rem/3.0rem $regular;
     margin-bottom: 10px;
     font-size: 2.4rem;
   }
@@ -172,11 +174,20 @@ section {
     font-style: italic;
   }
   a {
-    color: $green;
-    text-decoration: underline;
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px solid $coral;
     &:hover {
-      color: $black;
-      text-decoration: underline;
+      color: $coral;
+      border-bottom: 1px solid $coral;
+    }
+    &.read_more{
+      margin: 5px 0;
+      display: inline-block;
+      font: $normal 1.8rem/2.8rem $regular;
+      content: "";
+      background: $white url('../img/blue_arrow.svg') right center no-repeat ;
+      padding-right: 15px;
     }
   }
   ul {
@@ -205,16 +216,16 @@ section {
     font: $normal 1.6rem/2.6rem $regular;
     tr {
       &:first-child {
-        border: 1px solid $green;
-        background: $green;
+        border: 1px solid $blue;
+        background: $blue;
         td {
-          background: $green;
+          background: $blue;
           border: 1px solid $black;
           font-weight: bold;
         }
       }
       td {
-        background: $info;
+        background: $white-bg;
         padding: 10px 20px;
         border: 1px solid $black;
       }
@@ -262,7 +273,7 @@ section {
         border: 1px solid $black;
         padding: 10px;
         &:focus {
-          border: 1px solid $green;
+          border: 1px solid $blue;
         }
       }
       select {
@@ -292,34 +303,14 @@ section {
   }
 }
 
-// Small CTA
-
-.small_cta {
-  text-align: center;
-  padding: 20px;
-  background: $green;
-  color: $white;
-  h3 {
-    display: inline-block;
-    margin-right: 30px;
-    margin-top: 10px;
-  }
-  a.button {
-    margin-top: 10px;
-    @media (min-width: $breakpoint-tablet) {
-    margin-top: -10px;
-    }
-  }
-}
-
 // Aside
 aside {
   .services-list {
-    color: $green;
+    color: $blue;
     margin-bottom: 60px;
     .content {
       h3 {
-        font: $normal 2.8rem/3.8rem $headline;
+        font: $normal 2.8rem/3.8rem $regular;
         a {
           text-decoration: none;
         }
@@ -350,7 +341,7 @@ aside {
           }
           &.current, &.current_page_item, &.current_page_parent, &:hover {
             a {
-              color: $green;
+              color: $blue;
               font: $normal 1.8rem/2.6rem $regular;
               @media (min-width: $breakpoint-tablet) {
                 font: $normal 2.2rem/3.6rem $regular;
@@ -358,26 +349,6 @@ aside {
             }
           }
         }
-      }
-    }
-  }
-  .more-help {
-    background: $green;
-    @include border-radius(10px);
-    @media (max-width: $breakpoint-tablet) {
-      margin-bottom: $padding-half;
-    }
-    .content {
-      padding: 30px;
-      color: $white;
-      word-wrap: break-word;
-      h4 {
-        font: $normal 2.6rem/3.6rem $regular;
-        margin-bottom: 20px;
-      }
-      a {
-        color: $white;
-        text-decoration: underline;
       }
     }
   }
@@ -403,21 +374,20 @@ section.hero{
   .content {
     h1 {
       text-align: center;
-      font: $normal 3.6rem/3.6rem $headline;
+      font: $bold 3.6rem/3.6rem $regular;
       font-size: 3.6rem;
       line-height: 4.6rem;
       color: $white;
       margin-bottom: 0.5em;
       @media (min-width: $breakpoint-tablet) {
-        font: $normal 5.0rem/5.5rem $headline;
-        font-size: 5rem;
-        line-height: 5.5rem;
+        font: $bold 4.0rem/4.5rem $regular;
+        font-size: 4rem;
+        line-height: 4.5rem;
       }
       @media (min-width: $breakpoint-desktop) {
-        font: $normal 9rem/9rem $headline;
-        font-size: 9rem;
-        line-height: 9rem;
-        letter-spacing: -1px;
+        font: $bold 4.2rem/5.0rem $regular;
+        font-size: 4.2rem;
+        line-height: 5.0rem;
         margin-bottom: 50px;
       }
     }
@@ -439,7 +409,7 @@ section.hero{
     }
     .content {
       h1 {
-        color: $green;
+        color: $blue;
       }
       p {
         color: $black;
@@ -470,28 +440,6 @@ section.hero{
   } 
 }
 
-.map {
-  margin-top: $padding-half;
-  .find_us {
-    background: $green url('../img/arrow/round.svg') right 20px center no-repeat;
-    h4 {
-      font: $normal 2.4rem/3.2rem $regular;
-      padding: 20px;
-      text-decoration: none;
-      color: $white;
-    }
-  }
-  a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-    h4 {
-      text-decoration: none;
-    }
-  }
-}
-
 @keyframes bgZoom {
   0% {
     transform: scale(1);
@@ -500,7 +448,6 @@ section.hero{
     transform: scale(1.1);
   }
 }
-
 
 @keyframes opacity {
 	to {

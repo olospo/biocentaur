@@ -7,56 +7,37 @@
   z-index: 9999;
 }
 header {
-  background: $green;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  &.open {
-    box-shadow: none;
+  &.menu {
+    background: $blue;
   }
-  .container {
-    max-width: 100%;
-    width: 100%;
+  &.logo_secondary_menu {
+    overflow: hidden;
+    background: $white;
+    -moz-box-shadow: 0px 5px 15px rgba(14,94,164, 0.15);
+    box-shadow: 0px 5px 15px rgba(14,94,164, 0.15);
   }
+
   .logo {
     .site-title {
-      margin: 10px 0px 10px 20px;
-      @media (min-width: $breakpoint-desktop) {
-        margin: 15px 0px 15px 20px;
-      }
-      @media (max-width: $breakpoint-mobile) {
-        margin: 10px 0px 10px 0px;
-      }
+      margin: 15px 0px 25px 0px;
       line-height: 0;
       svg {
-        height: 40px;
+        height: 50px;
         width: auto;
         @media (min-width: $breakpoint-desktop) {
-          height: 55px;
+          height: 70px;
           width: auto;
         }
-      }
-    }
-    .des {
-      display: none;
-      @media (min-width: $breakpoint-tablet) {
-        display: block;
-      } 
-    }
-    .mob {
-    display: none;
-    text-align: center;
-    margin: 0px auto;
-      @media (max-width: $breakpoint-tablet) {
-        display: block; 
       }
     }
   }
   
   nav.primary {
     font: $normal 1.8em/3rem $regular;
+    letter-spacing: 0.1rem;
     ul {
-      display: none;
+      // display: none;
       line-height:1em;
-      text-align: center;
       @media (min-width: $breakpoint-desktop) {
         display: block;
       } 
@@ -64,25 +45,22 @@ header {
         display: inline-block;
         // padding: 45px 5px;
         &.current_page_item a, &.current-menu-item a, &.current-page-ancestor a, &.current-post-ancestor a, &.current-menu-parent a, &.current-category-ancestor a, &.current_page_parent a, &:hover a {
-          color: $white;
-          border-bottom: 2px solid $white;
-          margin: 25px 5px;
-          padding: 10px 5px;
+          color: $blue;
+          background: $white;
+          padding: 15px;
         }
         &.menu-item-has-children a {
           // background: url('../img/dropdown_icon.svg') center right no-repeat;
           // padding: 15px 22px 15px 5px;
         }
         a {
-          font: $normal 1.8rem/3.0rem $regular;
+          font: $normal 1.6rem/3.0rem $regular;
           @include transition(all 0.2s ease-out);
           line-height:1em;
           display: block;
           color: $white;
           text-decoration: none;
-          margin: 25px 5px;
-          padding: 10px 5px;
-          border-bottom: 2px solid transparent;
+          padding: 15px;
           text-transform: uppercase;
         }
         &.button {
@@ -92,7 +70,7 @@ header {
             margin: 0px;
             padding: 15px 20px;
             border-bottom: none;
-            color: $red;
+            color: $black;
           }
           
           &:hover {
@@ -103,69 +81,43 @@ header {
         }
       }
     }
-    
-    #menu-main {
-      @media (min-width: 1400px) {
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-      }
-    }
-   
-    ul.extra {
-      @media (max-width: $breakpoint-tablet) {
-        display: block;
-      } 
-      
-      // position: absolute;
+  }
+  
+  nav.secondary {
+    font: $normal 1.8rem/3rem $regular;
+    letter-spacing: 0.1rem;
+    float: right;
+    padding: 40px 0 0 0;
+    ul {
+      display: none;
       float: right;
-      right: 0;
-      text-decoration: none;
+      line-height:1em;
+      @media (min-width: $breakpoint-desktop) {
+        display: inline-block;
+      } 
       li {
+        display: inline-block;
+        &.current_page_item a, &.current-menu-item a, &.current-page-ancestor a, &.current-post-ancestor a, &.current-menu-parent a, &.current-category-ancestor a, &.current_page_parent a, &:hover a {
+          color: $blue;
+          padding: 15px;
+        }
+
         a {
-          margin: 0;
-          padding: 35px 30px;
-          @media (max-width: $breakpoint-tablet) {
-            padding: 0;
-            width: 70px;
-            height: 70px;
-            border: none;
-            &:hover {
-              border: none;
-            }
-          }
+          font: $normal 1.8rem/3.0rem $regular;
+          @include transition(all 0.2s ease-out);
+          line-height:1em;
+          display: block;
+          color: $blue;
           text-decoration: none;
-          text-transform: none;
-        }
-        &.quote {
-          background: $blue;
-          @media (max-width: $breakpoint-tablet) {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            right: 60px;
-            top: 0;
-            background: $blue url('../img/quote_icon.svg') center center no-repeat;
-            text-indent: -9999px;
-          } 
-        }
-        &.login {
-          background: $darkGreen;
-          @media (max-width: $breakpoint-tablet) {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background: $darkGreen url('../img/login_icon.svg') center center no-repeat;
-            text-indent: -9999px;
-          } 
+          padding: 15px;
         }
       }
     }
-    
+    a.button {
+      float: right;
+      margin-left: 15px;
+      padding-right: 60px;
+    }
   }
   a.menu-toggle {
     display: block;
@@ -237,28 +189,17 @@ nav.mobile {
         @include transition(all 0.2s ease-out);
         line-height: 1.4rem;
         display: block;
-        color: $green;
+        color: $blue;
         text-decoration: none;
         margin: 0px 10px;
         padding: 15px 0px;
-        border-bottom: 1px solid $green;
+        border-bottom: 1px solid $blue;
       }
       &:last-child {
         a {
           border-bottom: none;
         }
       }
-    }
-  }
-  .facebook {
-    padding: 30px 30px 30px 30px;
-    background: $green;
-    a {
-      padding-left: 30px;
-      display: block;
-      background: $green url('../img/fb_header.svg') no-repeat left center;
-      color: $white;
-      text-decoration: none;
     }
   }
 }
@@ -286,21 +227,6 @@ nav.primary ul li:hover > ul {
     text-align: left;
     border-bottom: 1px solid #e8eaed;
     margin: 0px 25px;
-    &.tank {
-      background: $green;
-      margin: 0px;
-      padding: 0px 25px;
-      @include border-radius(0px 0px 10px 10px);
-      a {
-        color: $black;
-      }
-      &:hover a {
-        color: $white;
-      }
-      &.current-menu-item a, &.current_page_item a {
-        color: $white;
-      }
-    }
     a {
       text-transform: none;
       font: $normal 1.8rem/2rem $regular;
@@ -309,14 +235,14 @@ nav.primary ul li:hover > ul {
       margin: 0;
       border-bottom: none;
       &:hover {
-        color: $green;
+        color: $blue;
       }
     }
     &:last-child {
       border-bottom: none;
     }
     &.current-menu-item a, &.current_page_item a {
-      color: $green;
+      color: $blue;
     }
   }
 }

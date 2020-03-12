@@ -59,7 +59,7 @@
       <div class="content eight columns offset-by-two">
       <h1><?php echo $title; ?></h1>
       <?php if ( $buttonText ): ?>
-        <a href="<?php echo $buttonLink; ?>" class="button primary"><?php echo $buttonText; ?></a> 
+        <a href="<?php echo $buttonLink; ?>" class="button secondary"><?php echo $buttonText; ?></a> 
       <?php endif; ?>
       </div>
     </div>

@@ -10,20 +10,37 @@
 <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory'); ?>/img/favicon-16x16.png"/>
 <?php if( get_field('social_metadata', 'options') ): the_field('social_metadata', 'options'); endif; // Social Metadata ?>
 <?php if( get_field('google_analytics', 'options') ): the_field('google_analytics', 'options'); endif; // Google Analytics Code ?>
-<meta name="google-site-verification" content="OnoVmuGmDEHfWEFYL1JciAPoXOp9tRBvFnc4xMpg8lI" />
+<meta name="google-site-verification" content="add-content-here" />
 </head>
 <body <?php body_class(); ?>>
 <div class="fixed_header">
-<header>
-  <div class="container"> 
+<header class="menu">
+  <div class="container">
+    <!-- Main Menu -->
+    <nav class="primary nine columns">
+      <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
+    </nav>
+  </div>
+</header>
+<header class="logo_secondary_menu">
+  <div class="container">
     <div class="logo three columns">  
       <?php if ( is_front_page() ) { echo '<h1 class="site-title">'; } else { echo '<p class="site-title">'; } ?>
       <a href="<?php echo get_site_url(); ?>">
-        <img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="Moorland Fuels Logo" class="des">
-        <img src="<?php bloginfo('template_directory'); ?>/img/mobile_logo.svg" alt="Moorland Fuels Logo" class="mob">
+        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo.svg" alt="Biocentaur Logo">
       </a>
       <?php if ( is_front_page() ) { echo '</h1>'; } else { echo '</p>'; } ?>
     </div>
+    <nav class="secondary nine columns">
+      <a href="#" class="button primary">Order a test</a>
+      <ul>
+        <li><a href="<?php echo get_site_url(); ?>/individuals">Our process</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/predictive-test">Predictive test</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/support">Support</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/individuals/faqs">FAQs</a></li>
+      </ul>
+    </nav>
+    
     <!-- Mobile Menu Trigger -->
     <a class="menu-toggle mobile_menu" aria-controls="primary-menu">
       <span></span>
@@ -31,20 +48,11 @@
       <span></span>
       <span></span>
     </a>
-    <!-- Main Menu -->
-    <nav class="primary nine columns">
-      <ul class="extra">
-        <li class="quote"><a href="<?php the_field('order_quote_link','option'); ?>" target="_blank">Order or get a quote</a></li><li class="login"><a href="<?php the_field('log_in_link','option'); ?>" target="_blank">Log in</a></li>
-      </ul>
-      <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
-    </nav>
+    
   </div>
 </header>
 </div>
 <!-- Mobile Menu -->
 <nav class="mobile">
   <?php wp_nav_menu( array( 'theme_location' => 'mobile_main' ) ); ?>
-  <div class="facebook">
-    <a href="<?php the_field('facebook_link','options'); ?>" class="fb">Follow us on Facebook</a>
-  </div>
 </nav>

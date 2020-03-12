@@ -1,0 +1,62 @@
+// Individuals
+
+.how_it_works {
+  padding: $padding 0;
+  .title {
+    text-align: center;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .step_text {
+      strong {
+        font: $normal 6.0rem/6rem $regular;
+        color: $coral;
+        letter-spacing: 0.5rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+      h2 {
+        font: $bold 2.4rem/3.4rem $regular;
+      }
+      p {
+        
+      }
+    }
+    &:nth-child(odd) {
+      .step_image {
+        order: 2;
+      }
+      .step_text {
+        order: 1;
+      }
+    }
+  }
+}
+
+.know_more {
+  background: $white-bg;
+  padding: 60px 0;
+  .more_intro {
+    clear: both;
+    padding: 0 0 60px 0;
+    h4 {
+      font: $bold 4.2rem/4.4rem $regular;
+      text-align: center;
+    }
+  }
+  .more_block {
+    @include border-radius(10px);
+    padding: 30px;
+    background: $white;
+    border: 1px solid $border;
+    -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    box-shadow: 0px 15px 20px -3px #e6ecf0;
+    text-align: center;
+    h5 {
+      font: $bold 2.6rem/4.4rem $regular;
+    }
+  }
+}

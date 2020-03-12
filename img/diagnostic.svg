@@ -1,0 +1,5 @@
+<svg id="DESIGN" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs><style>.diag_one, .diag_two{ fill:none;stroke-linecap:round;stroke-linejoin:round;} .diag_one{stroke:#ef928e;stroke-width:4px;} .diag_two{stroke:#00365f;}</style></defs>
+  <polyline class="diag_one" points="117.86 74.2 94.91 75.01 85.19 54.34 74.67 107.61 61.72 15.99 45.53 83.53 35.01 55.63 25.29 75.01 3.35 75.82"/>
+  <polyline class="diag_two" points="116.66 70.6 93.71 71.41 83.99 50.74 73.47 104 60.52 12.39 44.33 79.93 33.8 52.03 24.09 71.41 2.15 72.22"/>
+</svg>

@@ -1,0 +1,196 @@
+// Conditions
+
+.health_conditions {
+  padding: $padding 0;
+  .container {
+    border-top: 1px solid $border;
+  }
+  .block__title {
+    padding: $padding 0 $padding-half;
+    text-align: center;
+    h3 {
+      font: $bold 4.2rem/4.4rem $regular;
+      margin-bottom: 20px;
+    }
+    p {
+      font: $normal 2.4rem/3.6rem $regular;
+    }
+  }
+}
+
+
+
+// Block for listing all conditions
+.block__conditions {
+  @include border-radius(10px);
+  padding: 20px 40px;
+  border: 1px solid $border;
+  -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  box-shadow: 0px 15px 20px -3px #e6ecf0;
+  article {
+    clear: both;
+    border-bottom: 1px solid $border;
+    padding: 15px 0px;
+    .title {
+      font: $normal 2.6rem/4.4rem $regular;
+      overflow: hidden;
+      color: $blue;
+      svg {
+        @include border-radius(50%);
+        background: $coral-tint;
+        float: left;
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+      }
+    }
+    &:first-child {
+      padding: 0 0 15px 0;
+    }
+    &:last-child {
+      padding: 15px 0 0 0;
+      border-bottom: none;
+    }
+  }
+}
+
+// Conditions Single Page
+.condition {
+  margin-top: 120px;
+  padding: $padding 0;
+  p:first-child {
+    font: $normal 2.4rem/3.4rem $regular;
+  }
+}
+
+.condition_image {
+  @include border-radius(50%);
+  background: $coral-tint;
+}
+
+// Genetic Test 
+.genetic_test {
+  padding: $padding 0;
+  background: $light-blue;
+}
+
+// Test CTA
+.test_cta {
+  background: $blue;
+  color: $white;
+  padding: $padding-half 0;
+  font: $normal 2.6rem/3.6rem $regular;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Health Conditions Accordion
+.accordionItemHeading {
+  color: $black;
+  font: $normal 2.0rem/3.4rem $regular;
+  cursor:pointer;
+  position: relative;
+  .content {
+    max-width: 90%;
+  }
+  &:before {
+    content: "";
+    background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    right: 10px;
+    top: 10px;
+    height: 32px;
+    width: 20px;
+    position: absolute;
+  }
+}
+
+.open .accordionItemHeading {
+  border-bottom: none;
+  position: relative;
+  &:before {
+    content: "";
+    background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+    transform-origin: center center;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation:spin 0.3s linear forwards;
+    -moz-animation:spin 0.3s linear forwards;
+    animation:spin 0.3s linear forwards;
+  } 
+}
+
+.close .accordionItemHeading {
+  &:before {
+    transform-origin: center center;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-animation:return 0.3s linear forwards;
+    -moz-animation:return 0.3s linear forwards;
+    animation:return 0.3s linear forwards;
+  }
+}
+
+@keyframes spin { 
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% { 
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  } 
+}
+
+@keyframes return {
+  0% {
+    transform-origin: center center;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  100% { 
+    transform-origin: center center;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  } 
+}
+
+.close .accordionItemContent{
+  height:0px;
+  transition:height 10s ease-out;
+  -webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+  float:left;
+  display:block;   
+}
+.open .accordionItemContent{
+  margin: 0px 0px 10px 0px;
+  padding: 20px 0;
+  display:block;
+  -webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+  -webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+	-webkit-transition: -webkit-transform 0.5s ease-out;
+	-o-transition: -o-transform 0.5s ease;
+	-ms-transition: -ms-transform 0.5s ease;
+	transition: transform 0.5s ease;
+  box-sizing: border-box;
+  .content {
+    max-width: 90%;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+}
