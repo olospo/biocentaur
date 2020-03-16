@@ -42,16 +42,6 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
     	return false;
     });
 
-$('.news-slider').slick({
-  autoplay:true,
-  dots: true,
-  infinite: true,
-  cssEase: 'linear',
-  speed: 700,
-  slidesToShow: 1,
-  slidesToScroll: 1,  
-});
-
 $('.cta_slider').slick({
   autoplay:true,
   dots: true,
@@ -63,45 +53,6 @@ $('.cta_slider').slick({
   slidesToScroll: 1,  
 });
 
-$('.service-scroll').slick({
-  autoplay:true,
-  dots: false,
-  infinite: true,
-  cssEase: 'linear',
-  speed: 700,
-  slidesToShow: 5,
-  slidesToScroll: 5,  
-  responsive: [
-    {
-      breakpoint: 1300,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll:3
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
 
 
 // SVG as Images
@@ -159,7 +110,7 @@ var accItem = document.getElementsByClassName('accordionItem');
 
 var componentVisible = (function ($) {
   
-  var $components = $('section');
+  var $components = $('section, .step');
 
   var componentsWaypoints = $components.waypoint({
     handler: function() {

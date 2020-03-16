@@ -4,12 +4,7 @@
 
 @mixin fade() {
   opacity: 0;
-  transition: opacity linear 1s, transform ease-in 1s;
-}
-
-@mixin textfade() {
-  opacity: 0;
-  transition: opacity ease-in 1s;
+  transition: opacity linear 0.5s, transform ease-in 1s;
 }
 
 @mixin drop() {
@@ -21,17 +16,13 @@
 @mixin rise() {
   opacity: 0;
   transform: translate3d(0,80px,0);
-  transition: opacity linear 1.5s, transform ease-in 1s;
+  transition: opacity linear 1s, transform ease-in 1s;
 }
 
 @mixin reset-fade() {
   opacity: 1;
 }
 
-@mixin reset-textfade() {
-  opacity: 1;
-  transform: translate3d(0,0,0);
-}
 
 @mixin reset() {
   opacity: 1;
@@ -74,9 +65,13 @@
 
 section.home.hero {
   @include fade();
-  h1, a.button {
+  h1 {
     @include fade();
     transition-delay: 0.5s;
+  }
+  a.button {
+    @include fade();
+    transition-delay: 1.0s;
   }
   &.visible {
     @include reset-fade();
@@ -97,64 +92,72 @@ section.hero {
   }
 }
 
-section.service_listing {
-  .grid {
-    article {
-      @include drop();
+.health_conditions, .home_info, .know_more {
+  @include fade();
+  &.visible {
+    @include reset();
+  }
+}
+
+.home_cta {
+  .cta__block {
+    .content {
+      @include fade();
+      transition-delay: 0.5s;
+      a.button {
+        @include fade();
+        transition-delay: 1.0s;
+      }
     }
   }
   &.visible {
-    .grid {
-      article {
+    .cta__block {
+      .content {
         @include reset();
-        @include delay-children();
+        a.button {
+          @include reset();
+        }
       }
     }
   }
 }
 
-section.news, section.quick-links  {
-  article, .quick-one, .quick-two, .quick-three {
-    @include fade();
+.home_help {
+  .help_intro {
+    
   }
   &.visible {
-    article, .quick-one, .quick-two, .quick-three {
-      @include reset();
-      @include delay-children();
+    .help_intro {
+      
     }
   }
 }
 
-section.small_cta {
-  h3, a.button {
-    @include fade();
-  }
-  &.visible {
-    h3, a.button {
-      @include reset();
+.illustration_steps {
+  .step {
+    .step_text {
+      @include fade();
+      transition-delay: 0.5s;
+    }
+    .step_image {
+      @include fade();
+    }
+    &.visible {
+      .step_text, .step_image {
+        @include reset();  
+      }  
     }
   }
 }
 
-section.full-width {
-  .newsletter, .latest-news {
+.our_tests {
+  .test_block {
     @include fade();
+    @include delay-children();
   }
   &.visible {
-    .newsletter, .latest-news {
+    .test_block {
       @include reset();
-    }
-  }
-}
-
-section.services_slider, .home_cta {
-  .content {
-    @include fade();
-  }
-  &.visible {
-    .content {
-      @include reset();
-      @include delay-children();
     }
   }
 }
