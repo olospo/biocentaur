@@ -1,10 +1,11 @@
 // Footer
 footer {
+  font: $normal 1.8rem/3.0rem $regular;
   position: relative;
   overflow-wrap: break-word;
   padding: $padding-half 0px;
   @media (min-width: $breakpoint-tablet) {
-    padding: $padding 0px;
+    padding: $padding 0px $padding-half 0px;
   }
   color: $white;
   background: $blue;
@@ -12,14 +13,39 @@ footer {
   @media (min-width: $breakpoint-tablet) {
     text-align: left;  
   }
-  h4 {
-    font: $normal 2.8rem/3.6rem $regular;
-    margin-bottom: 20px;
+  h5 {
+    font: $bold 1.8rem/3.0rem $regular;
+    margin: 0;
   }
   a {
-    color: $white;
+    color: #a7b5c4;
     &:hover {
       color: $white;
+    }
+  }
+  ul {
+    margin: 40px 0 0 0;
+    li {
+      margin: 0 0 10px 0;
+      &.heading {
+        margin: 0;
+      }
+      h5 {
+        a {
+          color: $white;
+        }
+      }
+      ul {
+        margin: 0 0 10px 0;
+        li {
+          margin: 0;
+          a {
+            
+          }
+          background: url('../img/grey_arrow_small.svg') left center no-repeat;
+          padding-left: 15px;
+        }
+      }
     }
   }
   .about {
@@ -28,44 +54,30 @@ footer {
       margin: 0; 
     }
     svg {
-      max-width: 70%;
+      max-width: 60%;
       display: block;
       margin: 0px auto 20px auto;
       
       @media (min-width: $breakpoint-tablet) {
-        margin: 0px 0px $padding-half 0px;
-        max-width: 100%;
+        margin: 0px 0px 20px -15%;
+        max-width: 90%;
       }
-    }
-    a.button {
-      &.fb {
-        color: $black;
-        display: inline-block;
-        background: $blue url('../img/fb_icon.svg') no-repeat 15px center;
-        padding: 15px 30px 15px 50px;
-        &:hover {
-          background: #3a5899 url('../img/fb_icon_hover.svg') no-repeat 15px center;
-          &:before {
-            -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-          }
-        }
-        
-      }
-    }
-  }
-  ul#menu-footer {
-    margin-top: 40px;
-    display: inline-block;
-    li {
-      display: inline-block;
-      margin-right: 20px;
     }
   }
   .address {
     margin-top: $padding-half;
     @media (min-width: $breakpoint-tablet) {
       margin: 0; 
+    }
+  }
+  .end_links {
+    font: $normal 1.4rem/2.0rem $regular;
+    margin: $padding-half 0 0 0;
+    border-top: 1px solid $white;
+    padding: $padding-half 0;
+    text-align: center;
+    a, strong {
+      padding: 5px 15px;
     }
   }
 }
