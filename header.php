@@ -33,12 +33,17 @@
     </div>
     <nav class="secondary nine columns">
       <a href="#" class="button primary">Order a test</a>
-      <ul>
-        <li><a href="<?php echo get_site_url(); ?>/individuals">Our process</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/individuals/predictive-test">Predictive test</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/individuals/support">Support</a></li>
-        <li><a href="<?php echo get_site_url(); ?>/individuals/faqs">FAQs</a></li>
-      </ul>
+      <?php if (is_tree(164)) { // Individuals and/or children ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'individuals', 'container'=> false, 'menu_class'=> false ) ); ?>
+      <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'clinicians', 'container'=> false, 'menu_class'=> false ) ); ?>
+      <?php } else { // Other pages ?>
+        <ul>
+          <li><a href="<?php echo get_site_url(); ?>/individuals">Individuals</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/clinicians">Clinicians</a></li>
+        </ul>
+      <?php } ?>
+
     </nav>
     
     <!-- Mobile Menu Trigger -->

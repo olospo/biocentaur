@@ -7,7 +7,7 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'inc/steps' ); ?>
 
-<section class="predictive_test">
+<section class="order_test">
   <div class="container">
     <div class="test_content">
       <div class="five columns offset-by-one">
