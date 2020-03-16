@@ -1,9 +1,7 @@
 /* Buttons 
     
 <a href="#" class="button primary">Get a quote</a>
-<a href="#" class="button primary reversed">Get a quote</a>
 <a href="#" class="button secondary">Get a quote</a>
-<a href="#" class="button secondary reversed">Get a quote</a>
 
 */
 
@@ -12,17 +10,18 @@
   display: inline-block;
   vertical-align: middle;
   padding: 15px 100px 15px 20px;
+  margin: 10px 10px 10px 0;
   font: $bold 1.6rem/1.6rem $regular;
   text-decoration: none;
   text-transform: uppercase;
   &.primary {
-    color: $mid-blue;
-    border: 2px solid $mid-blue;
+    color: $blue;
+    border: 2px solid $blue;
     @include border-radius(10px);
     background: url('../img/blue_arrow.svg') right 15px center no-repeat ;
     &:hover {
       color: $white;
-      background: $mid-blue url('../img/white_arrow.svg') right 15px center no-repeat ;
+      background: $blue url('../img/white_arrow.svg') right 15px center no-repeat ;
       text-decoration: none;
     }
   }
@@ -33,9 +32,21 @@
     @include border-radius(10px);
     background: url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
-      color: $mid-blue;
+      color: $blue;
       background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
       text-decoration: none;
+    }
+  }
+  &.filled {
+    color: $white;
+    border: 2px solid $blue;
+    @include border-radius(10px);
+    background: $blue url('../img/white_arrow.svg') right 15px center no-repeat;
+    &:hover {
+      // color: $white;
+      // background: $mid-blue url('../img/white_arrow.svg') right 15px center no-repeat ;
+      // text-decoration: none;
+      // border: 2px solid $mid-blue;
     }
   }
 }

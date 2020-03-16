@@ -5,73 +5,19 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'inc/hero' ); ?>
 
-<section class="how_it_works">
-  <div class="container">
-    <article class="title">
-      <h1>How it works</h1>
-    </article>
-    <article class="step ten columns offset-by-one">
-      <div class="step_image six columns">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      </div>
-      <div class="step_text six columns">
-        <strong>01</strong>
-        <h2>Research the test</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </article>
-    <article class="step ten columns offset-by-one">
-      <div class="step_image six columns">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      </div>
-      <div class="step_text six columns">
-        <strong>02</strong>
-        <h2>Order a test</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </article>
-    <article class="step ten columns offset-by-one">
-      <div class="step_image six columns">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      </div>
-      <div class="step_text six columns">
-        <strong>03</strong>
-        <h2>Complete your test</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </article>
-    <article class="step ten columns offset-by-one">
-      <div class="step_image six columns">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      </div>
-      <div class="step_text six columns">
-        <strong>04</strong>
-        <h2>Return your test</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </article>
-    <article class="step ten columns offset-by-one">
-      <div class="step_image six columns">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
-      </div>
-      <div class="step_text six columns">
-        <strong>05</strong>
-        <h2>Your results</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </article>
-  </div>
-</section>
+<?php get_template_part( 'inc/steps' ); ?>
 
-<section class="genetic_test">
+<section class="predictive_test">
   <div class="container">
-    <div class="five columns offset-by-one">
-      <h3>Our predictive genetic test</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <a href="#" class="button primary">Order a test</a> <a href="#" class="button primary">Learn more</a>
-    </div>
-    <div class="five columns">
-      <p>Image here</p>
+    <div class="test_content">
+      <div class="five columns offset-by-one">
+        <h3>Our predictive genetic test</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <a href="#" class="button filled">Order a test</a> <a href="#" class="button primary">Learn more</a>
+      </div>
+      <div class="five columns">
+        <img src="<?php bloginfo('template_directory'); ?>/img/predictive.svg" />
+      </div>
     </div>
   </div>
 </section>

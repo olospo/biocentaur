@@ -69,7 +69,7 @@ body {
   font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.8;
   font-family: $regular;
-  color: $blue;
+  color: $mid-blue;
   -webkit-font-smoothing: antialiased; // Fix fonts looking rubbish in Chrome
   background: $white;
 }
@@ -78,6 +78,7 @@ h1, h2, h3 {
   font-family: $regular;
   font-kerning: normal;
   letter-spacing: 0.1rem;
+  color: $blue;
 }
 
 h4 {
