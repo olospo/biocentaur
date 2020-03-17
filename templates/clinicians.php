@@ -25,7 +25,7 @@ while ( have_posts() ) : the_post(); ?>
 <section class="about_bio">
   <div class="container">
     <div class="six columns">
-      <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
+      <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo.svg" />
     </div>
     <div class="six columns">
       <h4>About Biocentaur</h4>

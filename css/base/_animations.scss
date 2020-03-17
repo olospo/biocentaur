@@ -92,35 +92,13 @@ section.hero {
   }
 }
 
-.health_conditions, .home_info, .know_more {
+.health_conditions, .home_info {
   @include fade();
   &.visible {
     @include reset();
   }
 }
 
-.home_cta {
-  .cta__block {
-    .content {
-      @include fade();
-      transition-delay: 0.5s;
-      a.button {
-        @include fade();
-        transition-delay: 1.0s;
-      }
-    }
-  }
-  &.visible {
-    .cta__block {
-      .content {
-        @include reset();
-        a.button {
-          @include reset();
-        }
-      }
-    }
-  }
-}
 
 .home_help {
   .help_intro {

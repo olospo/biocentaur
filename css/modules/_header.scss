@@ -24,7 +24,7 @@ header {
       svg {
         height: 50px;
         width: auto;
-        @media (min-width: $breakpoint-desktop) {
+        @media (min-width: $breakpoint-tablet) {
           height: 70px;
           width: auto;
         }

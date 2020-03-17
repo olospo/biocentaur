@@ -24,8 +24,16 @@
   }
 }
 
+.fixed_header + .health_conditions {
+  margin-top: 80px;
+  .container {
+    border-top: 0px solid transparent;
+  }
+}
+
 section.post + .health_conditions {
   padding: 0 0 $padding 0;
+  
 }
 
 // Block for listing all conditions

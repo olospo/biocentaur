@@ -33,6 +33,10 @@
   }
 }
 
+.fixed_header + .our_tests {
+  margin-top: 150px;
+}
+
 .test_order {
   background: $light-blue;
   padding: $padding 0;
