@@ -4,14 +4,12 @@ footer {
   position: relative;
   overflow-wrap: break-word;
   padding: $padding-half 0px;
-  @media (min-width: $breakpoint-tablet) {
-    padding: $padding 0px $padding-half 0px;
-  }
   color: $white;
   background: $blue;
   text-align: center;
   @media (min-width: $breakpoint-tablet) {
-    text-align: left;  
+    padding: $padding 0px $padding-half 0px;
+    text-align: left; 
   }
   h5 {
     font: $bold 1.8rem/3.0rem $regular;
@@ -24,7 +22,10 @@ footer {
     }
   }
   ul {
-    margin: 40px 0 0 0;
+    margin: 0;
+    @media (min-width: $breakpoint-tablet) {
+      margin: 40px 0 0 0;
+    }
     li {
       margin: 0 0 10px 0;
       &.heading {
@@ -40,10 +41,9 @@ footer {
         li {
           margin: 0;
           a {
-            
+            background: url('../img/grey_arrow_small.svg') left center no-repeat;
+            padding-left: 15px;
           }
-          background: url('../img/grey_arrow_small.svg') left center no-repeat;
-          padding-left: 15px;
         }
       }
     }

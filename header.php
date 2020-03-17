@@ -43,7 +43,6 @@
           <li><a href="<?php echo get_site_url(); ?>/clinicians">Clinicians</a></li>
         </ul>
       <?php } ?>
-
     </nav>
     
     <!-- Mobile Menu Trigger -->

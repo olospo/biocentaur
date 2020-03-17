@@ -75,7 +75,7 @@ header {
       display: none;
       float: right;
       line-height:1em;
-      @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-tablet) {
         display: inline-block;
       } 
       li {

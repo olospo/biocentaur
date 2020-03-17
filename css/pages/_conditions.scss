@@ -167,9 +167,9 @@
     transform-origin: center center;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    -webkit-animation:spin 0.3s linear forwards;
-    -moz-animation:spin 0.3s linear forwards;
-    animation:spin 0.3s linear forwards;
+    -webkit-animation:spin 0.2s linear forwards;
+    -moz-animation:spin 0.2s linear forwards;
+    animation:spin 0.2s linear forwards;
   } 
 }
 
@@ -178,9 +178,9 @@
     transform-origin: center center;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-animation:return 0.3s linear forwards;
-    -moz-animation:return 0.3s linear forwards;
-    animation:return 0.3s linear forwards;
+    -webkit-animation:return 0.2s linear forwards;
+    -moz-animation:return 0.2s linear forwards;
+    animation:return 0.2s linear forwards;
   }
 }
 
@@ -217,6 +217,7 @@
 	transform: scaleY(0);
   float:left;
   display:block;   
+  opacity: 0;
 }
 .open .accordionItemContent{
   margin: 0px 0px 10px 0px;
@@ -230,10 +231,12 @@
 	-o-transform-origin: top;
 	-ms-transform-origin: top;
 	transform-origin: top;
-	-webkit-transition: -webkit-transform 0.5s ease-out;
-	-o-transition: -o-transform 0.5s ease;
-	-ms-transition: -ms-transform 0.5s ease;
-	transition: transform 0.5s ease;
+	opacity: 1;
+	-webkit-transition: opacity linear 0.2s;
+	-o-transition: opacity linear 0.2s;
+	-ms-transition: opacity linear 0.2s;
+	transition: opacity linear 0.2s;
+	transition-delay: 0.2s;
   box-sizing: border-box;
   .content {
     max-width: 90%;
