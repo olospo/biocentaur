@@ -24,6 +24,10 @@
   }
 }
 
+section.post + .health_conditions {
+  padding: 0 0 $padding 0;
+}
+
 // Block for listing all conditions
 .block__conditions {
   @include border-radius(10px);
