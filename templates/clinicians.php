@@ -29,7 +29,7 @@ while ( have_posts() ) : the_post(); ?>
     </div>
     <div class="six columns">
       <h4>About Biocentaur</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>We are experts in the field of advanced medical genetics. Our team of scientists and medical experts, led by genetics pioneer Dr Ioannis Papasotiriou, have developed a range of predictive and diagnostic genetic tests so that you can make informed decisions about your patients’ healthcare. We work at the cutting edge of molecular biology, developing techniques that will help accurately diagnose diseases and improve outcomes for patients across the world.</p>
       <a href="#" class="button filled">Learn more</a>
     </div>    
   </div>
