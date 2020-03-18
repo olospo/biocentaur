@@ -12,7 +12,7 @@ while ( have_posts() ) : the_post(); ?>
     <div class="test_content">
       <div class="five columns offset-by-one">
         <h3>Order a test</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p>Order your test online and we will send you a [saliva collection kit / blood sample kit] in the mail. Send your patient sample back to us and our team of genetic experts will do the rest.</p>
         <a href="#" class="button filled">Order a test</a>
       </div>
       <div class="five columns">
