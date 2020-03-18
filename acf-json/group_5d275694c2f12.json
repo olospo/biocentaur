@@ -3,22 +3,6 @@
     "title": "Hero",
     "fields": [
         {
-            "key": "field_5d5e7af508c2d",
-            "label": "Hero",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
             "key": "field_5d27569e7a94c",
             "label": "Title",
             "name": "title",
@@ -316,5 +300,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583250069
+    "modified": 1584535641
 }
