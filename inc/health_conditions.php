@@ -24,7 +24,11 @@
         
         <div class="accordionItemContent">
           <div class="content">
-            <?php the_excerpt(); ?>
+            <?php if( get_field('short_description')) { // Check if short description is added ?>
+              <?php the_field('short_description'); ?>
+            <?php } else { ?>
+              <?php the_excerpt(); ?>
+            <?php } ?> 
             <a href="<?php the_permalink(); ?>" class="button primary">Learn more</a>       
           </div>
         </div>

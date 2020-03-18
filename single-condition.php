@@ -10,6 +10,7 @@ while ( have_posts() ) : the_post(); ?>
       <img src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" class="condition_image"> 
     </aside>
     <div class="content eight columns extra_gutter">
+      <div class="breadcrumbs"><a href="<?php echo get_site_url(); ?>/individuals/health-conditions">Conditions</a> <img src="<?php bloginfo('template_directory'); ?>/img/blue_arrow.svg"> <?php the_title(); ?></div>
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
     </div>
@@ -22,7 +23,7 @@ while ( have_posts() ) : the_post(); ?>
     Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
     </div>
     <div class="three columns">
-      <a href="#" class="button secondary">Order a test</a>
+      <a href="#" class="button filled white">Order a test</a>
     </div>
   </div>
 </section>

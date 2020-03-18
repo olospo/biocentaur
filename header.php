@@ -33,7 +33,7 @@
     </div>
     <nav class="secondary nine columns">
       <a href="#" class="button primary">Order a test</a>
-      <?php if (is_tree(164)) { // Individuals and/or children ?>
+      <?php if (is_tree(164) || 'condition' == get_post_type()) { // Individuals and/or children ?>
         <?php wp_nav_menu( array( 'theme_location' => 'individuals', 'container'=> false, 'menu_class'=> false ) ); ?>
       <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>
         <?php wp_nav_menu( array( 'theme_location' => 'clinicians', 'container'=> false, 'menu_class'=> false ) ); ?>

@@ -73,10 +73,18 @@ section.post + .health_conditions {
 
 // Conditions Single Page
 .condition {
-  margin-top: 120px;
+  margin-top: 140px;
   padding: $padding 0;
   p:first-child {
     font: $normal 2.4rem/3.4rem $regular;
+  }
+  .breadcrumbs {
+    margin-bottom: 20px;
+    font: $normal 1.8rem/2.8rem $regular;
+    svg {
+      margin: 0px 10px;
+      height: 12px;
+    }
   }
 }
 

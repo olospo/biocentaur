@@ -48,5 +48,10 @@
       // text-decoration: none;
       // border: 2px solid $mid-blue;
     }
+    &.white {
+      color: $blue;
+      border: 2px solid $white;
+      background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
+    }
   }
 }
