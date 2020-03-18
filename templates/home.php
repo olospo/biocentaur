@@ -10,14 +10,14 @@ while ( have_posts() ) : the_post(); ?>
     <div class="cta__block individuals six columns">
       <div class="content">
         <h2>Individuals</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <p>Providing you with the information you need to manage your health and wellbeing.</p>
         <a href="<?php echo get_site_url(); ?>/individuals" target="_blank" class="button primary">Learn more</a>
       </div>
     </div>
     <div class="cta__block clinicians six columns">
       <div class="content">
         <h2>Clinicians</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <p>Innovative genetic tests to help you detect health issues and improve outcomes for your patients.</p>
         <a href="<?php echo get_site_url(); ?>/clinicians" class="button primary">Learn more</a>
       </div>
     </div>
@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post(); ?>
   <div class="container">
     <div class="six columns">
       <h3>Experts in advanced medical genetics</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Our team of scientists and medical experts have created a range of reliable tests that empower healthy individuals to make better-informed decisions about their healthcare. Working at the cutting edge of molecular biology, we have developed innovative techniques that can accurately diagnose diseases and improve outcomes for patients across the world.</p>
       <a href="#" class="button primary">Learn more</a>
     </div>
     <div class="six columns">
@@ -47,14 +47,14 @@ while ( have_posts() ) : the_post(); ?>
     <div class="row">
       <div class="help_block six columns">
         <h5>Individuals</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Health and wellness-related information to help you make better-informed decisions about your wellbeing.</p>
         <a href="#" class="read_more">Conditions</a>
         <br />
         <a href="#" class="read_more">Health features</a>
       </div>
       <div class="help_block six columns">
         <h5>Clinicians</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Browse our range of predictive and diagnostic genetic screening tests to help enhance your medical care.</p>
         <a href="#" class="read_more">See tests</a>
       </div>
     </div>
