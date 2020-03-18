@@ -20,7 +20,7 @@
         <ul>
           <li class="heading"><h5><a href="#">Individuals</a></h5></li>
           <li><a href="#">Our process</a></li>
-          <li><a href="#">Predictive test</a></li>
+          <li><a href="#">Future health test</a></li>
           <li>
             <a href="#">Support</a>
             <ul>
