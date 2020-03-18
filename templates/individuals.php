@@ -11,8 +11,8 @@ while ( have_posts() ) : the_post(); ?>
   <div class="container">
     <div class="test_content">
       <div class="five columns offset-by-one">
-        <h3>Our predictive genetic test</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <h3>Our Future health test</h3>
+        <p>Our Future health test has been developed to give you the information you need to make informed decisions about your health and wellbeing.</p>
         <a href="#" class="button filled">Order a test</a> <a href="#" class="button primary">Learn more</a>
       </div>
       <div class="five columns">
