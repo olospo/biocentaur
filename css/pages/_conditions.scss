@@ -78,8 +78,11 @@ section.post + .health_conditions {
 .condition {
   margin-top: 140px;
   padding: $padding 0;
-  p:first-child {
-    font: $normal 2.4rem/3.4rem $regular;
+  .content {
+    p:first-child {
+      font: $normal 2.4rem/3.4rem $regular !important;
+
+    }
   }
   .breadcrumbs {
     margin-bottom: 20px;
@@ -128,6 +131,67 @@ section.post + .health_conditions {
     }
     p {
       font: $normal 2.4rem/3.4rem $regular;
+    }
+  }
+}
+
+// Related Documents
+.related {
+  margin: $padding-half 0 0 0;
+  .content {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  }
+  h3 {
+    color: $black;
+    font: $normal 2.2rem/3.4rem $regular;
+    
+  }
+  ul {
+    color: $blue;
+    margin: 0;
+    li {
+      margin: 0px;
+      padding: 15px 0px;
+      list-style: none;
+      border-bottom: 1px solid $border;
+      &:last-child {
+        border-bottom: 0px solid $border;
+      }
+      a {
+        background: url('../img/document_icon.svg') center left no-repeat;
+        background-size: contain;
+        color: $blue;
+        text-decoration: underline;
+        text-decoration-color: $coral;
+        border-bottom: none;
+        padding-left: 40px;
+        display: block;
+        position: relative;
+        &:hover {
+          color: $coral;
+        }
+        &:after {
+          background: url('../img/blue_arrow.svg') center right no-repeat;
+          content: "";
+          position: absolute;
+          height: 35px;
+          width: 30px;
+          right: 10px;
+        }
+      }
+      &.link {
+        a {
+          background: url('../img/link_icon.svg') center left no-repeat;
+          background-size: contain;
+        }
+      }
+      &.pdf {
+        a {
+          background: url('../img/pdf_icon.svg') center left no-repeat;
+          background-size: contain;
+        }
+      }
     }
   }
 }

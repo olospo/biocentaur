@@ -176,19 +176,18 @@ section {
   }
   a {
     color: $blue;
-    text-decoration: none;
-    border-bottom: 1px solid $coral;
+    text-decoration: underline;
+    text-decoration-color: $coral;
     &:hover {
       color: $coral;
-      border-bottom: 1px solid $coral;
     }
     &.read_more{
       margin: 5px 0;
       display: inline-block;
-      font: $normal 1.8rem/2.8rem $regular;
+      font: $normal 2.0rem/3.2rem $regular;
       content: "";
       background: $white url('../img/blue_arrow.svg') right center no-repeat ;
-      padding-right: 15px;
+      padding-right: 20px;
     }
   }
   ul {

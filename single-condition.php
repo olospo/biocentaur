@@ -13,6 +13,43 @@ while ( have_posts() ) : the_post(); ?>
       <div class="breadcrumbs"><a href="<?php echo get_site_url(); ?>/individuals/health-conditions">Conditions</a> <img src="<?php bloginfo('template_directory'); ?>/img/blue_arrow.svg"> <?php the_title(); ?></div>
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
+      <!-- Related Info/Documents -->
+      <?php if( have_rows('related_info__documents') ): ?>
+      <div class="related">
+        <div class="content">
+        <ul>
+        <?php while( have_rows('related_info__documents') ): the_row(); 
+
+    		// vars
+    		$select = get_sub_field('url_or_upload');
+    		$title = get_sub_field('title');
+    		$url = get_sub_field('url');
+    		$upload = get_sub_field('upload');
+    		
+    		$ext = pathinfo($upload, PATHINFO_EXTENSION);
+    
+    		?>
+    		
+    		<?php if( $select == 'url' ): ?>
+        <li class="link">
+          <a href="<?php echo $url; ?>" target="_blank">
+            <?php echo $title; ?>
+			    </a>
+        </li>
+        <?php endif; ?>
+        
+        <?php if( $select == 'upload' ): ?>
+        <li class="<?php echo $ext; ?>">
+          <a href="<?php echo $upload; ?>">
+            <?php echo $title; ?>
+			    </a>
+        </li>
+        <?php endif; ?>
+
+    	  <?php endwhile; ?>
+    	  </ul>
+      </div>
+      <?php endif; ?> 
     </div>
   </div>
 </section>

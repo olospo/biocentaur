@@ -7,7 +7,7 @@
       <div class="more_block one-third column">
         <h5>Conditions</h5>
         <p>Learn more about the range of diseases potentially detected in our Predictive test, including causes, symptoms and treatments.</p>
-        <a href="#" class="read_more">See all conditions</a>
+        <a href="<?php echo get_site_url(); ?>/individuals/health-conditions" class="read_more">See all conditions</a>
       </div>
       <div class="more_block one-third column">
         <h5>Health features</h5>
@@ -17,7 +17,7 @@
       <div class="more_block one-third column">
         <h5>About Biocentaur</h5>
         <p>We work at the cutting edge of molecular biology to help accurately diagnose diseases and improve outcomes for patients across the world.</p>
-        <a href="#" class="read_more">About Biocentaur</a>
+        <a href="<?php echo get_site_url(); ?>/about" class="read_more">About Biocentaur</a>
       </div>
     </div>
   </div>
