@@ -49,7 +49,10 @@ section.post + .health_conditions {
     border-bottom: 1px solid $border;
     padding: 15px 0px;
     .title {
-      font: $normal 2.6rem/4.4rem $regular;
+      font: $normal 2.2rem/4.4rem $regular;
+      @media (min-width: $breakpoint-tablet) {
+        font: $normal 2.6rem/4.4rem $regular;
+      }
       overflow: hidden;
       color: $blue;
       svg {

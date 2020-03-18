@@ -371,12 +371,11 @@ section.hero{
   @media (min-width: $breakpoint-desktop) {
     margin-top: 90px;
   }
-  
   .content {
     h1 {
       text-align: center;
-      font: $bold 3.6rem/3.6rem $regular;
-      font-size: 3.6rem;
+      font: $bold 3.2rem/3.6rem $regular;
+      font-size: 3.2rem;
       line-height: 4.6rem;
       color: $white;
       margin-bottom: 0.5em;
