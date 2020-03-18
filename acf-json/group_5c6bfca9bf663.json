@@ -185,8 +185,8 @@
         },
         {
             "key": "field_5e7218ddb6d6b",
-            "label": "Instagram Link",
-            "name": "instagram_link",
+            "label": "YouTube Link",
+            "name": "youtube_link",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -220,5 +220,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1584535781
+    "modified": 1584540752
 }

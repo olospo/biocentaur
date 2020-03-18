@@ -14,6 +14,11 @@
           <a href="tel:+441179181506">+44 117 918 1506</a><br />
           <a href="mailto:info@biocentaur.com">info@biocentaur.com</a>
         </p>
+        <ul class="social-icons">
+          <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
+          <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
+          <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
+        </ul>
       </div>
     
       <div class="three columns">

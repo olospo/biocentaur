@@ -57,10 +57,22 @@ footer {
       max-width: 60%;
       display: block;
       margin: 0px auto 20px auto;
-      
       @media (min-width: $breakpoint-tablet) {
         margin: 0px 0px 20px -15%;
         max-width: 90%;
+      }
+    }
+    ul.social-icons {
+      margin: 20px 0;
+      li {
+        display: inline-block;
+        svg {
+          width: 40px;
+          margin: 0px auto;
+          path {
+            fill: $white;
+          }
+        }
       }
     }
   }
