@@ -38,6 +38,21 @@ get_header(); ?>
     <p>We currently provide three genetic tests: Future health test, Diagnostic test and Targeted test.</p>
   </div>
 </section>
+
+<section class="order_test">
+  <div class="container">
+    <div class="test_content">
+      <div class="five columns offset-by-one">
+        <img src="<?php bloginfo('template_directory'); ?>/img/predictive.svg" />
+      </div>
+      <div class="five columns">
+        <h3>Our Future health test</h3>
+        <p>Our Future health test has been developed to give you the information you need to make informed decisions about your health and wellbeing.</p>
+        <a href="#" class="button filled">Order a test</a> <a href="#" class="button primary">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
   
 <?php endwhile; // end of the loop. ?>
 
