@@ -49,6 +49,7 @@ header {
           color: $blue;
           background: $white;
           padding: 15px;
+          font-weight: bold;
         }
         a {
           font: $normal 1.6rem/3.0rem $regular;
@@ -66,7 +67,6 @@ header {
   
   nav.secondary {
     font: $normal 1.8rem/3rem $regular;
-    letter-spacing: 0.1rem;
     float: right;
     padding: 40px 0 0 0;
     @media (max-width: $breakpoint-tablet) {
