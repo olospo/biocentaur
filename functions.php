@@ -27,6 +27,7 @@ function theme_enqueue_styles() {
 // Enqueue scripts
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 function theme_enqueue_scripts() {
+
   wp_deregister_script( 'jquery' ); // Deregister to put jQuery into footer
   wp_register_script( 'jquery', get_stylesheet_directory_uri().'/js/jquery.min.js', false, NULL, true );
   
@@ -34,6 +35,10 @@ function theme_enqueue_scripts() {
   wp_enqueue_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', 'jquery', NULL, true );
   wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/application.min.js', 'jquery', NULL, true );
   wp_enqueue_script( 'theme-functions', get_stylesheet_directory_uri().'/js/functions.js', 'jquery', NULL , true ); 
+  
+  wp_enqueue_script('ajax', get_stylesheet_directory_uri(). '/js/ajax.min.js', 'jquery', false );
+  wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+  
 }
 
 // Disable Emoji Loading
@@ -54,6 +59,9 @@ require 'plugin-update-checker/plugin-update-checker.php';
 );
 
 $myUpdateChecker->setBranch('master');
+
+// Add Ajax Functions
+include_once 'functions/ajax-functions.php';
 
 // Options Page
 
@@ -217,9 +225,54 @@ function custom_post_type() {
 		'capability_type'     => 'post',
 	);
 	register_post_type( 'condition', $args );		
+	
+	// FAQ Post Type
+	$labels = array(
+		'name'                => _x( 'FAQs', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'FAQ', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'FAQ', 'text_domain' ),
+		'all_items'           => __( 'All FAQs', 'text_domain' ),
+		'view_item'           => __( 'View FAQ', 'text_domain' ),
+		'add_new_item'        => __( 'Add New FAQ', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit FAQ', 'text_domain' ),
+		'update_item'         => __( 'Update FAQ', 'text_domain' ),
+		'search_items'        => __( 'Search FAQs', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$args = array(
+		'label'               => __( 'FAQ', 'text_domain' ),
+		'description'         => __( 'Frequently asked questions', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom fields' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 30,
+		'menu_icon'           => 'dashicons-admin-comments',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	register_post_type( 'faq', $args );		
+
 }
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 );
+
+register_taxonomy('question_cat', 'faq', array(
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => _x( 'Categories', 'taxonomy general name', 'rgcc_translate' ),
+            'singular_name' => _x( 'Category', 'taxonomy singular name', 'rgcc_translate' ),
+        ),
+    ));
 
 // CPT Menu Item
 
@@ -297,6 +350,52 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 		}
 	}
 	return FALSE;  // we aren't at the page, and the page is not an ancestor
+}
+
+function the_faq_content( $posts_per_page, $pagination = true ) {
+  $searchterm = $_REQUEST['faq_searchterm'] ?? "";
+  $category = $_REQUEST['category'] ?? false;
+
+  $args = array(
+    'post_type' => 'faq',
+    'posts_per_page' => $posts_per_page
+  );
+
+  if($searchterm !== "") {
+      $args['s'] = $searchterm;
+  }
+  if ($category && $category !== 'all') {
+      $args['tax_query'] = array(
+          array(
+              'taxonomy' => 'question_cat',
+              'field'    => 'slug',
+              'terms'    => $category,
+          ),
+      );
+  }
+  
+  $args['post_status'] = 'publish';
+  $args['paged'] = $pagination ? get_query_var( 'paged', 1 ) : 1;
+  $args['paged'] = $_REQUEST['selected_page'] ?? $args['paged'];
+
+  $faq_query = new WP_Query( $args ); 
+
+  if ( $faq_query->have_posts() ) : 
+
+      while ( $faq_query->have_posts() ) : $faq_query->the_post(); 
+          get_template_part( 'inc/faq' );
+      endwhile;
+
+      if ($pagination) {
+          // Previous/next page navigation.
+          rgcc_posts_navigation($faq_query);
+      }
+      
+      wp_reset_postdata();
+  
+  else : 
+      rgcc_error( 'Sorry, no FAQs are available that match your search.' ); 
+  endif;
 }
 
 ?>

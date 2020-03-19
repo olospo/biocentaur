@@ -1,7 +1,7 @@
 <?php /* Archive */
 get_header(); ?>
 
-<section class="hero small">
+<section class="hero single">
   <div class="container">
     <div class="content ten columns offset-by-one">
       <h1><?php the_archive_title() ?></h1>
