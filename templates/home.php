@@ -32,7 +32,7 @@ while ( have_posts() ) : the_post(); ?>
       <a href="#" class="button primary">Learn more</a>
     </div>
     <div class="six columns">
-      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/zTqV1Gmy5fQ' frameborder='0' allowfullscreen></iframe></div>
+      <img src="/wp-content/uploads/2020/03/placeholder.jpg" title="Placeholder for video" alt="Placeholder for video"/><!--<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/zTqV1Gmy5fQ' frameborder='0' allowfullscreen></iframe></div>-->
     </div>
   </div>
 </section>
