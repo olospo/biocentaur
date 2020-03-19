@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
         <a href="#" class="button filled">Order a test</a>
       </div>
       <div class="five columns">
-        <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
+        <img src="<?php bloginfo('template_directory'); ?>/wp-content/uploads/2020/02/TESTBOX-predictive.png" />
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ while ( have_posts() ) : the_post(); ?>
 <section class="about_bio">
   <div class="container">
     <div class="six columns">
-      <img src="<?php bloginfo('template_directory'); ?>/img/placeholder.jpg" />
+      <img src="<?php bloginfo('template_directory'); ?>/wp-content/uploads/2020/03/placeholder.jpg" />
     </div>
     <div class="six columns">
       <h4>About Biocentaur</h4>
