@@ -25,12 +25,12 @@ while ( have_posts() ) : the_post(); ?>
 <section class="about_bio">
   <div class="container">
     <div class="six columns">
-      <img src="<?php bloginfo('template_directory'); ?>/wp-content/uploads/2020/03/placeholder.jpg" />
+      <img src="<?php bloginfo('template_directory'); ?>/img/placeholder.jpg" />
     </div>
     <div class="six columns">
       <h4>About Biocentaur</h4>
       <p>We are experts in the field of advanced medical genetics. Our team of scientists and medical experts, led by genetics pioneer Dr Ioannis Papasotiriou, have developed a range of predictive and diagnostic genetic tests so that you can make informed decisions about your patients’ healthcare. We work at the cutting edge of molecular biology, developing techniques that will help accurately diagnose diseases and improve outcomes for patients across the world.</p>
-      <a href="#" class="button filled">Learn more</a>
+      <a href="<?php echo get_site_url(); ?>/about" class="button filled">Learn more</a>
     </div>    
   </div>
 </section>
