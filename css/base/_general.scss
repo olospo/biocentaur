@@ -428,8 +428,9 @@ section.hero{
       transform: scale(1.1);
       animation: bgZoom 2s;
       padding: 100px 0px;
+      margin-top: 40px;
       @media (min-width: $breakpoint-tablet) {
-        padding: 220px 0px;
+        padding: 260px 0px;
       }
       overflow: hidden;
       position: relative;
