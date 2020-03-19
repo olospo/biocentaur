@@ -5,7 +5,7 @@
 
 */
 
-.button {
+.button, .nf-form-layout form input[type=button] {
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
@@ -14,6 +14,10 @@
   font: $bold 1.6rem/1.6rem $regular;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
   &.primary {
     color: $blue;
     border: 2px solid $blue;
@@ -21,19 +25,18 @@
     background: url('../img/blue_arrow.svg') right 15px center no-repeat ;
     &:hover {
       color: $white;
-      background: $blue url('../img/white_arrow.svg') right 15px center no-repeat ;
+      background: $blue url('../img/white_arrow.svg') right 20px center no-repeat ;
       text-decoration: none;
     }
   }
-  &.secondary {
-    background: transparent;
+  &.secondary, .nf-form-layout form input.secondary[type=button] {
     color: $white;
     border: 2px solid $white;
     @include border-radius(10px);
-    background: url('../img/white_arrow.svg') right 15px center no-repeat;
+    background: transparent url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
       color: $blue;
-      background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
+      background: $white url('../img/blue_arrow.svg') right 20px center no-repeat;
       text-decoration: none;
     }
   }
@@ -43,15 +46,15 @@
     @include border-radius(10px);
     background: $blue url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
-      // color: $white;
-      // background: $mid-blue url('../img/white_arrow.svg') right 15px center no-repeat ;
-      // text-decoration: none;
-      // border: 2px solid $mid-blue;
+      background: $blue url('../img/white_arrow.svg') right 20px center no-repeat;
     }
     &.white {
       color: $blue;
       border: 2px solid $white;
-      background: $white url('../img/blue_arrow.svg') right 15px center no-repeat ;
+      background: $white url('../img/blue_arrow.svg') right 15px center no-repeat;
+      &:hover {
+        background: $white url('../img/blue_arrow.svg') right 20px center no-repeat;
+      }
     }
   }
 }

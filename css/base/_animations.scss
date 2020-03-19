@@ -70,8 +70,12 @@ section.home.hero {
     transition-delay: 0.5s;
   }
   a.button {
-    @include fade();
-    transition-delay: 1.0s;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear 1s, background ease .5s;
+    -moz-transition: opacity 0.5s linear 1s, background ease .5s;
+    -o-transition: opacity 0.5s linear 1s, background ease .5s;
+    transition: opacity 0.5s linear 1s, background ease .5s;
+
   }
   &.visible {
     @include reset-fade();
