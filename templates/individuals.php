@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
         <a href="#" class="button filled">Order a test</a> <a href="<?php echo get_site_url(); ?>/individuals/future-health-test/" class="button primary">Learn more</a>
       </div>
       <div class="five columns">
-        <img src="<?php bloginfo('template_directory'); ?>/wp-content/uploads/2020/02/TESTBOX-predictive.png" />
+        <img src="/wp-content/uploads/2020/02/TESTBOX-predictive.png" />
       </div>
     </div>
   </div>
