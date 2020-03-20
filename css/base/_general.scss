@@ -441,8 +441,12 @@ section.hero{
     }
   }
   &.not_found {
-    background: $black;
+    margin-top: 140px;
+    background: $mid-blue;
     text-align: center;
+    a {
+      color: $coral;
+    }
   } 
 }
 
