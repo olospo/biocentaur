@@ -89,6 +89,7 @@
 }
 
 #faq-search-submit, #archive-faq-submit {
+  position: absolute;
   width: 50px;
   padding: 10px 0;
   background: $white url('../img/blue_arrow.svg') right 20px center no-repeat;

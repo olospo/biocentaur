@@ -20,7 +20,7 @@
   transition: all ease .5s;
   &.primary {
     color: $blue;
-    border: 2px solid $blue;
+    border: 1px solid $blue;
     @include border-radius(10px);
     background: url('../img/blue_arrow.svg') right 15px center no-repeat ;
     &:hover {
@@ -31,7 +31,7 @@
   }
   &.secondary, .nf-form-layout form input.secondary[type=button] {
     color: $white;
-    border: 2px solid $white;
+    border: 1px solid $white;
     @include border-radius(10px);
     background: transparent url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
@@ -42,7 +42,7 @@
   }
   &.filled {
     color: $white;
-    border: 2px solid $blue;
+    border: 1px solid $blue;
     @include border-radius(10px);
     background: $blue url('../img/white_arrow.svg') right 15px center no-repeat;
     &:hover {
@@ -50,7 +50,7 @@
     }
     &.white {
       color: $blue;
-      border: 2px solid $white;
+      border: 1px solid $white;
       background: $white url('../img/blue_arrow.svg') right 15px center no-repeat;
       &:hover {
         background: $white url('../img/blue_arrow.svg') right 20px center no-repeat;
