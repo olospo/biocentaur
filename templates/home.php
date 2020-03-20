@@ -29,7 +29,7 @@ while ( have_posts() ) : the_post(); ?>
     <div class="six columns">
       <h3>Experts in advanced medical genetics</h3>
       <p>Our team of scientists and medical experts have created a range of reliable tests that empower healthy individuals to make better-informed decisions about their healthcare. Working at the cutting edge of molecular biology, we have developed innovative techniques that can accurately diagnose diseases and improve outcomes for patients across the world.</p>
-      <a href="#" class="button primary">Learn more</a>
+      <a href="<?php echo get_site_url(); ?>/about/" class="button primary">Learn more</a>
     </div>
     <div class="six columns">
       <img src="<?php bloginfo('template_directory'); ?>/img/placeholder.jpg" title="Placeholder for video" alt="Placeholder for video"/>
@@ -49,14 +49,14 @@ while ( have_posts() ) : the_post(); ?>
       <div class="help_block six columns">
         <h5>Individuals</h5>
         <p>Health and wellness-related information to help you make better-informed decisions about your wellbeing.</p>
-        <a href="#" class="read_more">Conditions</a>
+        <a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/" class="read_more">Conditions</a>
         <br />
         <a href="#" class="read_more">Health features</a>
       </div>
       <div class="help_block six columns">
         <h5>Clinicians</h5>
         <p>Browse our range of predictive and diagnostic genetic screening tests to help enhance your medical care.</p>
-        <a href="#" class="read_more">See tests</a>
+        <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/" class="read_more">See tests</a>
       </div>
     </div>
   </div>
