@@ -13,7 +13,7 @@ while ( have_posts() ) : the_post(); ?>
       <div class="five columns offset-by-one">
         <h3>Our Future health test</h3>
         <p>Our Future health test has been developed to give you the information you need to make informed decisions about your health and wellbeing.</p>
-        <a href="#" class="button filled">Order a test</a> <a href="#" class="button primary">Learn more</a>
+        <a href="#" class="button filled">Order a test</a> <a href="<?php echo get_site_url(); ?>/individuals/future-health-test/" class="button primary">Learn more</a>
       </div>
       <div class="five columns">
         <img src="<?php bloginfo('template_directory'); ?>/wp-content/uploads/2020/02/TESTBOX-predictive.png" />

@@ -23,13 +23,13 @@
     
       <div class="three columns">
         <ul>
-          <li class="heading"><h5><a href="#">Individuals</a></h5></li>
-          <li><a href="#">Our process</a></li>
-          <li><a href="#">Future health test</a></li>
+          <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/individuals/">Individuals</a></h5></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/">Our process</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></li>
           <li>
             <a href="#">Support</a>
             <ul>
-              <li><a href="#">Conditions</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Conditions</a></li>
               <li><a href="#">Health features</a></li>
             </ul>
           </li>
@@ -38,14 +38,14 @@
       </div>
       <div class="three columns">
         <ul>
-          <li class="heading"><h5><a href="#">Clinicians</a></h5></li>
+          <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/clinicians/">Clinicians</a></h5></li>
           <li><a href="#">Clinicians</a></li>
           <li>
-            <a href="#">Our tests</a>
+            <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/">Our tests</a>
             <ul>
-              <li><a href="#">Predictive test</a></li>
-              <li><a href="#">Dianostic test</a></li>
-              <li><a href="#">Targeted test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/predictive-test/">Predictive test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/diagnostic-test/">Dianostic test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/targeted-test/">Targeted test</a></li>
             </ul>
           </li>
           <li><a href="#">FAQs</a></li>
@@ -54,15 +54,15 @@
       <div class="three columns">
         <ul>
           <li class="heading">
-            <h5><a href="#">About</a></h5>
+            <h5><a href="<?php echo get_site_url(); ?>/about/">About</a></h5>
             <ul>
-              <li><a href="#">About us</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/about/">About us</a></li>
               <li><a href="#">Laboratory</a></li>
             </ul>
           </li>
         </ul>
         <ul>
-          <li class="heading"><h5><a href="#">Contact</a></h5></li>
+          <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/contact/">Contact</a></h5></li>
         </ul>
       </div>
     </div>
