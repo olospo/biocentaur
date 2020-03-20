@@ -37,6 +37,11 @@
   margin-top: 150px;
 }
 
+.our_tests + .footer_faq .container {
+  border-top: 0px solid transparent;
+  padding: 20px 0 40px 0;
+}
+
 .test_order {
   background: $light-blue;
   padding: $padding 0;
@@ -44,4 +49,9 @@
 
 .about_bio {
   padding: $padding 0;
+}
+
+.about_bio + .footer_faq .container {
+  padding-top: $padding-half;
+  border-top: 0px solid transparent;
 }

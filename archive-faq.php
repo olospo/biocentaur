@@ -1,6 +1,6 @@
 <?php get_header();
-$searchterm = $_REQUEST['faq_searchterm'] ?? "";
-$category = $_REQUEST['category'] ?? false;
+// $searchterm = $_REQUEST['faq_searchterm'] ?? "";
+// $category = $_REQUEST['category'] ?? false;
 ?>
 
 <section class="faq_archive">
@@ -14,8 +14,7 @@ $category = $_REQUEST['category'] ?? false;
           <input type="hidden" name="form_id" value="faq-archive-form" />
           <input type="hidden" name="content_area_id" value="faq-archive-content" />
           <?php wp_nonce_field( 'faq_search_form', 'faq_search_nonce' ); ?>
-          <input type="search" placeholder="Enter your keyword" id="archive-faq-search" name="faq_searchterm" value="<?php echo $searchterm ?>">
-          <input type="submit" id="archive-faq-submit" value/>
+          <input type="search" id="archive-faq-search" name="faq_searchterm" value="<?php echo $searchterm ?>"><input type="submit" id="archive-faq-submit" value/>
           <div class="category-buttons">
           <?php 
           $terms = get_terms(array(
@@ -40,9 +39,13 @@ $category = $_REQUEST['category'] ?? false;
         </form>
     </div>
     <div class="accordion ten columns offset-by-one">
-      <?php the_faq_content(); ?>
+      <?php the_faq_content( 5, false ); ?>
     </div>
   </div>
 </section>
+
+<?php get_template_part('inc/health_conditions'); ?>
+
+<?php get_template_part('inc/know_more'); ?>
 	
 <?php get_footer(); ?>
