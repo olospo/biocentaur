@@ -5,7 +5,10 @@
     border-top: 1px solid $border;
   }
   .block__title {
-    padding: $padding 0 $padding-half;
+    padding: $padding-half 0;
+    @media (min-width: $breakpoint-tablet) {
+      padding: $padding 0 $padding-half;
+    }
     text-align: center;
     h3 {
       font: $bold 4.2rem/4.4rem $regular;
@@ -199,10 +202,16 @@ section.post + .health_conditions {
 // Know More
 .know_more {
   background: $white-bg;
-  padding: 60px 0;
+  padding: 60px 0 0 0;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 60px 0 60px 0;
+  }
   .more_intro {
     clear: both;
-    padding: 0 0 60px 0;
+    padding: 0 0 20px 0;
+    @media (min-width: $breakpoint-tablet) {
+      padding: 0 0 60px 0;
+    }
     h4 {
       font: $bold 4.2rem/4.4rem $regular;
       text-align: center;
@@ -218,6 +227,10 @@ section.post + .health_conditions {
     -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
     box-shadow: 0px 15px 20px -3px #e6ecf0;
     text-align: center;
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 0; 
+    }
     h5 {
       font: $bold 2.6rem/4.4rem $regular;
       color: $blue;

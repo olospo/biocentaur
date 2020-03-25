@@ -1,7 +1,10 @@
 // Individuals
 
 .illustration_steps {
-  padding: $padding 0;
+  padding: $padding-half 0;
+  @media (min-width: $breakpoint-tablet) {
+    padding: $padding 0;
+  }
   .title {
     text-align: center;
   }
@@ -9,6 +12,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 500px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      .step_image {
+        max-width: 30%;
+        padding-right: 5%;
+      }
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin: 20px 0px;
+    }
     .step_text {
       strong {
         font: $normal 6.0rem/6rem $regular;
@@ -24,10 +38,17 @@
     &:nth-child(odd) {
       .step_image {
         order: 2;
+        @media (max-width: $breakpoint-tablet) {
+          order: 1; 
+        }
       }
       .step_text {
         order: 1;
+        @media (max-width: $breakpoint-tablet) {
+          order: 2; 
+        }
       }
     }
+    
   }
 }
