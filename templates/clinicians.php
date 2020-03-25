@@ -25,7 +25,7 @@ while ( have_posts() ) : the_post(); ?>
 <section class="about_bio">
   <div class="container">
     <div class="six columns">
-      <img src="<?php bloginfo('template_directory'); ?>/img/placeholder.jpg" />
+      <img src="/wp-content/uploads/2020/03/BioC_ABOUT-US_LAB_01bt.jpg" />
     </div>
     <div class="six columns">
       <h4>About Biocentaur</h4>
