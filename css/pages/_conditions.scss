@@ -137,14 +137,19 @@ section.post + .health_conditions {
   padding: $padding-half 0;
   font: $normal 2.6rem/3.6rem $regular;
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     h3 {
       font: $bold 3.6rem/4.6rem $regular;
     }
     p {
       font: $normal 2.4rem/3.4rem $regular;
+    }
+    .text {
+      margin-bottom: $padding-half;
     }
   }
 }

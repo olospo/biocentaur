@@ -56,10 +56,10 @@ while ( have_posts() ) : the_post(); ?>
 
 <section class="test_cta">
   <div class="container">
-    <div class="seven columns offset-by-one">
+    <div class="text seven columns offset-by-one">
     Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
     </div>
-    <div class="three columns">
+    <div class="buttons three columns">
       <a href="#" class="button filled white">Order a test</a>
     </div>
   </div>
