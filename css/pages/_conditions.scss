@@ -104,17 +104,28 @@ section.post + .health_conditions {
 
 // Genetic Test 
 .order_test {
-  padding: $padding 0;
+  padding: $padding-half 0;
+  @media (min-width: $breakpoint-tablet) {
+    padding: $padding 0;
+  }
   background: $light-blue;
   .test_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     h3 {
       font: $bold 3.6rem/4.6rem $regular;
     }
     p {
       font: $normal 2.4rem/3.4rem $regular;
+    }
+    .text {
+      margin-bottom: $padding-half;
+      @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 0; 
+      }
     }
   }
 }
