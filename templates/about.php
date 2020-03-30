@@ -4,7 +4,6 @@ $title = get_field('intro_title');
 $content = get_field('intro_content');
 
 
-
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -36,7 +35,7 @@ get_header(); ?>
         <?php endwhile; else : endif; ?>
       </ul>
     </div>
-    <div class="about_image one-half column">
+    <div class="about_image one-half column" style="background: url(' <?php the_field('aims_background_image'); ?> ') center center no-repeat; background-size: cover;">
 
     </div>
   </div>

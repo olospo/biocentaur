@@ -5,19 +5,19 @@
     </div>
     <div class="row">
       <div class="more_block one-third column">
-        <h5>Conditions</h5>
-        <p>Learn more about the range of diseases potentially detected in our Predictive test, including causes, symptoms and treatments.</p>
-        <a href="<?php echo get_site_url(); ?>/individuals/health-conditions" class="read_more">See all conditions</a>
+        <h5><?php the_field('one_title','options'); ?></h5>
+        <p><?php the_field('one_content','options'); ?></p>
+        <a href="<?php the_field('one_link_url','options'); ?>" class="read_more"><?php the_field('one_link_text','options'); ?></a>
       </div>
       <div class="more_block one-third column">
-        <h5>Health features</h5>
-        <p>Advice and information on a range of health-related topics to help empower you to make informed decision about your wellbeing.</p>
-        <a href="#" class="read_more">Explore health features</a>
+        <h5><?php the_field('two_title','options'); ?></h5>
+        <p><?php the_field('two_content','options'); ?></p>
+        <a href="<?php the_field('two_link_url','options'); ?>" class="read_more"><?php the_field('two_link_text','options'); ?></a>
       </div>
       <div class="more_block one-third column">
-        <h5>About Biocentaur</h5>
-        <p>We work at the cutting edge of molecular biology to help accurately diagnose diseases and improve outcomes for patients across the world.</p>
-        <a href="<?php echo get_site_url(); ?>/about" class="read_more">About Biocentaur</a>
+        <h5><?php the_field('three_title','options'); ?></h5>
+        <p><?php the_field('three_content','options'); ?></p>
+        <a href="<?php the_field('three_link_url','options'); ?>" class="read_more"><?php the_field('three_link_text','options'); ?></a>
       </div>
     </div>
   </div>
