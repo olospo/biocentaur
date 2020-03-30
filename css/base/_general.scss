@@ -426,7 +426,7 @@ section.hero{
     padding: 0px;
     .background {
       transform: scale(1.1);
-      animation: bgZoom 2s;
+      animation: bgZoom 4s;
       padding: 100px 0px;
       margin-top: 40px;
       @media (min-width: $breakpoint-tablet) {
