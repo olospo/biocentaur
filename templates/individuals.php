@@ -1,6 +1,11 @@
 <?php /* Template Name: Individuals */
 get_header();
 
+// Test CTA Vars
+$testTitle = get_field('test_title');
+$testContent = get_field('test_content');
+$testImage = get_field('test_product_image');
+
 while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'inc/hero' ); ?>
