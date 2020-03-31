@@ -43,9 +43,9 @@
           <li><a href="<?php echo get_site_url(); ?>/clinicians">Clinicians</a></li>
         </ul>
       <?php } ?>
+      <!-- Mobile Menu Trigger -->
+      
     </nav>
-    
-    <!-- Mobile Menu Trigger -->
     <a class="menu-toggle mobile_menu" aria-controls="primary-menu">
       <span></span>
       <span></span>
@@ -56,7 +56,7 @@
   </div>
 </header>
 </div>
-<!-- Mobile Menu 
+
 <nav class="mobile">
   <?php wp_nav_menu( array( 'theme_location' => 'mobile_main' ) ); ?>
-</nav> -->
+</nav>

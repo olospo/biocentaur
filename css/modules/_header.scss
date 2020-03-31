@@ -34,6 +34,10 @@ header {
   }
   
   nav.primary {
+    display: none;
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+    }
     font: $normal 1.8em/3rem $regular;
     letter-spacing: 0.1rem;
     ul {
@@ -117,17 +121,14 @@ header {
     display: block;
     @media (min-width: $breakpoint-desktop) {
       display: none;
-    } 
-    @media (max-width: $breakpoint-tablet) {
-      left: 25px;
-    } 
+    }
     height: 30px;
     width: 30px;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 35px;
+    right: 10px;
     cursor: pointer;
     z-index: 30;
     span{
@@ -135,7 +136,7 @@ header {
       position: absolute;
       height: 2px;
       width: 100%;
-      background: $white;
+      background: $blue;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
@@ -146,7 +147,7 @@ header {
     }
     &.open {
       span{
-        background-color: $white !important;
+        background-color: $blue !important;
         &:nth-child(1), &:nth-child(4) { opacity: 0; }
         &:nth-child(2) {transform: rotate(45deg);}
         &:nth-child(3) {transform: rotate(-45deg);}
@@ -154,10 +155,11 @@ header {
     }
   }
 }
+
 nav.mobile {
   display: none;
   position: fixed;
-  top: 60px;
+  top: 90px;
   background: $white;
   z-index: 1000;
   width: 100%;
@@ -193,6 +195,9 @@ nav.mobile {
         a {
           border-bottom: none;
         }
+      }
+      ul {
+        display: none; // REMOVE THIS 
       }
     }
   }

@@ -1,6 +1,6 @@
 {
     "key": "group_5e8319f459222",
-    "title": "Test CTA",
+    "title": "Order Test - Call to action",
     "fields": [
         {
             "key": "field_5e831a190948c",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -30,14 +30,14 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 4,
             "new_lines": ""
         },
         {
@@ -49,7 +49,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -63,6 +63,44 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5e834b7422a62",
+            "label": "Order button link",
+            "name": "order_button_link",
+            "type": "page_link",
+            "instructions": "Link to the product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5e834bb422a63",
+            "label": "Learn more link",
+            "name": "learn_more_link",
+            "type": "page_link",
+            "instructions": "Leave blank if not needed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
         }
     ],
     "location": [
@@ -81,7 +119,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -89,5 +127,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1585650690
+    "modified": 1585666371
 }
