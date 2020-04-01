@@ -55,8 +55,7 @@
     
   </div>
 </header>
-</div>
-
 <nav class="mobile">
   <?php wp_nav_menu( array( 'theme_location' => 'mobile_main' ) ); ?>
 </nav>
+</div>

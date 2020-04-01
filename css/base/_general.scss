@@ -74,7 +74,7 @@ body {
   background: $white;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $regular;
   font-kerning: normal;
   color: $blue;
@@ -101,7 +101,10 @@ h4 {
 // Page 
 section {
   &.page, &.post, &.search {
-    margin-top: 140px;
+    margin-top: 90px;
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 160px;
+    }
     padding: $padding-half 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;

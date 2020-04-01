@@ -35,7 +35,7 @@ header {
   
   nav.primary {
     display: none;
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-tablet) {
       display: block;
     }
     font: $normal 1.8em/3rem $regular;
@@ -72,7 +72,7 @@ header {
     font: $normal 1.8rem/3rem $regular;
     float: right;
     padding: 55px 0 0 0;
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-desktop) {
       display: none;
     }
     ul {
@@ -128,7 +128,10 @@ header {
     transition: .5s ease-in-out;
     position: absolute;
     top: 35px;
-    right: 10px;
+    @media (min-width: $breakpoint-tablet) {
+      top: 60px;
+    }
+    right: 20px;
     cursor: pointer;
     z-index: 30;
     span{
@@ -160,10 +163,12 @@ nav.mobile {
   display: none;
   position: fixed;
   top: 90px;
+  @media (min-width: $breakpoint-tablet) {
+    top: 166px;
+  }
   background: $white;
   z-index: 1000;
   width: 100%;
-  border-top: 1px solid $white;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   ul {
     text-align: left;
@@ -177,7 +182,7 @@ nav.mobile {
         font: $normal 1.8rem/1.8rem $regular !important;
         color: $blue;
         padding: 15px 0px;
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid #e1e1ff;
         font-weight: bold;
       }
       a {
@@ -185,19 +190,42 @@ nav.mobile {
         @include transition(all 0.2s ease-out);
         line-height: 1.4rem;
         display: block;
-        color: $blue;
+        color: $mid-blue;
         text-decoration: none;
         margin: 0px 10px;
         padding: 15px 0px;
-        border-bottom: 1px solid $blue;
+        border-bottom: 1px solid #e1e1ff;
       }
-      &:last-child {
+      &:nth-last-child(2), &:last-child {
         a {
           border-bottom: none;
         }
       }
       ul {
         display: none; // REMOVE THIS 
+      }
+      &.button {
+        padding: 0;
+        margin: 10px;
+        display: inline-block;
+        font: $bold 1.6rem/1.6rem $regular;
+        a {
+          font: $bold 1.6rem/1.6rem $regular !important;
+          overflow: hidden;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 15px 80px 15px 20px;
+          margin: 5px 10px 5px 0;
+          text-decoration: none;
+          text-transform: uppercase;
+          -webkit-transition: all ease .5s;
+          -moz-transition: all ease .5s;
+          -o-transition: all ease .5s;
+          transition: all ease .5s;
+          &:hover {
+            color: $white;
+          }
+        }
       }
     }
   }

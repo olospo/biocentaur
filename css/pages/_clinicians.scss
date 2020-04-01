@@ -41,7 +41,10 @@
 }
 
 .fixed_header + .our_tests {
-  margin-top: 150px;
+  margin-top: 90px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 160px;
+  }
 }
 
 .our_tests + .footer_faq .container {
@@ -58,6 +61,16 @@
   padding: $padding-half 0;
   @media (min-width: $breakpoint-tablet) {
     padding: $padding 0;
+  }
+  .content {
+    margin-top: 20px;
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 0; 
+    }
+    h4 {
+      font: $bold 3.6rem/4.6rem $regular;
+      margin-bottom: 20px;
+    }
   }
 }
 
