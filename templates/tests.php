@@ -1,14 +1,17 @@
 <?php /* Template Name: Tests */
 get_header();
 
+$order = get_field('order_link');
+$faq = get_field('faq_link');
+
 while ( have_posts() ) : the_post(); ?>
 
 <section class="post">
   <div class="container">
     <div class="five columns offset-by-one">
       <img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
-      <a href="#" class="button filled">Order a test</a>
-      <a href="#" class="button primary">FAQS</a>
+      <a href="<?php echo $order; ?>" class="button filled">Order a test</a>
+      <a href="<?php echo $faq; ?>" class="button primary">FAQS</a>
     </div>
     <div class="five columns">
       <h1><?php the_title(); ?></h1>
