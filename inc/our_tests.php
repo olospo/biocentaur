@@ -5,25 +5,25 @@
     </div>
     <div class="row">
       <div class="test_block one-third column">
-        <img src="<?php bloginfo('template_directory'); ?>/img/predictive.svg">
-        <h3>Predictive test</h3>
-        <p>Determine your patient’s risk of developing non-cancerous diseases.</p>
-        <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/predictive-test/" class="button primary">Learn more</a>
-        <a href="#" class="button filled">Order test</a>
+        <img src="<?php the_field('test_icon_one',169); ?>">
+        <h3><?php the_field('test_title_one',169); ?></h3>
+        <p><?php the_field('test_excerpt_one',169); ?></p>
+        <a href="<?php the_field('learn_more_link_one',169); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_one',169); ?>" class="button filled">Order test</a>
       </div>
       <div class="test_block one-third column">
-        <img src="<?php bloginfo('template_directory'); ?>/img/diagnostic.svg">
-        <h3>Diagnostic test</h3>
-        <p>Accurately diagnose Lyme Disease and chronic fatigue syndrome.</p>
-        <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/diagnostic-test/" class="button primary">Learn more</a>
-        <a href="#" class="button filled">Order test</a>
+        <img src="<?php the_field('test_icon_two',169); ?>">
+        <h3><?php the_field('test_title_two',169); ?></h3>
+        <p><?php the_field('test_excerpt_two',169); ?></p>
+        <a href="<?php the_field('learn_more_link_two',169); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_two',169); ?>" class="button filled">Order test</a>
       </div>
       <div class="test_block one-third column">
-        <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg">
-        <h3>Targeted test</h3>
-        <p>Accurate screenings to determine your patient’s response to treatment.</p>
-        <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/targeted-test/" class="button primary">Learn more</a>
-        <a href="#" class="button filled">Order test</a>
+        <img src="<?php the_field('test_icon_three',169); ?>">
+        <h3><?php the_field('test_title_three',169); ?></h3>
+        <p><?php the_field('test_excerpt_three',169); ?></p>
+        <a href="<?php the_field('learn_more_link_three',169); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_three',169); ?>" class="button filled">Order test</a>
       </div>
     </div>
   </div>
