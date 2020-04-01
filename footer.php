@@ -7,12 +7,11 @@
       <div class="about three columns">
         <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo_rev.svg" alt="Biocentaur Logo"/>
         <p>
-          Baarerstrasse 75, Zug, 6300.<br />
-          Switzerland
+          <?php the_field('address','options'); ?>
         </p>
         <p>
-          <a href="tel:+441179181506">+44 117 918 1506</a><br />
-          <a href="mailto:info@biocentaur.com">info@biocentaur.com</a>
+          <a href="tel:<?php the_field('phone_number','options'); ?>"><?php the_field('phone_number','options'); ?></a><br />
+          <a href="mailto:<?php the_field('email','options'); ?>"><?php the_field('email','options'); ?></a>
         </p>
         <ul class="social-icons">
           <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>

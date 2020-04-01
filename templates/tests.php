@@ -6,14 +6,14 @@ $faq = get_field('faq_link');
 
 while ( have_posts() ) : the_post(); ?>
 
-<section class="post">
-  <div class="container">
-    <div class="five columns offset-by-one">
+<section class="post single_test">
+  <div class="container flex">
+    <aside class="five columns offset-by-one">
       <img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
       <a href="<?php echo $order; ?>" class="button filled">Order a test</a>
       <a href="<?php echo $faq; ?>" class="button primary">FAQS</a>
-    </div>
-    <div class="five columns">
+    </aside>
+    <div class="content five columns">
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
     </div>

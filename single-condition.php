@@ -9,7 +9,7 @@ while ( have_posts() ) : the_post(); ?>
     <aside class="two columns offset-by-one">
       <img src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" class="condition_image"> 
     </aside>
-    <div class="content eight columns extra_gutter">
+    <div class="content seven columns extra_gutter">
       <div class="breadcrumbs"><a href="<?php echo get_site_url(); ?>/individuals/health-conditions">Conditions</a> <img src="<?php bloginfo('template_directory'); ?>/img/blue_arrow.svg"> <?php the_title(); ?></div>
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
