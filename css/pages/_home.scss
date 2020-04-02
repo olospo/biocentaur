@@ -9,8 +9,8 @@
   padding: 0;
   text-align: center;
   .background {
-    transform: scale(1.1);
-    animation: bgZoom 4s;
+    transform: scale(1.05);
+    animation: bgZoom 5s;
     padding: 40px 0px;
     @media (min-width: $breakpoint-tablet) {
       padding: 120px 0px;
