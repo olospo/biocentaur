@@ -20,12 +20,13 @@
     <nav class="primary nine columns">
       <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
     </nav>
-    <div class="extras three columns">
+    <div class="extras three columns">	
       <ul class="social-icons">
         <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
         <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
         <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
       </ul>
+      <?php // get_search_form(); ?>
     </div>
   </div>
 </header>
@@ -64,5 +65,10 @@
 </header>
 <nav class="mobile">
   <?php wp_nav_menu( array( 'theme_location' => 'mobile_main' ) ); ?>
+  <ul class="social-icons">
+    <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
+    <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
+    <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
+  </ul>
 </nav>
 </div>

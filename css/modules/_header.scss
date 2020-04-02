@@ -69,6 +69,10 @@ header {
   }
   
   .extras {
+    display: block;
+    @media (max-width: $breakpoint-desktop) {
+      display: none;
+    }
     ul.social-icons {
       line-height: 0;
       margin: 8px 0;
@@ -329,6 +333,26 @@ nav.mobile {
             color: $white;
           }
         }
+      }
+    }
+  }
+  ul.social-icons {
+    line-height: 0;
+    margin: 0 10px 20px 10px;
+    li {
+      line-height: 0;
+      display: inline-block;
+      a {
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-bottom: none;
+      }
+      svg {
+        width: 35px;
+        height: auto;
+        margin: 0px auto;
       }
     }
   }
