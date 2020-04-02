@@ -69,7 +69,7 @@
     <div class="row">
       <div class="end_links twelve columns">
         <strong>Biocentaur &copy; <?php echo date("Y"); ?>, all rights reserved</strong> | <a href="#">Disclaimer & copyrights</a> | <a href="#">Privacy & cookie policy</a> | <a href="#">Accessibility</a> | <a href="#">Sitemap</a> | <a href="#">Terms of service</a><br />
-        <span class="registered">Registered number: xxxxx</span> | <span class="registered">Registered office: xxx</span>
+        <span class="registered">Registered number: xxxxx</span> | <span class="registered">Registered office: Biocentaur LTD, 3 Beau Street, BA6 1QY Bath, UK.</span> | <span class="registered">In compliance with GDPR -EU 2016/679- / IBC- Motive Consulting / DPO for RGCC Group</span>
       </div>
     </div>
   </div>
