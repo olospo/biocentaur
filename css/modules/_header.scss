@@ -136,82 +136,107 @@ header {
             background: url('../img/menu_arrow.svg') right center no-repeat;
             padding-right: 20px;
           }
-          li.predictive, li.diagnostic, li.targeted {
-            display: inline-block;
-            font: $bold 2.2rem/1.8rem $regular !important;
-            &:before {
-              content: "";
-              height: 60px;
-              width: 60px;
-              display: inline-block;
-              float: left;
-              margin-right: 20px;
-            }
-            &:after {
-              font: $normal 1.6rem/2.4rem $regular !important;
-              margin-left: 50px;
-              display: table; 
-            }
-          }
-          li.predictive {
-            &:before {
-              background: url('../img/predictive_round.svg') left center no-repeat;
-              background-size: cover;
-            }
-            &:after {
-              content: "Determine your patient’s risk of developing non-cancerous diseases.";
+          ul {
+            li {
+              display: block;
+              a {
+                text-transform: none;
+                font: $normal 1.8rem/2rem $regular;
+                color: $blue;
+                padding: 20px;
+                margin: 0;
+                border-bottom: none;
+                background: none;
+              }
+              &:last-child {
+                border-bottom: none;
+              }
+              &:hover a, &.current-menu-item a, &.current_page_item a {
+                color: $blue;
+                font-weight: bold;
+                background: $light-blue;
+                @include border-radius(10px);
+              }
             }
           }
-          li.diagnostic {
-            &:before {
-              background: url('../img/diagnostic_round.svg') left center no-repeat;
-              background-size: cover;
-            }
-            &:after {
-              content: "Accurately diagnose Lyme Disease and chronic fatigue syndrome.";
-            }
-          }
-          li.targeted {
-            &:before {
-              background: url('../img/targeted_round.svg') left center no-repeat;
-              background-size: cover;
-            }
-            &:after {
-              content: "Accurate screenings to determine your patient’s response to treatment.";
-            }
-          }
-          
         }
-        &.tests:hover > ul {
-          left: 0;
-          min-width: auto;
-          display: inline-block;
-          background: $white;
-          border: 1px solid $border;
-          letter-spacing: 0px;
-          padding: 30px 0px;
-          @include border-radius(10px);
-          li {
-            padding: 0px 2%;
-            width: 28%;
-            border-right: 1px solid #e8eaed;
-            border-bottom: none;
-            a {
-              padding: 0;
-              margin: 0 0 10px 0;
-              font-weight: bold;
-            }
-            &:last-child {
-              border-right: none;
+        &.tests {
+          ul {
+            left: 0;
+            min-width: auto;
+            display: inline-block;
+            background: $white;
+            border: 1px solid $border;
+            letter-spacing: 0px;
+            padding: 30px 0px;
+            @include border-radius(10px);
+            li {
+              padding: 0px 2%;
+              width: 28%;
+              border-right: 1px solid #e8eaed;
               border-bottom: none;
+              a {
+                background: none;
+                padding: 0;
+                margin: 0 0 10px 0;
+                font-weight: bold;
+              }
+              &:last-child {
+                border-right: none;
+                border-bottom: none;
+              }
+              &:hover a, &.current-menu-item a, &.current_page_item a {
+                color: $blue;
+                font-weight: bold;
+                background: transparent;
+                text-decoration: underline;
+                text-decoration-color: $coral;
+                @include border-radius(0px);
+              }
             }
-            &:hover a, &.current-menu-item a, &.current_page_item a {
-              color: $blue;
-              font-weight: bold;
-              background: transparent;
-              text-decoration: underline;
-              text-decoration-color: $coral;
-              @include border-radius(0px);
+            li.predictive, li.diagnostic, li.targeted {
+              display: inline-block;
+              font: $bold 2.2rem/1.8rem $regular !important;
+              &:before {
+                content: "";
+                height: 60px;
+                width: 60px;
+                display: inline-block;
+                float: left;
+                margin-right: 20px;
+              }
+              &:after {
+                font: $normal 1.6rem/2.4rem $regular !important;
+                margin-left: 50px;
+                display: table; 
+              }
+            }
+            li.predictive {
+              &:before {
+                background: url('../img/predictive_round.svg') left center no-repeat;
+                background-size: cover;
+              }
+              &:after {
+                content: "Determine your patient’s risk of developing non-cancerous diseases.";
+              }
+            }
+            li.diagnostic {
+              &:before {
+                background: url('../img/diagnostic_round.svg') left center no-repeat;
+                background-size: cover;
+              }
+              &:after {
+                content: "Accurately diagnose Lyme Disease and chronic fatigue syndrome.";
+              }
+            }
+            li.targeted {
+              &:before {
+                background: url('../img/targeted_round.svg') left center no-repeat;
+                background-size: cover;
+              }
+              &:after {
+                content: "Accurate screenings to determine your patient’s response to treatment.";
+              }
             }
           }
         }
@@ -359,44 +384,22 @@ nav.mobile {
 }
 
 nav.secondary ul ul {
-  display: none; 
   position: absolute;
   top: 100px;
   z-index: 9999;
   background: $white;
   margin: 0;
-}
-
-nav.secondary ul li:hover > ul {
   min-width: 200px;
-  display: block;
   background: $white;
   border: 1px solid $border;
   letter-spacing: 0px;
   @include border-radius(10px);
-  li {
-    float: none;
-    display: block;
-    text-align: left;
-    border-bottom: 1px solid #e8eaed;
-    margin: 0px;
-    a {
-      text-transform: none;
-      font: $normal 1.8rem/2rem $regular;
-      color: $blue;
-      padding: 20px;
-      margin: 0;
-      border-bottom: none;
-      background: none;
-    }
-    &:last-child {
-      border-bottom: none;
-    }
-    &:hover a, &.current-menu-item a, &.current_page_item a {
-      color: $blue;
-      font-weight: bold;
-      background: $light-blue;
-      @include border-radius(10px);
-    }
-  }
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  @include fade();
+  opacity: 0;
+}
+
+nav.secondary ul li:hover > ul {
+  @include reset();
+  opacity: 1;
 }
