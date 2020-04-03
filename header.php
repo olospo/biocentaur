@@ -26,7 +26,7 @@
         <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
         <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
       </ul>
-      <?php // get_search_form(); ?>
+      <?php get_search_form(); ?>
     </div>
   </div>
 </header>
