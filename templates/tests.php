@@ -20,7 +20,7 @@ while ( have_posts() ) : the_post(); ?>
   </div>
 </section>
 
-<?php get_template_part('inc/health_conditions'); ?>
+<?php if(is_page(211)) { get_template_part('inc/health_conditions'); } // Only show on Individual Test ?>
 
 <?php get_template_part('inc/know_more'); ?>
 
