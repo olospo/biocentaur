@@ -17,16 +17,18 @@
 <header class="menu">
   <div class="container">
     <!-- Main Menu -->
-    <nav class="primary nine columns">
+    <nav class="primary eight columns">
       <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
     </nav>
-    <div class="extras three columns">	
+    <div class="extras four columns">	
+      <div class="searchbox">
+        <?php get_search_form(); ?>
+      </div>
       <ul class="social-icons">
         <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
         <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
         <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
       </ul>
-      <?php get_search_form(); ?>
     </div>
   </div>
 </header>

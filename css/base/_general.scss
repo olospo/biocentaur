@@ -100,7 +100,7 @@ h4 {
 
 // Page 
 section {
-  &.page, &.post, &.search {
+  &.page, &.post {
     margin-top: 90px;
     @media (min-width: $breakpoint-tablet) {
       margin-top: 160px;
@@ -465,6 +465,47 @@ section.hero{
 	to {
 		opacity: 1;
 	}
+}
+
+// Pagination
+
+.pagination {
+  clear: both;
+  position: relative;
+  margin-top: 0px;
+  padding: 20px 0px;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      a {
+        padding: 10px 15px;
+        background: $blue;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          background: $coral;
+        }
+      }
+      &.next {
+        position: absolute;
+        right: 0;
+      }
+      &.prev {
+        position: absolute;
+        left: 0;
+      }
+      &.active {
+        a {
+          background: $white;
+          color: $blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 // WordPress Alignment

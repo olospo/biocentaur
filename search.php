@@ -1,23 +1,20 @@
 <?php /* Search */
 get_header(); ?>
 
-<section class="hero small">
+<section class="post no_hero">
   <div class="container">
-    <div class="twelve columns">
+    <div class="ten columns offset-by-one">
       <div class="content">
         <h1><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
       </div>
     </div>
   </div>
-</section>
-
-<section class="search news">
   <div class="container">
-    <div class="twelve columns">
+    <div class="ten columns offset-by-one">
       <div class="content">
         <?php if ( have_posts() ) : // Show search results ?>
         <?php while ( have_posts() ) : the_post(); ?>
-          <article class="standard one-third column">
+          <article class="standard twelve columns">
           <div class="item_content">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <div class="content">
@@ -27,11 +24,8 @@ get_header(); ?>
         </article>
         <?php endwhile; ?>
       </div>
-      <div class="content">
-        <div class="sixteen columns">
-          <?php numeric_posts_nav(); ?>
-        </div>
-      </div>
+      <?php numeric_posts_nav(); ?>
+      
       <?php else : // No search results found ?>
       <article class="search_item">
         <h2>No Results Found</h1>
