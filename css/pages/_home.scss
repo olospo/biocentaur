@@ -2,12 +2,15 @@
 
 // Hero
 .home.hero {
-  margin-top: 150px;
+  margin-top: 90px;
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 160px;
+  }
   padding: 0;
   text-align: center;
   .background {
-    transform: scale(1.1);
-    animation: bgZoom 2s;
+    transform: scale(1.05);
+    animation: bgZoom 4s;
     padding: 40px 0px;
     @media (min-width: $breakpoint-tablet) {
       padding: 120px 0px;
@@ -75,7 +78,10 @@
     }
   }
   .float {
-    padding: $padding-half 0;
+    padding: $padding-half;
+    @media (min-width: $breakpoint-desktop) {
+      padding: $padding-half 0;
+    }
     &.video {
       text-align: center;
       display: block !important;
@@ -96,7 +102,10 @@
 // CTA
 .home_cta {
   margin-top: -$padding-half;
-  margin-bottom: $padding;
+  margin-bottom: $padding-half;
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: $padding;
+  }
   display: block;
   .cta__block {
     -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
@@ -129,6 +138,12 @@
   }
   p {
     font: $normal 2.2rem/3.2rem $regular;
+  }
+  img {
+    margin-top: $padding-half;
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 0; 
+    }
   }
 }
 

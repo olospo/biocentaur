@@ -17,9 +17,19 @@
 <header class="menu">
   <div class="container">
     <!-- Main Menu -->
-    <nav class="primary nine columns">
+    <nav class="primary eight columns">
       <?php wp_nav_menu( array( 'theme_location' => 'main', 'container'=> false, 'menu_class'=> false ) ); ?>
     </nav>
+    <div class="extras four columns">	
+      <div class="searchbox">
+        <?php get_search_form(); ?>
+      </div>
+      <ul class="social-icons">
+        <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
+        <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
+        <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
+      </ul>
+    </div>
   </div>
 </header>
 <header class="logo_secondary_menu">
@@ -32,20 +42,25 @@
       <?php if ( is_front_page() ) { echo '</h1>'; } else { echo '</p>'; } ?>
     </div>
     <nav class="secondary nine columns">
-      <a href="#" class="button primary">Order a test</a>
+      
       <?php if (is_tree(164) || 'condition' == get_post_type()) { // Individuals and/or children ?>
+        <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'individuals', 'container'=> false, 'menu_class'=> false ) ); ?>
       <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>
+        <a href="<?php echo get_site_url(); ?>/customer/clinician-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'clinicians', 'container'=> false, 'menu_class'=> false ) ); ?>
+      <?php } elseif (is_tree(500)) { } elseif (is_singular( 'product' )) { // Ordering process ?> 
+
       <?php } else { // Other pages ?>
+        <a href="<?php echo get_site_url(); ?>/customer/" class="button primary">Order a test</a>
         <ul>
           <li><a href="<?php echo get_site_url(); ?>/individuals">Individuals</a></li>
           <li><a href="<?php echo get_site_url(); ?>/clinicians">Clinicians</a></li>
         </ul>
       <?php } ?>
+      <!-- Mobile Menu Trigger -->
+      
     </nav>
-    
-    <!-- Mobile Menu Trigger -->
     <a class="menu-toggle mobile_menu" aria-controls="primary-menu">
       <span></span>
       <span></span>
@@ -55,8 +70,12 @@
     
   </div>
 </header>
-</div>
-<!-- Mobile Menu 
 <nav class="mobile">
   <?php wp_nav_menu( array( 'theme_location' => 'mobile_main' ) ); ?>
-</nav> -->
+  <ul class="social-icons">
+    <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
+    <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
+    <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
+  </ul>
+</nav>
+</div>

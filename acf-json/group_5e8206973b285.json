@@ -1,10 +1,10 @@
 {
-    "key": "group_5c6bfca9bf663",
-    "title": "General",
+    "key": "group_5e8206973b285",
+    "title": "Want to know more?",
     "fields": [
         {
-            "key": "field_5d3704e85c013",
-            "label": "Code",
+            "key": "field_5e82085f43530",
+            "label": "Box One",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,11 +19,30 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d5aaaff60f65",
-            "label": "Social Metadata",
-            "name": "social_metadata",
+            "key": "field_5e82087843533",
+            "label": "Title",
+            "name": "one_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e8208c319e99",
+            "label": "Content",
+            "name": "one_content",
             "type": "textarea",
-            "instructions": "Add in the social metadata to go inside the header",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,15 +53,88 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 2,
             "new_lines": ""
         },
         {
-            "key": "field_5c6bfcbf3877e",
-            "label": "Google Analytics",
-            "name": "google_analytics",
+            "key": "field_5e8208ea19e9c",
+            "label": "Link Text",
+            "name": "one_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e82092019e9f",
+            "label": "Link URL",
+            "name": "one_link_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5e82086f43531",
+            "label": "Box Two",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e82088343534",
+            "label": "Title",
+            "name": "two_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e8208d619e9a",
+            "label": "Content",
+            "name": "two_content",
             "type": "textarea",
-            "instructions": "Add in the code for Google Analytics",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -53,12 +145,50 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 2,
             "new_lines": ""
         },
         {
-            "key": "field_5d3711a6f7431",
-            "label": "Contact Details",
+            "key": "field_5e8208f919e9d",
+            "label": "Link Text",
+            "name": "two_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e82093c19ea0",
+            "label": "Link URL",
+            "name": "two_link_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5e82087343532",
+            "label": "Box Three",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -73,9 +203,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d3711c0f7433",
-            "label": "Email",
-            "name": "email",
+            "key": "field_5e82088943535",
+            "label": "Title",
+            "name": "three_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -92,28 +222,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d3711c6f7434",
-            "label": "Phone Number",
-            "name": "phone_number",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d3711aff7432",
-            "label": "Address",
-            "name": "address",
+            "key": "field_5e8208dd19e9b",
+            "label": "Content",
+            "name": "three_content",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -126,35 +237,19 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
+            "rows": 2,
+            "new_lines": ""
         },
         {
-            "key": "field_5d3711ccf7435",
-            "label": "Social",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5e7218d6b6d6a",
-            "label": "Twitter Link",
-            "name": "twitter_link",
+            "key": "field_5e82090219e9e",
+            "label": "Link Text",
+            "name": "three_link_text",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -165,42 +260,23 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d443665ef6dd",
-            "label": "Facebook Link",
-            "name": "facebook_link",
-            "type": "text",
+            "key": "field_5e82094219ea1",
+            "label": "Link URL",
+            "name": "three_link_url",
+            "type": "page_link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e7218ddb6d6b",
-            "label": "YouTube Link",
-            "name": "youtube_link",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
@@ -212,7 +288,7 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 0,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -220,5 +296,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1585579731
+    "modified": 1585580687
 }

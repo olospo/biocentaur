@@ -77,8 +77,8 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Footer Settings',
-		'menu_title'	=> 'Footer',
+		'page_title' 	=> 'Theme Settings',
+		'menu_title'	=> 'Settings',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	
@@ -273,6 +273,7 @@ register_taxonomy('question_cat', 'faq', array(
             'singular_name' => _x( 'Category', 'taxonomy singular name', 'rgcc_translate' ),
         ),
     ));
+    
 
 // CPT Menu Item
 
@@ -333,7 +334,7 @@ add_filter( 'pre_get_posts', 'cpt_search' );
  */
 function cpt_search( $query ) {
   if ( $query->is_search ) {
-    $query->set( 'post_type', array( 'post', 'tanks', 'services' ) );
+    $query->set( 'post_type', array( 'page', 'condition' ) );
   }
   return $query;  
 }
@@ -397,5 +398,8 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       rgcc_error( 'Sorry, no FAQs are available that match your search.' ); 
   endif;
 }
+
+// Disable WooCommerce CSS
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 ?>

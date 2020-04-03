@@ -74,7 +74,7 @@ body {
   background: $white;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $regular;
   font-kerning: normal;
   color: $blue;
@@ -100,8 +100,11 @@ h4 {
 
 // Page 
 section {
-  &.page, &.post, &.search {
-    margin-top: 140px;
+  &.page, &.post {
+    margin-top: 90px;
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 160px;
+    }
     padding: $padding-half 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;
@@ -123,9 +126,9 @@ section {
       }
     }
     &.no_hero {
-      padding: 100px 0 $padding-half 0px;
+      padding: $padding-half 0px;
       @media (min-width: $breakpoint-tablet) {
-        padding: 140px 0px $padding 0px;
+        padding: $padding 0px;
       }
     }
   }
@@ -138,16 +141,15 @@ section {
     font-size: 3.6rem;
   }
   h2 {
-    font: $normal 3.6rem/4rem $regular;
+    font: $bold 2.8rem/3.8rem $regular;
     margin-bottom: 0.5em;
-    font-size: 3.6rem;
-    line-height: 4rem;
-    
+    font-size: 2.8rem;
+    line-height: 3.8rem;
   }
   h3 {
-    font: $normal 2.4rem/3.0rem $regular;
+    font: $bold 2.2rem/3.0rem $regular;
     margin-bottom: 10px;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
   h4 {
     font: $bold 2rem/2.8rem $regular;
@@ -249,7 +251,7 @@ section {
       display: inline;
     }
   }
-  .nf-form-layout {
+  .nf-form-layout, .register {
     form {
       .nf-cell:first-child {
         padding-right: 20px;
@@ -263,23 +265,20 @@ section {
       label {
         font: $normal 1.8rem/2.6rem $regular;
         @media (min-width: $breakpoint-tablet) {
-          font: $normal 2.4rem/3.4rem $regular;
+          font: $normal 2.0rem/3.4rem $regular;
         }
         font-weight: 300 !important;
-        color: $black;
+        color: $blue;
       }
       
       select, input, textarea {
         font: $normal 1.8rem/2.6rem $regular;
-        @media (min-width: $breakpoint-tablet) {
-          font: $normal 2.2rem/3.4rem $regular;
-        }
         @include border-radius(5px);
         background: transparent;
-        border: 1px solid $black;
+        border: 1px solid #adbac8;
         padding: 10px;
         &:focus {
-          border: 1px solid $blue;
+          border: 1px solid $coral;
         }
       }
       select {
@@ -291,6 +290,7 @@ section {
         margin: 20px 0 0 0;
         @extend .button;
         @extend .primary;
+        @extend .filled;
         border: none;
         &:hover {
           background: $blue;
@@ -425,8 +425,8 @@ section.hero{
     overflow: hidden; 
     padding: 0px;
     .background {
-      transform: scale(1.1);
-      animation: bgZoom 2s;
+      transform: scale(1.05);
+      animation: bgZoom 4s;
       padding: 100px 0px;
       margin-top: 40px;
       @media (min-width: $breakpoint-tablet) {
@@ -463,6 +463,47 @@ section.hero{
 	to {
 		opacity: 1;
 	}
+}
+
+// Pagination
+
+.pagination {
+  clear: both;
+  position: relative;
+  margin-top: 0px;
+  padding: 20px 0px;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      a {
+        padding: 10px 15px;
+        background: $blue;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          background: $coral;
+        }
+      }
+      &.next {
+        position: absolute;
+        right: 0;
+      }
+      &.prev {
+        position: absolute;
+        left: 0;
+      }
+      &.active {
+        a {
+          background: $white;
+          color: $blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 // WordPress Alignment

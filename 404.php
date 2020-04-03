@@ -12,4 +12,8 @@ get_header(); ?>
   </div>
 </section>
 
+<?php get_template_part('inc/know_more'); // Know More section ?>
+
+<?php get_template_part('inc/footer_faq'); // Footer FAQ ?>
+
 <?php get_footer(); ?>

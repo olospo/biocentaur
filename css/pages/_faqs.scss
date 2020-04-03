@@ -34,7 +34,10 @@
 .footer_faq {
   .container {
     border-top: 1px solid $border;
-    padding-top: $padding;
+    padding-top: $padding-half;
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: $padding;
+    }
   }
   padding: $padding-half 0;
   background: $light-blue;

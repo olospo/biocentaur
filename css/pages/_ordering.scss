@@ -1,0 +1,117 @@
+// Ordering
+
+.test_navigation {
+  background: #e6eaef;
+  padding: 10px;
+  margin-top: 90px;
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 166px;
+  }
+  ul {
+    margin: 10px 0;
+    text-align: center;
+    li {
+      line-height: 2rem;
+      text-transform: uppercase;
+      display: inline-block;
+      color: #aebac8;
+      padding: 0px 5px 0px 5px;
+      &.active {
+        color: $blue;
+        font-weight: bold;
+      }
+      &:after {
+        padding: 0px 10px;
+        background: url('../img/grey_arrow.svg') right center no-repeat;
+        content: "";
+        content: "";
+        height: 14px;
+        width: 18px;
+        display: inline-block;
+        background-size: contain;
+      }
+      &:last-child {
+        &:after {
+          background: none;
+          padding: 0;
+          height: 0;
+          width: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.test_content {
+  padding: $padding 0
+}
+.test_heading {
+  padding: 20px 0 $padding-half 0;
+  h1 {
+    margin-bottom: 5px;
+  }
+  a.back {
+    font: $normal 2.0rem/2.6rem $regular;
+    margin-bottom: 30px;
+    display: inline-block;
+    background: url('../img/back_arrow.svg') left center no-repeat;
+    padding-left: 20px;
+  }
+  p {
+    font: $normal 2.4rem/3.6rem $regular;
+  }
+}
+a.declaration {
+  position: relative;
+  text-decoration: none;
+  .next_button {
+    font: $normal 2.6rem/3.6rem $regular;
+    @include border-radius(10px);
+    padding: 30px 120px 30px 30px;
+    border: 1px solid $border;
+    -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    box-shadow: 0px 15px 20px -3px #e6ecf0;
+    margin-bottom: 30px;
+    background: url('../img/grey_arrow.svg') right 30px center no-repeat;
+    overflow: hidden;
+    &:hover {
+      background: #f6f8fc url('../img/grey_arrow.svg') right 30px center no-repeat;
+      color: $blue;
+    }
+    svg {
+      width: 100px;
+      height: auto;
+      background: $coral-tint;
+      padding: 10px;
+      @include border-radius(50%);
+      float: left;
+    }
+    .content {
+      margin-left: 150px;
+    }
+  }
+}
+
+.register {
+  form {
+    .half {
+      margin-bottom: 20px;
+      overflow: hidden;
+      .element {
+        float: left;
+        width: 50%;
+      }
+    }
+    .full {
+      label {
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "key": "group_5e847ce6a789d",
+    "title": "Tests - Single",
+    "fields": [
+        {
+            "key": "field_5e847cf31cdc9",
+            "label": "Order link",
+            "name": "order_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5e847cf91cdca",
+            "label": "FAQ link",
+            "name": "faq_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/tests.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1585741191
+}
