@@ -12,50 +12,7 @@ get_header(); ?>
 <section class="post no_hero">
 <?php } ?>
   <div class="container flex">
-    <aside class="three columns">
-      <?php global $post;
-        $parent = get_post($post->post_parent);
-        $current_post = $post->ID;
-      if ( $post->post_parent ) :  // if it's a child
-        $siblings = new WP_Query( array(
-            'post_type' => 'page',
-            'post_parent' => $post->post_parent
-        ) );
-        if ( $siblings->have_posts() ) :
-      ?>
-      <div class="services-list">
-        <div class="content">
-          <ul>
-            <li><a href="<?php the_permalink($parent); ?>"><?php echo $parent->post_title; ?></a></li>
-            <?php while ( $siblings->have_posts() ) : $siblings->the_post(); ?>
-            <li <?php if( $current_post == $post->ID ) { echo ' class="current"'; } ?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-            <?php endwhile; wp_reset_postdata(); ?>
-          </ul>
-        </div>
-      </div>
-      <?php endif; endif; ?>
-      
-      <?php global $post;
-      if ( $post ) :  // if it's a child
-        $siblings = new WP_Query( array(
-            'post_type' => 'page',
-            'post_parent' => $post->ID
-        ) );
-        if ( $siblings->have_posts() ) :
-      ?>
-      <div class="services-list">
-        <div class="content">
-          <ul>
-            <li class="current"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-            <?php while ( $siblings->have_posts() ) : $siblings->the_post(); ?>
-            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-            <?php endwhile; wp_reset_postdata(); ?>
-          </ul>
-        </div>
-      </div>
-      <?php endif; endif; ?>
-    </aside>
-    <div class="content nine columns extra_gutter">
+    <div class="content ten columns offset-by-one">
        <h1><?php the_title(); ?></h1>
       <?php $content = get_the_content(); if($content) { ?>
         <?php echo $content; ?>
@@ -65,5 +22,11 @@ get_header(); ?>
 </section>
 
 <?php endwhile; // end of the loop. ?>
+
+<?php get_template_part('inc/health_conditions'); // Health Conditions Accordion ?>
+
+<?php get_template_part('inc/know_more'); // Know More section ?>
+
+<?php get_template_part('inc/footer_faq'); // Footer FAQ ?>
 
 <?php get_footer(); ?>
