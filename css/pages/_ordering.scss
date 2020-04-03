@@ -97,21 +97,38 @@ a.declaration {
 
 .register {
   form {
+    input {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 6px 10px !important;
+    }
+    label {
+      font: $normal 1.8rem/2.6rem $regular;
+      margin-bottom: 5px;
+      display: block;
+    }
     .half {
       margin-bottom: 20px;
       overflow: hidden;
       .element {
         float: left;
-        width: 50%;
-      }
-    }
-    .full {
-      label {
-        width: 100%;
+        width: 48%;
+        &:last-child {
+          margin-left: 4%;
+        }
       }
       input {
         width: 100%;
       }
+    }
+    .full {
+      margin-bottom: 20px;
+      overflow: hidden;
+      input[type="email"] {
+        width: 100%;
+      }
+
     }
   }
 }

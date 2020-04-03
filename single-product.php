@@ -20,7 +20,7 @@ while ( have_posts() ) : the_post(); ?>
       <div class="test_heading">
         <a href="<?php echo get_site_url(); ?>" class="back">Back to Biocentaur</a>
         <h1>Order your test</h1>
-        <p>You are an <?php if ( is_page('269') ) { echo "Individual"; } else { echo "Clinician"; } ?> ordering a <?php the_title(); ?></p>
+        <p>You are <?php if ( is_page('269') ) { echo "an Individual"; } else { echo "a Clinician"; } ?> ordering a <?php the_title(); ?> via online transaction.</p>
       </div>
       <div class="row">
         <div class="register six columns">
@@ -37,6 +37,7 @@ while ( have_posts() ) : the_post(); ?>
               </div>
               
             </div>
+            
             <div class="full">
               <div class="element">
                 <label>Email *</label>
@@ -55,8 +56,15 @@ while ( have_posts() ) : the_post(); ?>
                 <input type="password" />
               </div>
             </div>
+            
+            <div class="full">
+              <div class="element">
+                <input type="checkbox"> By registering I agree to Biocentaur's Terms of use and Privacy policy
+              </div>
+            </div>
 
-          <a href="<?php echo get_site_url(); ?>/customer/confirm" class="button primary filled">Register</a>
+            <a href="<?php echo get_site_url(); ?>/customer/confirm" class="button primary filled">Register</a>
+            
           </form>
         </div>
         <div class="product six columns">
