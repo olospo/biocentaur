@@ -265,23 +265,20 @@ section {
       label {
         font: $normal 1.8rem/2.6rem $regular;
         @media (min-width: $breakpoint-tablet) {
-          font: $normal 2.4rem/3.4rem $regular;
+          font: $normal 2.0rem/3.4rem $regular;
         }
         font-weight: 300 !important;
-        color: $black;
+        color: $blue;
       }
       
       select, input, textarea {
         font: $normal 1.8rem/2.6rem $regular;
-        @media (min-width: $breakpoint-tablet) {
-          font: $normal 2.2rem/3.4rem $regular;
-        }
         @include border-radius(5px);
         background: transparent;
-        border: 1px solid $black;
+        border: 1px solid #adbac8;
         padding: 10px;
         &:focus {
-          border: 1px solid $blue;
+          border: 1px solid $coral;
         }
       }
       select {
@@ -293,6 +290,7 @@ section {
         margin: 20px 0 0 0;
         @extend .button;
         @extend .primary;
+        @extend .filled;
         border: none;
         &:hover {
           background: $blue;
