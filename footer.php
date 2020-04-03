@@ -30,6 +30,7 @@
             <a href="#">Support</a>
             <ul>
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Conditions</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/individuals/support/sample-collection/">Sample collection</a></li>
               <li><a href="#">Health features</a></li>
             </ul>
           </li>
@@ -39,7 +40,6 @@
       <div class="three columns">
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/clinicians/">Clinicians</a></h5></li>
-          <li><a href="#">Clinicians</a></li>
           <li>
             <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/">Our tests</a>
             <ul>
