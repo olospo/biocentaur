@@ -60,7 +60,7 @@ while ( have_posts() ) : the_post(); ?>
     Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
     </div>
     <div class="three columns">
-      <a href="#" class="button filled white">Order a test</a>
+      <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="button filled white">Order a test</a>
     </div>
   </div>
 </section>
