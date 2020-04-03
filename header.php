@@ -49,6 +49,8 @@
       <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>
         <a href="<?php echo get_site_url(); ?>/customer/clinician-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'clinicians', 'container'=> false, 'menu_class'=> false ) ); ?>
+      <?php } elseif (is_tree(500)) { } elseif (is_singular( 'product' )) { // Ordering process ?> 
+
       <?php } else { // Other pages ?>
         <a href="<?php echo get_site_url(); ?>/customer/" class="button primary">Order a test</a>
         <ul>

@@ -94,3 +94,24 @@ a.declaration {
     }
   }
 }
+
+.register {
+  form {
+    .half {
+      margin-bottom: 20px;
+      overflow: hidden;
+      .element {
+        float: left;
+        width: 50%;
+      }
+    }
+    .full {
+      label {
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

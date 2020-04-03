@@ -23,7 +23,7 @@ get_header(); ?>
         <p>You are an Individual ordering a <a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></p>
       </div>
       
-      <a href="#" class="declaration">
+      <a href="<?php echo get_site_url(); ?>/product/future-health-test/" class="declaration">
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/order-online.svg" />
           <div class="content">

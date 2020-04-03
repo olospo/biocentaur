@@ -23,7 +23,7 @@ get_header(); ?>
         <p>You are a Clinician. Please select a test to order:</p>
       </div>
       
-      <a href="#" class="declaration">
+      <a href="<?php echo get_site_url(); ?>/product/predictive-test/" class="declaration">
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/predictive.svg" />
           <div class="content">
@@ -33,7 +33,7 @@ get_header(); ?>
         </div>
       </a>
       
-      <a href="#" class="declaration">
+      <a href="<?php echo get_site_url(); ?>/product/diagnostic-test/" class="declaration">
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/diagnostic.svg" />
           <div class="content">
@@ -43,7 +43,7 @@ get_header(); ?>
         </div>
       </a>
       
-      <a href="#" class="declaration">
+      <a href="<?php echo get_site_url(); ?>/product/targeted-test/" class="declaration">
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
           <div class="content">
