@@ -32,13 +32,14 @@ function theme_enqueue_scripts() {
   wp_register_script( 'jquery', get_stylesheet_directory_uri().'/js/jquery.min.js', false, NULL, true );
   
   wp_enqueue_script( 'jquery' ); // Re-register jQuery
-  wp_enqueue_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', 'jquery', NULL, true );
+
   wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/application.min.js', 'jquery', NULL, true );
   wp_enqueue_script( 'theme-functions', get_stylesheet_directory_uri().'/js/functions.js', 'jquery', NULL , true ); 
   
-  wp_enqueue_script('ajax', get_stylesheet_directory_uri(). '/js/ajax.min.js', 'jquery', false );
-  wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-  
+  wp_enqueue_script('ajax', get_stylesheet_directory_uri(). '/js/ajax.min.js', 'jquery', NULL, true );
+  wp_localize_script('ajax', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+  wp_enqueue_script('ajax');
+
 }
 
 // Disable Emoji Loading
@@ -59,9 +60,6 @@ require 'plugin-update-checker/plugin-update-checker.php';
 );
 
 $myUpdateChecker->setBranch('master');
-
-// Add Ajax Functions
-include_once 'functions/ajax-functions.php';
 
 // Options Page
 
@@ -105,6 +103,8 @@ function ID_from_page_name($page_name)
 	return $page_name_id;
 }
 
+// Disable WooCommerce CSS
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 // Pagination
 function numeric_posts_nav() {
@@ -353,6 +353,10 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 	return FALSE;  // we aren't at the page, and the page is not an ancestor
 }
 
+// Add Ajax Functions
+include_once 'functions/ajax-functions.php';
+
+// FAQ functions
 function the_faq_content( $posts_per_page, $pagination = true ) {
   $searchterm = $_REQUEST['faq_searchterm'] ?? "";
   $category = $_REQUEST['category'] ?? false;
@@ -366,13 +370,13 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       $args['s'] = $searchterm;
   }
   if ($category && $category !== 'all') {
-      $args['tax_query'] = array(
-          array(
-              'taxonomy' => 'question_cat',
-              'field'    => 'slug',
-              'terms'    => $category,
-          ),
-      );
+    $args['tax_query'] = array(
+      array(
+        'taxonomy' => 'question_cat',
+        'field'    => 'slug',
+        'terms'    => $category,
+      ),
+    );
   }
   
   $args['post_status'] = 'publish';
@@ -388,18 +392,15 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       endwhile;
 
       if ($pagination) {
+          echo "Pagination";
           // Previous/next page navigation.
-          rgcc_posts_navigation($faq_query);
+          // rgcc_posts_navigation($faq_query);
       }
       
       wp_reset_postdata();
   
   else : 
-      rgcc_error( 'Sorry, no FAQs are available that match your search.' ); 
+      echo "Sorry, no FAQs are available that match your search."; 
   endif;
 }
-
-// Disable WooCommerce CSS
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
-
 ?>

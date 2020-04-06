@@ -3,20 +3,6 @@ $(".mobile_menu").click(function() {
   $(this).toggleClass("open");
 });
 
-
-$(".mobile_enquiry").click(function() {
-  var link = $(this);
-  $('.enquiry form').slideToggle('slow',function() {
-    if ($(this).is(':visible')) {
-    link.text('Hide form');                
-    } else {
-    link.text('View form');                
-    }        
-  });
-});
-
-
-
 $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 768px
   var width = $(this).width(); // The window width
   if (width > 768) {
@@ -52,8 +38,6 @@ $('.cta_slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,  
 });
-
-
 
 // SVG as Images
 $(function(){
@@ -119,5 +103,4 @@ var componentVisible = (function ($) {
     offset: '80%'
   });
 
-  
 })(jQuery);

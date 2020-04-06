@@ -1,9 +1,9 @@
 <?php get_header();
-// $searchterm = $_REQUEST['faq_searchterm'] ?? "";
-// $category = $_REQUEST['category'] ?? false;
+$searchterm = $_REQUEST['faq_searchterm'] ?? "";
+$category = $_REQUEST['category'] ?? false;
 ?>
 
-<section class="faq_archive">
+<section class="faq_page">
   <div class="container">
     <div class="filter ten columns offset-by-one">
       <h1>Frequently asked questions</h1>
@@ -34,12 +34,12 @@
           }
           ?>
           </div>
-          
-          
         </form>
     </div>
-    <div class="accordion ten columns offset-by-one">
-      <?php the_faq_content( 5, false ); ?>
+    <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
+      <div class="accordion">
+        <?php the_faq_content( 20, false ); ?>
+      </div>
     </div>
   </div>
 </section>
@@ -47,5 +47,5 @@
 <?php get_template_part('inc/health_conditions'); ?>
 
 <?php get_template_part('inc/know_more'); ?>
-	
+
 <?php get_footer(); ?>

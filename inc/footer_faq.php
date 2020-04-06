@@ -12,8 +12,10 @@
         <input type="search" id="footer-faq-search" name="faq_searchterm" value="<?php echo $searchterm ?>"><input type="submit" id="faq-search-submit" value/>
       </form>
     </div>
-    <div class="accordion ten columns offset-by-one">
-      <?php the_faq_content( 23, false ); ?>
+    <div class="faq-footer-content ten columns offset-by-one" id="faq-archive">
+      <div class="accordion">
+        <?php the_faq_content( 12, false ); ?>
+      </div>
     </div>
     <div class="answer ten columns offset-by-one">
     <p>Didn't find an answer to your question?</p>

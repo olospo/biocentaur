@@ -33,11 +33,11 @@ function faqSearch() {
 
     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
         if ($_REQUEST['form_id'] === "faq-archive-form") {
-            the_faq_content( 12 );
+            the_faq_content( 20 );
         } elseif ($_REQUEST['form_id'] === "footer-faq-form") {
             the_faq_content( 5, false );
         } else {
-            rgcc_error("Unregognised form ID, please try again.");
+            rgcc_error("Unrecognised form ID, please try again.");
         }
     } else {
         $referer = parse_url($_SERVER["HTTP_REFERER"]);
