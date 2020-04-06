@@ -24,6 +24,8 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/style.css', false, '0.1.6' );
 }
 
+$loading = '<img src="/wp-content/themes/biocentaur/img/ajax-loader.gif">';
+
 // Enqueue scripts
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 function theme_enqueue_scripts() {
@@ -372,6 +374,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   if ($category && $category !== 'all') {
     $args['tax_query'] = array(
       array(
+        'post_type' => 'faq',
         'taxonomy' => 'question_cat',
         'field'    => 'slug',
         'terms'    => $category,
@@ -392,7 +395,6 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       endwhile;
 
       if ($pagination) {
-          echo "Pagination";
           // Previous/next page navigation.
           // rgcc_posts_navigation($faq_query);
       }
@@ -400,7 +402,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       wp_reset_postdata();
   
   else : 
-      echo "Sorry, no FAQs are available that match your search."; 
+      echo "<div class='no_results'>Sorry, no FAQs match your search.</div>"; 
   endif;
 }
 ?>
