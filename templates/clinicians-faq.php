@@ -1,4 +1,5 @@
-<?php get_header();
+<?php /* Template Name: FAQ - Clinicians */
+get_header();
 $searchterm = $_REQUEST['faq_searchterm'] ?? "";
 $category = $_REQUEST['category'] ?? false;
 ?>
@@ -7,7 +8,7 @@ $category = $_REQUEST['category'] ?? false;
     <div class="filter ten columns offset-by-one">
       <h1>Frequently asked questions</h1>
       <p>Filter frequently asked questions by topic or search the database for specific keywords.</p>
-        <form id="faq-archive-form" action="<?php echo admin_url('admin-ajax.php'); ?>" method="post">
+        <form id="faq-archive-form" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="post">
           <input type="hidden" name="action" value="faq_search" />
           <input type="hidden" name="anchor" value="main" />
           <input type="hidden" name="form_id" value="faq-archive-form" />
@@ -19,11 +20,11 @@ $category = $_REQUEST['category'] ?? false;
           $terms = get_terms(array(
               'taxonomy' => 'question_cat',
               'hide_empty' => false,
-              'parent' => '25',
+              'parent' => '26',
           ));
           $selected = ($category === 'all' || !$category) ? 'checked="checked"': "";
   
-          echo '<div class="button_wrapper"><input type="radio" name="category" value="all" '.$selected.'/><label>All</label></div>';
+          echo '<div class="button_wrapper"><input type="radio" name="category" value="clinicians" '.$selected.'/><label>All</label></div>';
           foreach ($terms as $term) {
               if ($category === $term->slug) {
                   $selected = 'checked="checked"';

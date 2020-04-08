@@ -1,9 +1,9 @@
 .faq_page {
   margin-top: 90px;
-  padding: $padding-half 0 0 0;
+  padding: $padding-half 0;
   @media (min-width: $breakpoint-tablet) {
     margin-top: 160px;
-    padding: $padding 0 0 0;
+    padding: $padding 0;
   }
   .filter {
     h1 {

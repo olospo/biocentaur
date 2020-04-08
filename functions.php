@@ -269,12 +269,12 @@ function custom_post_type() {
 add_action( 'init', 'custom_post_type', 0 );
 
 register_taxonomy('question_cat', 'faq', array(
-        'hierarchical' => true,
-        'labels' => array(
-            'name' => _x( 'Categories', 'taxonomy general name', 'rgcc_translate' ),
-            'singular_name' => _x( 'Category', 'taxonomy singular name', 'rgcc_translate' ),
-        ),
-    ));
+  'hierarchical' => true,
+  'labels' => array(
+  'name' => _x( 'Categories', 'taxonomy general name' ),
+  'singular_name' => _x( 'Category', 'taxonomy singular name' ),
+  ),
+));
     
 
 // CPT Menu Item
@@ -355,11 +355,37 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 	return FALSE;  // we aren't at the page, and the page is not an ancestor
 }
 
-// Add Ajax Functions
-include_once 'functions/ajax-functions.php';
+// FAQ Pagination
+function rgcc_posts_navigation( $custom_query = NULL) {
+    if ($custom_query !== NULL) {
+        global $wp_query;
+        $temp_query = $wp_query;
+        $wp_query   = NULL;
+        $wp_query   = $custom_query;
+    }
+    the_posts_pagination(
+        array(
+            'mid_size'  => 2,
+            'prev_text' => sprintf(
+                '<span class="nav-prev-text">%s</span>',
+                __( 'Newer posts', 'rgcc_translate' )
+            ),
+            'next_text' => sprintf(
+                '<span class="nav-next-text">%s</span>',
+                __( 'Older posts', 'rgcc_translate' )
+            ),
+        )
+    );
+    if ($custom_query !== NULL) {
+        $wp_query = NULL;
+        $wp_query = $temp_query;
+    }
+}
+
 
 // FAQ functions
 function the_faq_content( $posts_per_page, $pagination = true ) {
+  
   $searchterm = $_REQUEST['faq_searchterm'] ?? "";
   $category = $_REQUEST['category'] ?? false;
 
@@ -369,7 +395,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   );
 
   if($searchterm !== "") {
-      $args['s'] = $searchterm;
+    $args['s'] = $searchterm;
   }
   if ($category && $category !== 'all') {
     $args['tax_query'] = array(
@@ -396,7 +422,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
 
       if ($pagination) {
           // Previous/next page navigation.
-          // rgcc_posts_navigation($faq_query);
+          rgcc_posts_navigation($faq_query);
       }
       
       wp_reset_postdata();
@@ -405,4 +431,75 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       echo "<div class='no_results'>Sorry, no FAQs match your search.</div>"; 
   endif;
 }
+
+// Add Ajax Functions
+add_action("wp_ajax_smart_filter", "smartFilter");
+add_action("wp_ajax_nopriv_smart_filter", "smartFilter");
+
+function smartFilter() {
+    if ( ! isset( $_REQUEST['smart_filter_nonce'] ) || ! wp_verify_nonce( $_REQUEST['smart_filter_nonce'], 'smart_filter_form' )) {
+        exit("No naughty business please");
+    }
+
+    $category = $_REQUEST['category'];
+
+    if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        the_smarttest_content();
+    } else {
+        $referer = parse_url($_SERVER["HTTP_REFERER"]);
+        $return_url = $referer['scheme'] . '://' . $referer['host'] . $referer['path'] . '?category=' . $category;
+
+        header("Location: ".$return_url);
+    }
+    die();
+}
+
+add_action("wp_ajax_faq_search", "faqSearch");
+add_action("wp_ajax_nopriv_faq_search", "faqSearch");
+
+function faqSearch() {
+    if ( ! isset( $_REQUEST['faq_search_nonce'] ) || ! wp_verify_nonce( $_REQUEST['faq_search_nonce'], 'faq_search_form' )) {
+        exit("No naughty business please");
+    }
+    $category = $_REQUEST['category'] ?? false;
+    $searchterm = $_REQUEST['faq_searchterm'] ?? false;
+    $anchor = $_REQUEST['anchor'] ?? false;
+
+    if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        if ($_REQUEST['form_id'] === "faq-archive-form") {
+            the_faq_content( 12 );
+        } else {
+            rgcc_error("Unregognised form ID, please try again.");
+        }
+    } else {
+        $referer = parse_url($_SERVER["HTTP_REFERER"]);
+        $query = false;
+        if($category) {
+            if (!$query) {
+                $query = "?";
+            }
+            $query .= 'category=' . $category;
+        }
+        if($searchterm) {
+            if (!$query) {
+                $query = "?";
+            } else {
+                $query .= "&";
+            }
+            $query .= 'faq_searchterm=' . $searchterm;
+        }
+
+        $return_url = $referer['scheme'] . '://' . $referer['host'] . $referer['path'];
+        if ($query) {
+            $return_url = $return_url . $query;
+        }
+        if ($anchor) {
+            $return_url = $return_url . '#' . $anchor;
+        }
+
+        header("Location: ".$return_url);
+    }
+    die();
+}
+
 ?>
