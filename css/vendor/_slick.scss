@@ -112,8 +112,8 @@ ul {
   color: transparent;
   position: absolute;
   top: 50%;
-  width: 54px;
-  height: 80px;
+  width: 30px;
+  height: 50px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -122,6 +122,14 @@ ul {
   border: none;
   outline: none;
   background: transparent;
+}
+.slick-prev {
+  background: url('../img/slider_left.svg') center center no-repeat;
+}
+
+.slick-next {
+  background: url('../img/slider_right.svg') center center no-repeat;
+  right: 0;
 }
 
 .slick-prev:hover:before,
@@ -161,17 +169,15 @@ ul {
 .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   margin: 0 6px;
   padding: 0;
   cursor: pointer;
-  background: none;
-  border: 1px solid $white;
+  background: $blue;
   border-radius: 50%;
   &.slick-active, &:hover {
-    background: $white;
-    border: 1px solid $white;
+    background: $coral;
   }
 }
 .slick-dots li button {

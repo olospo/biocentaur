@@ -49,6 +49,36 @@ get_header(); ?>
   </div>
 </section>
 
+<?php if( have_rows('tests') ): ?>
+<section class="about_slider order_test ">
+  <div class="container">
+    <div class="slider twelve columns">
+	<?php while( have_rows('tests') ): the_row(); 
+	// vars
+	$image = get_sub_field('test_image');
+	$title = get_sub_field('test_title');
+	$content = get_sub_field('test_content');
+
+	?>
+	
+  <div class="slide">
+    <div class="test_content">
+      <div class="image five columns">
+        <img src="<?php echo $image; ?>" />
+      </div>
+      <div class="text five columns">
+        <h3><?php echo $title; ?></h3>
+        <?php echo $content; ?>
+      </div>
+    </div>
+  </div>
+
+	<?php endwhile; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
 <section class="test_cta">
   <div class="container">
     <div class="text six columns">

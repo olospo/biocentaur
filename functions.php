@@ -170,18 +170,6 @@ function remove_page_from_query_string($query_string)
     }      
     return $query_string;
 }
-add_filter('request', 'remove_page_from_query_string');
-function fix_category_pagination($qs){
-	if(isset($qs['category_name']) && isset($qs['paged'])){
-		$qs['post_type'] = get_post_types($args = array(
-			'public'   => true,
-			'_builtin' => false
-		));
-		array_push($qs['post_type'],'post');
-	}
-	return $qs;
-}
-add_filter('request', 'fix_category_pagination');
 
 // Remove Menu Items 
 function remove_menus(){
@@ -389,7 +377,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   );
 
   if($searchterm !== "") {
-    $args['s'] = $searchterm;
+    $args['s'] = $searchterm; 
   }
   if ($category && $category !== 'all') {
     $args['tax_query'] = array(

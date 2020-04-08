@@ -24,7 +24,7 @@ $category = $_REQUEST['category'] ?? false;
           ));
           $selected = ($category === 'all' || !$category) ? 'checked="checked"': "";
   
-          echo '<div class="button_wrapper"><input type="radio" name="category" value="individuals" '.$selected.'/><label>All</label></div>';
+          echo '<div class="button_wrapper"><input type="radio" name="category" value="all" '.$selected.'/><label>All</label></div>';
           foreach ($terms as $term) {
               if ($category === $term->slug) {
                   $selected = 'checked="checked"';
@@ -39,7 +39,7 @@ $category = $_REQUEST['category'] ?? false;
         </form>
     </div>
     <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
-      <?php the_faq_content( 20 ); ?>
+      <?php the_faq_content( 10 ); ?>
     </div>
   </div>
 </section>

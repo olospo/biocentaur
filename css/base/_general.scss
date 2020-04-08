@@ -472,6 +472,7 @@ section.hero{
   position: relative;
   margin-top: 0px;
   padding: 20px 0px;
+  font: $bold 1.6rem/2.2rem $regular;
   ul {
     text-align: center;
     li {
@@ -479,30 +480,84 @@ section.hero{
       list-style: none;
       margin: 0;
       a {
-        padding: 10px 15px;
-        background: $blue;
-        color: $white;
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        width: 25px;
+        background: $white;
+        @include border-radius(10px);
+        border: 1px solid $blue;
+        color: $blue;
         text-decoration: none;
         &:hover {
-          background: $coral;
+          background: $blue;
+          color: $white;
         }
       }
-      &.next {
-        position: absolute;
-        right: 0;
-      }
-      &.prev {
-        position: absolute;
-        left: 0;
+      &.next, &.prev {
+        display: none;
       }
       &.active {
         a {
-          background: $white;
-          color: $blue;
+          background: $blue;
+          @include border-radius(10px);
+          border: 1px solid $blue;
+          color: $white;
           text-decoration: none;
         }
       }
     }
+  }
+}
+
+
+.nav-links {
+    text-align: center;
+    font: $bold 1.6rem/2.2rem $regular;
+    span.current {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      width: 25px;
+      background: $blue;
+      @include border-radius(10px);
+      border: 1px solid $blue;
+      color: $white;
+    }
+    a.page-numbers {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      width: 25px;
+      background: $white;
+      @include border-radius(10px);
+      border: 1px solid $blue;
+      color: $blue;
+      text-decoration: none;
+      &:hover {
+        background: $blue;
+        color: $white;
+      }
+    }
+  }
+
+.search_item {
+  margin: 10px 0px;
+  background: $white;
+  padding: 20px 30px;
+  border: 1px solid $border;
+  -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  box-shadow: 0px 15px 20px -3px #e6ecf0;
+  @include border-radius(10px);
+  .title {
+    color: $blue;
+    font: $normal 2.2rem/4.4rem $regular;
+    @media (min-width: $breakpoint-tablet) {
+      font: $normal 2.6rem/4.4rem $regular;
+    }
+    overflow: hidden;
+    color: $blue;
   }
 }
 

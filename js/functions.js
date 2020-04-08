@@ -10,6 +10,22 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
   }
 });
 
+// Accordian
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    }
+}
+  
 // Back to Top Scroll 
     var amountScrolled = 100;
     
@@ -28,7 +44,7 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
     	return false;
     });
 
-$('.cta_slider').slick({
+$('.slider').slick({
   autoplay:true,
   dots: true,
   infinite: true,
@@ -71,22 +87,6 @@ $(function(){
   }
 });
 
-// Accordian
-var accItem = document.getElementsByClassName('accordionItem');
-  var accHD = document.getElementsByClassName('accordionItemHeading');
-  for (i = 0; i < accHD.length; i++) {
-      accHD[i].addEventListener('click', toggleItem, false);
-  }
-  function toggleItem() {
-      var itemClass = this.parentNode.className;
-      for (i = 0; i < accItem.length; i++) {
-          accItem[i].className = 'accordionItem close';
-      }
-      if (itemClass == 'accordionItem close') {
-          this.parentNode.className = 'accordionItem open';
-      }
-  }
-  
   
 // ------------------------------------------------------------
 // Animation Javascript
