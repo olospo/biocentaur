@@ -115,6 +115,9 @@ header {
         -moz-appearance: none;
         -webkit-appearance: none;
         font: $normal 1.4rem/1.8rem $regular;
+        &::placeholder {
+          color: $white;
+        }
       }
       input.search-submit {
         font: $normal 1.4rem/1.8rem $regular;
@@ -131,6 +134,7 @@ header {
         border-bottom: 1px solid #fff;
         color: #fff;
         padding: 5px 0;
+        
       }
     }
   }
