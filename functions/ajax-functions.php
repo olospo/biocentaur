@@ -35,7 +35,7 @@ function faqSearch() {
         if ($_REQUEST['form_id'] === "faq-archive-form") {
             the_faq_content( 20 );
         } elseif ($_REQUEST['form_id'] === "footer-faq-form") {
-            the_faq_content( 5, false );
+            the_faq_content( 5, true );
         } else {
             rgcc_error("Unrecognised form ID, please try again.");
         }

@@ -1,9 +1,9 @@
-<article class="accordion accordionItem close">
-  <div class="title accordionItemHeading accordion-toggle">
+<article class="accordionItem close">
+  <div class="title accordionItemHeading">
     <?php the_title(); ?>
   </div>
   
-  <div class="accordionItemContent accordion-content">
+  <div class="accordionItemContent">
     <div class="content">
       <?php the_content(); ?>      
     </div>
