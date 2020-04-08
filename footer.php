@@ -33,7 +33,7 @@
               <li><a href="#">Health features</a></li>
             </ul>
           </li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/faq/">FAQs</a></li>
         </ul>
       </div>
       <div class="three columns">
@@ -47,7 +47,7 @@
               <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/targeted-test/">Targeted test</a></li>
             </ul>
           </li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/clinicians/faq/">FAQs</a></li>
         </ul>
       </div>
       <div class="three columns">
