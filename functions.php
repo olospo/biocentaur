@@ -356,30 +356,24 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 }
 
 // FAQ Pagination
-function rgcc_posts_navigation( $custom_query = NULL) {
-    if ($custom_query !== NULL) {
-        global $wp_query;
-        $temp_query = $wp_query;
-        $wp_query   = NULL;
-        $wp_query   = $custom_query;
-    }
-    the_posts_pagination(
-        array(
-            'mid_size'  => 2,
-            'prev_text' => sprintf(
-                '<span class="nav-prev-text">%s</span>',
-                __( 'Newer posts', 'rgcc_translate' )
-            ),
-            'next_text' => sprintf(
-                '<span class="nav-next-text">%s</span>',
-                __( 'Older posts', 'rgcc_translate' )
-            ),
-        )
-    );
-    if ($custom_query !== NULL) {
-        $wp_query = NULL;
-        $wp_query = $temp_query;
-    }
+function posts_navigation( $custom_query = NULL) {
+  if ($custom_query !== NULL) {
+    global $wp_query;
+    $temp_query = $wp_query;
+    $wp_query   = NULL;
+    $wp_query   = $custom_query;
+  }
+  the_posts_pagination(
+    array(
+      'mid_size'  => 2,
+      'prev_next' => false,
+      'screen_reader_text' => ' ', 
+    )
+  );
+  if ($custom_query !== NULL) {
+    $wp_query = NULL;
+    $wp_query = $temp_query;
+  }
 }
 
 
@@ -422,7 +416,7 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
 
       if ($pagination) {
           // Previous/next page navigation.
-          rgcc_posts_navigation($faq_query);
+          posts_navigation($faq_query);
       }
       
       wp_reset_postdata();

@@ -33,6 +33,37 @@
       color: $blue;
     }
   }
+  .pagination {
+    .nav-links {
+      text-align: center;
+      font: $bold 1.6rem/2.2rem $regular;
+      span.current {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        width: 20px;
+        background: $blue;
+        @include border-radius(10px);
+        border: 1px solid $blue;
+        color: $white;
+      }
+      a.page-numbers {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        width: 20px;
+        background: $white;
+        @include border-radius(10px);
+        border: 1px solid $blue;
+        color: $blue;
+        text-decoration: none;
+        &:hover {
+          background: $blue;
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 .footer_faq {
