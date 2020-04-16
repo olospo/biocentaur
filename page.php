@@ -2,7 +2,6 @@
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-
 <?php if ( has_post_thumbnail() ) { ?>
 <section class="hero single">
   <div class="background" style="background: url(' <?php the_post_thumbnail_url( 'full' ); ?> ') center center no-repeat; background-size: cover;">

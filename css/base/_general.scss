@@ -221,21 +221,26 @@ section {
   table {
     overflow-x: scroll;
     display: block;
-    font: $normal 1.6rem/2.6rem $regular;
+    font: $normal 1.8rem/2.6rem $regular;
+    th {
+      background: $blue;
+      color: $white;
+      font: $normal 2.0rem/2.6rem $regular;
+      padding: 20px;
+    }
     tr {
-      &:first-child {
-        border: 1px solid $blue;
-        background: $blue;
-        td {
-          background: $blue;
-          border: 1px solid $black;
-          font-weight: bold;
-        }
-      }
       td {
-        background: $white-bg;
-        padding: 10px 20px;
-        border: 1px solid $black;
+        background: $white;
+        padding: 20px;
+        border: 1px solid $border;
+        vertical-align: middle;
+      }
+      &:last-child {
+        td {
+          background: $white-bg;
+          border: 1px solid $border;
+          vertical-align: middle;
+        }
       }
     }
   }
@@ -251,7 +256,7 @@ section {
       display: inline;
     }
   }
-  .nf-form-layout, .register {
+  .nf-form-layout, .woocommerce {
     form {
       .nf-cell:first-child {
         padding-right: 20px;
@@ -284,17 +289,6 @@ section {
       select {
         background: url('../img/select_icon.svg') 97% center no-repeat;
         padding-right: 40px;
-      }
-      input[type="button"] {
-        cursor: pointer;
-        margin: 20px 0 0 0;
-        @extend .button;
-        @extend .primary;
-        @extend .filled;
-        border: none;
-        &:hover {
-          background: $blue;
-        }
       }
       input.datepicker {
         background: url('../img/date_icon.svg') 94% center no-repeat;
@@ -559,6 +553,22 @@ section.hero{
     overflow: hidden;
     color: $blue;
   }
+}
+
+// Screen Reader
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }
 
 // WordPress Alignment

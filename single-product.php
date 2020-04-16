@@ -7,6 +7,7 @@ while ( have_posts() ) : the_post(); ?>
     <ul>
       <li><a href="<?php echo get_site_url(); ?>/customer/">Customer</a></li>
       <li><a href="<?php echo get_site_url(); ?>/customer/<?php if ( is_page('269') ) { echo "individual-test"; } else { echo "clinician-test"; } ?>">Test</a></li>
+      <li>Basket</li>
       <li class="active">Checkout</li>
       <li>Confirm</li>
     </ul>
@@ -62,8 +63,6 @@ while ( have_posts() ) : the_post(); ?>
                 <input type="checkbox"> By registering I agree to Biocentaur's Terms of use and Privacy policy
               </div>
             </div>
-
-            <a href="<?php echo get_site_url(); ?>/customer/confirm" class="button primary filled">Register</a>
             
           </form>
         </div>
@@ -76,6 +75,7 @@ while ( have_posts() ) : the_post(); ?>
     </div>
   </div>
 </section>
+
 
 <?php endwhile; // end of the loop. ?>
 

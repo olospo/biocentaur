@@ -7,6 +7,7 @@ get_header(); ?>
     <ul>
       <li><a href="<?php echo get_site_url(); ?>/customer/">Customer</a></li>
       <li class="active">Test</li>
+      <li>Basket</li>
       <li>Checkout</li>
       <li>Confirm</li>
     </ul>
@@ -23,7 +24,7 @@ get_header(); ?>
         <p>You are an Individual ordering a <a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></p>
       </div>
       
-      <a href="<?php echo get_site_url(); ?>/product/future-health-test/" class="declaration">
+      <a href="<?php echo get_site_url(); ?>/basket/?add-to-cart=269" class="declaration">
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/order-online.svg" />
           <div class="content">

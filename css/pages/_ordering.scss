@@ -132,3 +132,137 @@ a.declaration {
     }
   }
 }
+
+.woocommerce {
+
+}
+
+
+button[type="submit"], a.checkout-button {
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 80px 15px 20px;
+  margin: 10px 0px;
+  font: $bold 1.6rem/1.6rem $regular;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+  color: $white;
+  border: 1px solid $blue;
+  @include border-radius(10px);
+  float: right;
+  background: $blue url('../img/white_arrow.svg') right 15px center no-repeat;
+  &:hover {
+    color: $white;
+    background: $blue url('../img/white_arrow.svg') right 20px center no-repeat;
+  }
+  &:disabled {
+    border: 1px solid #b7bbc4;
+    background: #b7bbc4 url('../img/white_arrow.svg') right 20px center no-repeat;
+  }
+}
+
+a.checkout-button {
+  margin: 20px 0px;
+}
+
+.woocommerce-message {
+  background: $white-bg;
+  border: 1px solid $border;
+  @include border-radius(10px);
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  color: $black;
+}
+
+a.remove {
+  font: $bold 4rem/4rem $regular;
+}
+
+#customer_details {
+  // display: flex;
+  width: 64%;
+  float: left;
+  .col-1 {
+    // width: 48%;
+    input, textarea, select {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
+  }
+  .col-2 {
+    // width: 48%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $border;
+    input, textarea, select {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+#order_review_heading {
+  margin-left: 4%;
+  float: left;
+  width: 32%;
+}
+#order_review {
+  float: left;
+  width: 32%; 
+  margin-left: 4%;
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
+#payment {
+  margin: 20px 0;
+  p {
+    margin-bottom: 20px;
+  }
+}
+// Country Select
+.select2-container .select2-selection--single {
+  height: 48px;
+  border: 1px solid #adbac8;
+  
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 48px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px;
+  right: 10px;
+}
+.woocommerce-cart-form {
+  @media (min-width: $breakpoint-desktop) {
+  width: 66%;
+  float: left;
+  }
+}
+
+.cart-collaterals {
+  margin: 20px 0;
+  @media (min-width: $breakpoint-desktop) {
+    float: left;
+    width: 30%;
+    margin: 0 0 0 4%;
+    
+  }
+}

@@ -1,4 +1,4 @@
-<?php /* Template Name: Order - Confirm */
+<?php /* Template Name: Order - Checkout */
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -7,9 +7,9 @@ get_header(); ?>
     <ul>
       <li>Customer</li>
       <li>Test</li>
-      <li>Basket</li>
-      <li>Checkout</li>
-      <li class="active">Confirm</li>
+      <li><a href="<?php echo get_site_url(); ?>/basket/">Basket</a></li>
+      <li class="active">Checkout</li>
+      <li>Confirm</li>
     </ul>
   </div>
 </section>
@@ -20,9 +20,9 @@ get_header(); ?>
       
       <div class="test_heading">
         <a href="<?php echo get_site_url(); ?>" class="back">Back to Biocentaur</a>
-        <h1>Order confirmed</h1>
-        <p>Your order has been confirmed.</p>
+        <h1><?php the_title(); ?></h1>
       </div>
+      <?php echo do_shortcode('[woocommerce_checkout]'); ?>
       
     </div>
   </div>

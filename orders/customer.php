@@ -7,6 +7,7 @@ get_header(); ?>
     <ul>
       <li class="active">Customer</li>
       <li>Test</li>
+      <li>Basket</li>
       <li>Checkout</li>
       <li>Confirm</li>
     </ul>
