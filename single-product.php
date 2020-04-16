@@ -7,8 +7,8 @@ while ( have_posts() ) : the_post(); ?>
     <ul>
       <li><a href="<?php echo get_site_url(); ?>/customer/">Customer</a></li>
       <li><a href="<?php echo get_site_url(); ?>/customer/<?php if ( is_page('269') ) { echo "individual-test"; } else { echo "clinician-test"; } ?>">Test</a></li>
-      <li>Basket</li>
-      <li class="active">Checkout</li>
+      <li class="active"><a href="<?php echo get_site_url(); ?>/basket/">Basket</a></li>
+      <li>Checkout</li>
       <li>Confirm</li>
     </ul>
   </div>
@@ -24,53 +24,23 @@ while ( have_posts() ) : the_post(); ?>
         <p>You are <?php if ( is_page('269') ) { echo "an Individual"; } else { echo "a Clinician"; } ?> ordering a <?php the_title(); ?> via online transaction.</p>
       </div>
       <div class="row">
-        <div class="register six columns">
-          <form>
-            <div class="half">
-              <div class="element">
-                <label>First name *</label>
-                <input type="text" />
-              </div>
-              
-              <div class="element">
-                <label>Last name *</label>
-                <input type="text" />
-              </div>
-              
-            </div>
-            
-            <div class="full">
-              <div class="element">
-                <label>Email *</label>
-                <input type="email" />
-              </div>
-            </div>
-            
-            <div class="half">
-              <div class="element">
-                <label>Password *</label>
-                <input type="password" />
-              </div>
-              
-              <div class="element">
-                <label>Repeat password *</label>
-                <input type="password" />
-              </div>
-            </div>
-            
-            <div class="full">
-              <div class="element">
-                <input type="checkbox"> By registering I agree to Biocentaur's Terms of use and Privacy policy
-              </div>
-            </div>
-            
-          </form>
-        </div>
         <div class="product six columns">
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
-          <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+          <p><img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"></p>
+            <?php echo apply_filters(
+                    'woocommerce_loop_add_to_cart_link',
+                    sprintf(
+                        '<a href="%s" rel="nofollow" data-product_id="133" data-product_sku="%s" class="button filled %s product_type_%s">Add to basket</a>',
+                        esc_url( $product->add_to_cart_url() ),
+                        esc_attr( $product->get_id() ),
+                        esc_attr( $product->get_sku() ),
+                        $product->is_purchasable() ? 'add_to_cart_button' : '',
+                        esc_attr( $product->product_type ),
+                        esc_html( $product->add_to_cart_text() )
+                    ),
+                    $product
+                );?>
         </div>
-      </div>
       </div>
     </div>
   </div>
