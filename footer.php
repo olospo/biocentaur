@@ -42,7 +42,7 @@
           <li>
             <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/">Our tests</a>
             <ul>
-              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/predictive-test/">Predictive test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/future-health-test/">Future health test</a></li>
               <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/diagnostic-test/">Dianostic test</a></li>
               <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/targeted-test/">Targeted test</a></li>
             </ul>
