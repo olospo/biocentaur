@@ -219,27 +219,49 @@ section {
     }
   }
   table {
+    border: 1px solid $border;
+    @include border-radius(10px);
     overflow-x: scroll;
-    display: block;
     font: $normal 1.8rem/2.6rem $regular;
+    width:100%;
+    table-layout: auto;
+    border-collapse: separate !important;
+
     th {
-      background: $blue;
-      color: $white;
-      font: $normal 2.0rem/2.6rem $regular;
+      color: $blue;
+      font: $bold 2.0rem/2.6rem $regular;
       padding: 20px;
+      background: $white-bg;
+      text-transform: uppercase;
     }
+    thead {
+      background: $white-bg;
+      th {
+        color: $blue;
+        font: $bold 2.0rem/2.6rem $regular;
+        padding: 20px;
+        border: none;
+      }
+    }
+
     tr {
       td {
-        background: $white;
         padding: 20px;
-        border: 1px solid $border;
+        border-left: 1px solid $border;
         vertical-align: middle;
+        &:first-child {
+          border-left: none;
+        }
       }
       &:last-child {
         td {
           background: $white-bg;
-          border: 1px solid $border;
           vertical-align: middle;
+        }
+      }
+      &:first-child {
+        td {
+          background: $white;
         }
       }
     }

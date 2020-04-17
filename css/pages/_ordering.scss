@@ -95,48 +95,6 @@ a.declaration {
   }
 }
 
-.register {
-  form {
-    input {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 6px 10px !important;
-    }
-    label {
-      font: $normal 1.8rem/2.6rem $regular;
-      margin-bottom: 5px;
-      display: block;
-    }
-    .half {
-      margin-bottom: 20px;
-      overflow: hidden;
-      .element {
-        float: left;
-        width: 48%;
-        &:last-child {
-          margin-left: 4%;
-        }
-      }
-      input {
-        width: 100%;
-      }
-    }
-    .full {
-      margin-bottom: 20px;
-      overflow: hidden;
-      input[type="email"] {
-        width: 100%;
-      }
-
-    }
-  }
-}
-
-.woocommerce {
-
-}
-
 
 button[type="submit"], a.checkout-button {
   cursor: pointer;
@@ -186,11 +144,11 @@ a.remove {
 }
 
 #customer_details {
-  // display: flex;
-  width: 64%;
+  width: 100%;
   float: left;
+  margin-bottom: 40px;
   .col-1 {
-    // width: 48%;
+    width: 100%;
     input, textarea, select {
       width: 100%;
       display: block;
@@ -198,9 +156,9 @@ a.remove {
     }
   }
   .col-2 {
-    // width: 48%;
-    margin-top: 20px;
-    padding-top: 20px;
+    width: 100%;
+    margin-top: 60px;
+    padding-top: 40px;
     border-top: 1px solid $border;
     input, textarea, select {
       width: 100%;
@@ -213,15 +171,34 @@ a.remove {
     }
   }
 }
-#order_review_heading {
-  margin-left: 4%;
-  float: left;
-  width: 32%;
+
+span.optional {
+  display: none;
+}
+table.woocommerce-checkout-review-order-table {
+  td {
+    text-align: center;
+  }
+  tfoot {
+    td {
+      border-top: 1px solid $border;
+    }
+    th {
+      border-top: 1px solid $border;
+      font-size: 14px;
+    }
+    tr.cart-subtotal {
+      border-top: 5px solid green !important;
+    }
+  }
+}
+h3#order_review_heading {
+  display: block;
+  clear: both;
 }
 #order_review {
   float: left;
-  width: 32%; 
-  margin-left: 4%;
+  width: 100%;
   ul {
     margin: 0;
     li {
@@ -231,7 +208,7 @@ a.remove {
   }
 }
 #payment {
-  margin: 20px 0;
+  margin: 40px 0 0 0;
   p {
     margin-bottom: 20px;
   }
@@ -250,19 +227,27 @@ a.remove {
   height: 48px;
   right: 10px;
 }
-.woocommerce-cart-form {
-  @media (min-width: $breakpoint-desktop) {
-  width: 66%;
-  float: left;
+
+body.woocommerce-page {
+  .test_heading {
+    padding: 20px 0;
   }
+}
+.woocommerce-cart-form {
+  width: 100%;
 }
 
 .cart-collaterals {
   margin: 20px 0;
-  @media (min-width: $breakpoint-desktop) {
-    float: left;
-    width: 30%;
-    margin: 0 0 0 4%;
-    
+  width: 100%;
+  h2 {
+    margin: 40px 0 20px 0;
+  }
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
   }
 }
