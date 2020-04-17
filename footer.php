@@ -28,8 +28,8 @@
           <li>
             <a href="#">Support</a>
             <ul>
-              <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Conditions</a></li>
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/sample-collection/">Sample collection</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Health conditions</a></li>
               <li><a href="#">Health features</a></li>
             </ul>
           </li>
