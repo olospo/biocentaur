@@ -157,8 +157,8 @@ a.remove {
   }
   .col-2 {
     width: 100%;
-    margin-top: 60px;
-    padding-top: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid $border;
     input, textarea, select {
       width: 100%;
@@ -177,6 +177,7 @@ p#clinician_field {
   @include border-radius(10px);
   padding: 10px;
   background: $white-bg;
+  margin-top: 20px;
 }
 
 span.optional {
