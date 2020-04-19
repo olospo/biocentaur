@@ -11,20 +11,23 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
 });
 
 // Accordian
-var accItem = document.getElementsByClassName('accordionItem');
-var accHD = document.getElementsByClassName('accordionItemHeading');
-for (i = 0; i < accHD.length; i++) {
-    accHD[i].addEventListener('click', toggleItem, false);
+function accordion_ajax() {
+  var accItem = document.getElementsByClassName('accordionItem');
+  var accHD = document.getElementsByClassName('accordionItemHeading');
+  for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+          this.parentNode.className = 'accordionItem open';
+      }
+  }
 }
-function toggleItem() {
-    var itemClass = this.parentNode.className;
-    for (i = 0; i < accItem.length; i++) {
-        accItem[i].className = 'accordionItem close';
-    }
-    if (itemClass == 'accordionItem close') {
-        this.parentNode.className = 'accordionItem open';
-    }
-}
+accordion_ajax();
   
 // Back to Top Scroll 
     var amountScrolled = 100;
