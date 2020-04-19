@@ -20,7 +20,8 @@ $category = $_REQUEST['category'] ?? false;
           $terms = get_terms(array(
               'taxonomy' => 'question_cat',
               'hide_empty' => false,
-              'parent' => '26',
+              'parent' => '19', // Live
+              // 'parent' => '26', // Local
           ));
           $selected = ($category === 'all' || !$category) ? 'checked="checked"': "";
   

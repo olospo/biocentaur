@@ -374,7 +374,8 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       array(
         'taxonomy'  => 'question_cat',
         'field'     => 'id',
-        'terms'     => 25
+        'terms'     => 20
+        // 'terms'     => 25
       )
     ), 
   );
@@ -431,7 +432,8 @@ function the_faq_content_clinician( $posts_per_page, $pagination = true ) {
       array(
         'taxonomy'  => 'question_cat',
         'field'     => 'id',
-        'terms'     => 26
+        'terms'     => 19
+        // 'terms'     => 26
       )
     ), 
   );
@@ -446,13 +448,6 @@ function the_faq_content_clinician( $posts_per_page, $pagination = true ) {
         'taxonomy' => 'question_cat',
         'field'    => 'slug',
         'terms'    => $category,
-        'tax_query'     => array(
-          array(
-            'taxonomy'  => 'question_cat',
-            'field'     => 'id',
-            'terms'     => 26
-          )
-        ),
       ),
     );
   }
