@@ -45,7 +45,7 @@
   }
 }
 .test_content {
-  padding: $padding 0
+  padding: $padding-half 0
 }
 .test_heading {
   padding: 20px 0 $padding-half 0;
@@ -146,7 +146,7 @@ a.remove {
 #customer_details {
   width: 100%;
   float: left;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   .col-1 {
     width: 100%;
     input, textarea, select {
