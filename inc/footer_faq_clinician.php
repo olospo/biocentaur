@@ -15,12 +15,12 @@
     </div>
     <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
       <div class="accordion">
-        <?php the_faq_content( 5, true ); ?>
+        <?php the_faq_content_clinician( 5, true ); ?>
       </div>
     </div>
     <div class="answer ten columns offset-by-one">
     <p>Didn't find an answer to your question?</p>
-    <a href="<?php echo get_site_url(); ?>/individuals/faq" class="button primary">More support</a>
+    <a href="<?php echo get_site_url(); ?>/clinicians/faq" class="button primary">More support</a>
     </div>
   </div>
 </div>

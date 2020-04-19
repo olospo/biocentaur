@@ -322,12 +322,6 @@ add_filter( 'pre_get_posts', 'cpt_search' );
  * @param object $query  The original query.
  * @return object $query The amended query.
  */
-function cpt_search( $query ) {
-  if ( $query->is_search ) {
-    $query->set( 'post_type', array( 'page', 'condition' ) );
-  }
-  return $query;  
-}
 
 // is_tree
 function is_tree( $pid ) {      // $pid = The ID of the page we're looking for pages underneath
@@ -373,7 +367,14 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
 
   $args = array(
     'post_type' => 'faq',
-    'posts_per_page' => $posts_per_page
+    'posts_per_page' => $posts_per_page,
+    'tax_query'     => array(
+      array(
+        'taxonomy'  => 'question_cat',
+        'field'     => 'id',
+        'terms'     => 25
+      )
+    ), 
   );
 
   if($searchterm !== "") {
@@ -393,6 +394,71 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   $args['post_status'] = 'publish';
   $args['paged'] = $pagination ? get_query_var( 'paged', 1 ) : 1;
   $args['paged'] = $_REQUEST['selected_page'] ?? $args['paged'];
+  $args['post_type'] = 'faq';
+
+  $faq_query = new WP_Query( $args ); 
+
+  if ( $faq_query->have_posts() ) : 
+
+      while ( $faq_query->have_posts() ) : $faq_query->the_post(); 
+          get_template_part( 'inc/faq' );
+      endwhile;
+
+      if ($pagination) {
+          // Previous/next page navigation.
+          posts_navigation($faq_query);
+      }
+      
+      wp_reset_postdata();
+  
+  else : 
+      echo "<div class='no_results'>Sorry, no FAQs match your search.</div>"; 
+  endif;
+}
+
+// FAQ functions
+function the_faq_content_clinician( $posts_per_page, $pagination = true ) {
+  
+  $searchterm = $_REQUEST['faq_searchterm'] ?? "";
+  $category = $_REQUEST['category'] ?? false;
+
+  $args = array(
+    'post_type' => 'faq',
+    'posts_per_page' => $posts_per_page,
+    'tax_query'     => array(
+      array(
+        'taxonomy'  => 'question_cat',
+        'field'     => 'id',
+        'terms'     => 26
+      )
+    ), 
+  );
+
+  if($searchterm !== "") {
+    $args['s'] = $searchterm; 
+  }
+  if ($category && $category !== 'all') {
+    $args['tax_query'] = array(
+      array(
+        'post_type' => 'faq',
+        'taxonomy' => 'question_cat',
+        'field'    => 'slug',
+        'terms'    => $category,
+        'tax_query'     => array(
+          array(
+            'taxonomy'  => 'question_cat',
+            'field'     => 'id',
+            'terms'     => 26
+          )
+        ),
+      ),
+    );
+  }
+  
+  $args['post_status'] = 'publish';
+  $args['paged'] = $pagination ? get_query_var( 'paged', 1 ) : 1;
+  $args['paged'] = $_REQUEST['selected_page'] ?? $args['paged'];
+  $args['post_type'] = 'faq';
 
   $faq_query = new WP_Query( $args ); 
 
@@ -449,9 +515,9 @@ function faqSearch() {
 
     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
         if ($_REQUEST['form_id'] === "faq-archive-form") {
-            the_faq_content( 12 );
+            the_faq_content( 10 );
         } else {
-            rgcc_error("Unregognised form ID, please try again.");
+            the_faq_content_clinicians( 10 );
         }
     } else {
         $referer = parse_url($_SERVER["HTTP_REFERER"]);
@@ -483,5 +549,4 @@ function faqSearch() {
     }
     die();
 }
-
 ?>

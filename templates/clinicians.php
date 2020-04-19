@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'inc/about_bio' ); // About Biocentaur ?>
 
-<?php get_template_part('inc/footer_faq'); // Footer FAQ ?>
+<?php get_template_part('inc/footer_faq_clinician'); // Footer FAQ ?>
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

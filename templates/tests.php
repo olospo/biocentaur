@@ -24,7 +24,7 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part('inc/know_more'); ?>
 
-<?php get_template_part('inc/footer_faq'); ?>
+<?php if(is_page(211)) { get_template_part('inc/footer_faq'); } else { get_template_part('inc/footer_faq_clinician'); } ?>
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
