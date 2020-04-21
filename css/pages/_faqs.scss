@@ -110,6 +110,13 @@
   }
 }
 
+.single_test + .footer_faq {
+  padding: 0 0 $padding-half 0;
+  .container {
+    border: none;
+  }
+}
+
 #footer-faq-search, #archive-faq-search {
   color: $blue;
   width: 85%;
