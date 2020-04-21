@@ -1,4 +1,5 @@
-<?php $searchterm = $_REQUEST['faq_searchterm'] ?? ""; ?>
+<?php $searchterm = $_REQUEST['faq_searchterm'] ?? "";
+$category = $_REQUEST['category'] ?? false; ?>
 <div class="footer_faq">
   <div class="container">
 
@@ -11,12 +12,32 @@
           <input type="hidden" name="content_area_id" value="faq-archive-content" />
           <?php wp_nonce_field( 'faq_search_form', 'faq_search_nonce' ); ?>
           <input type="search" id="archive-faq-search" name="faq_searchterm" value="<?php echo $searchterm ?>"><input type="submit" id="archive-faq-submit" value/>
+          <div class="category-buttons" style="display:none;">
+          <?php 
+          $terms = get_terms(array(
+              'taxonomy' => 'question_cat',
+              'hide_empty' => false,
+              'parent' => '19', // Live
+              // 'parent' => '26', // Local
+          ));
+          $selected = ($category === 'all' || !$category) ? 'checked="checked"': "";
+  
+          echo '<div class="button_wrapper"><input type="radio" name="category" value="clinicians" '.$selected.'/><label>All</label></div>';
+          foreach ($terms as $term) {
+              if ($category === $term->slug) {
+                  $selected = 'checked="checked"';
+              } else {
+                  $selected = "";
+              }
+              echo '<div class="button_wrapper"><input type="radio" name="category" value="'.$term->slug.'" '.$selected.'/><label>' . $term->name .'</label></div>';
+          }
+          ?>
+          
+          </div>
         </form>
     </div>
     <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
-      <div class="accordion">
-        <?php the_faq_content_clinician( 5, true ); ?>
-      </div>
+      <?php the_faq_content_clinician( 5 ); ?>
     </div>
     <div class="answer ten columns offset-by-one">
     <p>Didn't find an answer to your question?</p>

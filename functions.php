@@ -371,8 +371,8 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
       array(
         'taxonomy'  => 'question_cat',
         'field'     => 'id',
-        'terms'     => 20
-        // 'terms'     => 25
+        // 'terms'     => 20
+        'terms'     => 25
       )
     ), 
   );
@@ -429,8 +429,8 @@ function the_faq_content_clinician( $posts_per_page, $pagination = true ) {
       array(
         'taxonomy'  => 'question_cat',
         'field'     => 'id',
-        'terms'     => 19
-        // 'terms'     => 26
+        // 'terms'     => 19
+        'terms'     => 26
       )
     ), 
   );

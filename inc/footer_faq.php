@@ -15,7 +15,7 @@
     </div>
     <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
       <div class="accordion">
-        <?php the_faq_content( 5, true ); ?>
+        <?php the_faq_content( 5 ); ?>
       </div>
     </div>
     <div class="answer ten columns offset-by-one">

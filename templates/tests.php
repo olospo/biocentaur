@@ -22,9 +22,7 @@ while ( have_posts() ) : the_post(); ?>
 
 <?php if(is_page(211)) { get_template_part('inc/health_conditions'); } // Only show on Individual Test ?>
 
-<?php get_template_part('inc/know_more'); ?>
-
-<?php if(is_page(211)) { get_template_part('inc/footer_faq'); } else { get_template_part('inc/footer_faq_clinician'); } ?>
+<?php if(is_tree(164)) { get_template_part('inc/footer_faq'); } else { get_template_part('inc/footer_faq_clinician'); } ?>
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
