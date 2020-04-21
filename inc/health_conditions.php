@@ -8,9 +8,8 @@
       <?php 
           $args = array(
             'post_type'      => 'condition',
-            'order_by'       => 'title',
+            'orderby'        => 'title',
             'order'          => 'ASC',
-            'post_status'    => 'publish',
             'posts_per_page' => -1
           ); 
           query_posts($args); ?>
@@ -26,7 +25,7 @@
           <div class="content">
             <?php if( get_field('short_description')) { // Check if short description is added ?>
               <?php the_field('short_description'); ?>
-            <?php } else { ?>
+            <?php } else { // Show the excerpt if not ?>
               <?php the_excerpt(); ?>
             <?php } ?> 
             <a href="<?php the_permalink(); ?>" class="button primary">Learn more</a>       
