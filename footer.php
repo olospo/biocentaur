@@ -26,14 +26,14 @@
           <li><a href="<?php echo get_site_url(); ?>/individuals/">Our process</a></li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></li>
           <li>
-            <a href="#">Support</a>
+            Support
             <ul>
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/sample-collection/">Sample collection</a></li>
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Health conditions</a></li>
-              <li><a href="#">Health features</a></li>
             </ul>
           </li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/faq/">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/customer/individual-test/">Order a test</a></li>
         </ul>
       </div>
       <div class="three columns">
@@ -48,6 +48,7 @@
             </ul>
           </li>
           <li><a href="<?php echo get_site_url(); ?>/clinicians/faq/">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/customer/clinician-test/">Order a test</a></li>
         </ul>
       </div>
       <div class="three columns">
