@@ -25,13 +25,13 @@ get_header(); ?>
       
       <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="declaration">
         <div class="next_button">
-        I am an Individual
+        I am an individual
         </div>
       </a>
       
       <a href="<?php echo get_site_url(); ?>/customer/clinician-test/" class="declaration">
         <div class="next_button">
-        I am a Clinician
+        I am a clinician
         </div>
       </a>
     </div>
