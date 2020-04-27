@@ -44,7 +44,7 @@ get_header(); ?>
 <section class="about_test_intro">
   <div class="container">
     <div class="six columns offset-by-three">
-    <p>We currently provide three genetic tests: Future health test, Diagnostic test and Targeted test.</p>
+    <p>We currently provide four genetic tests: Future health test, Diagnostic test and Targeted test.</p>
     </div>
   </div>
 </section>
@@ -55,8 +55,8 @@ get_header(); ?>
     Find out more about our range of tests to determine whether they are suitable for you or your patients.
     </div>
     <div class="buttons six columns">
-      <a href="<?php echo get_site_url(); ?>/clinicians" class="button filled white">Clinicians</a>
       <a href="<?php echo get_site_url(); ?>/individuals" class="button filled white">Individuals</a>
+      <a href="<?php echo get_site_url(); ?>/clinicians" class="button filled white">Clinicians</a>
     </div>
   </div>
 </section>
