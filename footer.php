@@ -23,7 +23,7 @@
       <div class="three columns">
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/individuals/">Individuals</a></h5></li>
-          <li><a href="<?php echo get_site_url(); ?>/individuals/">Our process</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/">How it works</a></li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></li>
           <li>
             Support
