@@ -28,7 +28,7 @@ get_header(); ?>
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/predictive.svg" />
           <div class="content">
-            <h2>Predictive test</h2>
+            <h2>PrediSpot test</h2>
             <p>Determine your patient’s risk of developing non-cancerous diseases.</p>
           </div>
         </div>
@@ -38,7 +38,7 @@ get_header(); ?>
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/diagnostic.svg" />
           <div class="content">
-            <h2>Diagnostic test</h2>
+            <h2>PrimeSpot test</h2>
             <p>Accurately diagnose Lyme Disease and chronic fatigue syndrome.</p>
           </div>
         </div>
@@ -48,8 +48,18 @@ get_header(); ?>
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
           <div class="content">
-            <h2>Targeted test</h2>
+            <h2>SNPs test</h2>
             <p>Accurate screenings to determine your patient’s response to treatment.</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="<?php echo get_site_url(); ?>/basket/?add-to-cart=661" class="declaration">
+        <div class="next_button">
+        <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
+          <div class="content">
+            <h2>PaldiSpot test</h2>
+            <p>Excerpt.</p>
           </div>
         </div>
       </a>
