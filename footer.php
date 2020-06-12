@@ -42,9 +42,10 @@
           <li>
             <a href="<?php echo get_site_url(); ?>/clinicians/our-tests/">Our tests</a>
             <ul>
-              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/future-health-test/">Future health test</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/diagnostic-test/">Dianostic test</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/targeted-test/">Targeted test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/predispot-test/">PrediSpot test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/primespot-test/">PrimeSpot test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/snps-test/">SNPs test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/paldispot-test/">PaldiSpot test</a></li>
             </ul>
           </li>
           <li><a href="<?php echo get_site_url(); ?>/clinicians/faq/">FAQs</a></li>
