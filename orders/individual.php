@@ -34,15 +34,20 @@ get_header(); ?>
         </div>
       </a>
       
-      <a href="#" class="declaration">
+      <div class="declaration">
         <div class="next_button">
           <img src="<?php bloginfo('template_directory'); ?>/img/order-clinician.svg" />
             <div class="content">
             <h2>Order through your clinician</h2>
-            <p>If you'd rather go through your personal healthcare provider, that's fine too. Download this letter and take it along to your appointment.</p>
+            <p>If you'd rather go through your personal healthcare provider, that's fine too. Download one of the letters and take it along to your appointment.</p>
+            <ul>
+              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_Future-Health-test.pdf">Future Health test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_PaldiSpot-PrimeSpot-tests.pdf">PrimeSpot and PaldiSpot test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_SNPs-test.pdf">SNPs test</a></li>
+            </ul>
             </div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
