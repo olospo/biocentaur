@@ -13,10 +13,23 @@ get_header(); ?>
 
 <section class="about_intro">
   <div class="container">
-    <div class="eight columns offset-by-one">
-    <h1><?php echo $title; ?></h1>
-    <?php echo $content; ?>
+    <div class="eight columns offset-by-two">
+      <h1><?php echo $title; ?></h1>
+      <?php echo $content; ?>
     </div>
+    <?php $images = get_field('gallery'); if( $images ): ?>
+    <div class="twelve columns">
+      <div class="grid">
+        <ul>
+        <?php foreach( $images as $image ): ?>
+          <li>
+            <img src="<?php echo esc_url($image['sizes']['featured-img']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          </li>
+        <?php endforeach; ?>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?> 
   </div>
 </section>
   
