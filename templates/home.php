@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post(); ?>
       <div class="content">
         <h2>Individuals</h2>
         <p>Providing you with the information you need to manage your health and wellbeing.</p>
-        <a href="<?php echo get_site_url(); ?>/individuals" target="_blank" class="button primary">Learn more</a>
+        <a href="<?php echo get_site_url(); ?>/individuals" class="button primary">Learn more</a>
       </div>
     </div>
     <div class="cta__block clinicians six columns">

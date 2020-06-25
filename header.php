@@ -43,7 +43,7 @@
     </div>
     <nav class="secondary nine columns">
       
-      <?php if (is_tree(164) || 'condition' == get_post_type()) { // Individuals and/or children ?>
+      <?php if (is_tree(460) || is_tree(738) || 'condition' == get_post_type()) { // Individuals and/or children ?>
         <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'individuals', 'container'=> false, 'menu_class'=> false ) ); ?>
       <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>

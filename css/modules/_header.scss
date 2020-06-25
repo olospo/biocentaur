@@ -164,6 +164,9 @@ header {
           color: $blue;
           margin: 15px 20px;
         }
+        &.current-page-ancestor.menu-item-229 a {
+          font-weight: normal;
+        }
         a {
           font: $normal 1.8rem/3.0rem $regular;
           @include transition(all 0.2s ease-out);
