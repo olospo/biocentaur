@@ -12,11 +12,30 @@
       font: $bold 4.2rem/4.4rem $regular;
       text-align: center;
     }
+    
+  }
+  .blocks {
+    display: grid;
+    grid-gap: 40px;
+    @media (min-width: $breakpoint-tablet) {
+      grid-gap: 40px;
+    }
   }
   .test_block {
-    margin-bottom: 20px;
     @media (min-width: $breakpoint-tablet) {
-      margin-bottom: 0;
+      &:nth-child(1), &:nth-child(2) {
+        grid-row: 1;
+      }
+      &:nth-child(3), &:nth-child(4) {
+        grid-row: 2;
+      }
+    }
+    margin-bottom: 0px;
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 0px;
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        grid-row: 1;
+      }
     }
     @include border-radius(10px);
     padding: 30px;
@@ -35,7 +54,10 @@
       @include border-radius(50%);
     }
     h3 {
-      font: $bold 2.6rem/4.4rem $regular;
+      font: $bold 2.2rem/3.4rem $regular;
+    }
+    a.button {
+      padding: 15px 40px 15px 20px;
     }
   }
 }

@@ -20,9 +20,11 @@ while ( have_posts() ) : the_post(); ?>
   </div>
 </section>
 
+<!-- Fix these -->
 <?php if(is_page(211)) { get_template_part('inc/health_conditions'); } // Only show on Individual Test ?>
 
 <?php if(is_tree(164)) { get_template_part('inc/footer_faq'); } else { get_template_part('inc/footer_faq_clinician'); } ?>
+<!-- -->
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

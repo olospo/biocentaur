@@ -3,11 +3,10 @@
 .about_intro {
   padding: $padding-half 0;
   background: $light-blue;
-  text-align: center;
 }
 
 .grid {
-  padding: $padding 0 0 0;
+  padding: $padding-half 0 0 0;
   ul {
     margin: 0;
     display: flex;

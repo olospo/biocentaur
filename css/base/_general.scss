@@ -72,6 +72,7 @@ body {
   color: $mid-blue;
   -webkit-font-smoothing: antialiased; // Fix fonts looking rubbish in Chrome
   background: $white;
+  letter-spacing: 0.25px;
 }
 
 h1, h2, h3, h4 {

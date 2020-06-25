@@ -124,7 +124,7 @@ header {
         width: 30px;
         float: left;
         margin: 0;
-        line-height: 1.8rem;
+        line-height: 1.9rem;
         background: transparent url('../img/search_small.svg') right center no-repeat;
         text-indent: -99999px;
         cursor: pointer;
@@ -214,7 +214,7 @@ header {
             @include border-radius(10px);
             li {
               padding: 0px 2%;
-              width: 28%;
+              width: 20%;
               border-right: 1px solid #e8eaed;
               border-bottom: none;
               a {
