@@ -161,6 +161,9 @@ section.post + .health_conditions {
     }
     .text {
       margin-bottom: $padding-half;
+      @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 0; 
+      }
     }
   }
 }

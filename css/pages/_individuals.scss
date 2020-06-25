@@ -52,3 +52,44 @@
     
   }
 }
+
+// Test CTA
+.health_cta {
+  background: $blue;
+  color: $white;
+  padding: $padding-half 0;
+  font: $normal 2.6rem/3.6rem $regular;
+  .container {
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    h3 {
+      font: $bold 3.6rem/4.6rem $regular;
+    }
+    p {
+      font: $normal 2.4rem/3.4rem $regular;
+    }
+    .text {
+      margin-bottom: $padding-half;
+      @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 0; 
+      }
+    }
+    a {
+      color: $white;
+      &:hover {
+        color: $coral;
+      }
+    }
+  }
+}
+
+.health_cta + .footer_faq {
+  padding: 0 0 60px 0;
+  .container {
+    padding-top: 60px;
+  }
+}

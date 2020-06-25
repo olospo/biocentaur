@@ -23,7 +23,7 @@
       <div class="three columns">
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/individuals/">Individuals</a></h5></li>
-          <li><a href="<?php echo get_site_url(); ?>/individuals/">How it works</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/how-it-works">How it works</a></li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></li>
           <li>
             Support
@@ -32,7 +32,7 @@
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Health conditions</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo get_site_url(); ?>/individuals/faq/">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/faq-ind">FAQs</a></li>
           <li><a href="<?php echo get_site_url(); ?>/customer/individual-test/">Order a test</a></li>
         </ul>
       </div>
@@ -48,7 +48,7 @@
               <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/paldispot-test/">PaldiSpot test</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo get_site_url(); ?>/clinicians/faq/">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/clinicians/faq-clin">FAQs</a></li>
           <li><a href="<?php echo get_site_url(); ?>/customer/clinician-test/">Order a test</a></li>
         </ul>
       </div>
