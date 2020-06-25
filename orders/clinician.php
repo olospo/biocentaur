@@ -56,7 +56,7 @@ get_header(); ?>
       
       <a href="<?php echo get_site_url(); ?>/basket/?add-to-cart=661" class="declaration">
         <div class="next_button">
-        <img src="<?php bloginfo('template_directory'); ?>/img/targeted.svg" />
+        <img src="<?php bloginfo('template_directory'); ?>/img/paldi.svg" />
           <div class="content">
             <h2>PaldiSpot test</h2>
             <p>Excerpt.</p>
