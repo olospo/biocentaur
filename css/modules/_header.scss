@@ -236,7 +236,7 @@ header {
                 @include border-radius(0px);
               }
             }
-            li.predictive, li.diagnostic, li.targeted {
+            li.predictive, li.diagnostic, li.targeted, li.paldi {
               display: inline-block;
               font: $bold 2.2rem/1.8rem $regular !important;
               &:before {
@@ -278,6 +278,15 @@ header {
               }
               &:after {
                 content: "Accurate screenings to determine your patient’s response to treatment.";
+              }
+            }
+            li.paldi {
+              &:before {
+                background: url('../img/paldi_round.svg') left center no-repeat;
+                background-size: cover;
+              }
+              &:after {
+                content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed eiusmod.";
               }
             }
           }
