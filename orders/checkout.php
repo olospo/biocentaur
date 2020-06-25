@@ -23,7 +23,9 @@ get_header(); ?>
         <h1><?php the_title(); ?></h1>
       </div>
       <?php echo do_shortcode('[woocommerce_checkout]'); ?>
-      
+      <div class="legal">
+      <a href="<?php echo get_site_url(); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php echo get_site_url(); ?>/terms-conditions">Terms & Conditions</a>
+      </div>
     </div>
   </div>
 </section>
