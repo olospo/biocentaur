@@ -59,7 +59,7 @@ get_header(); ?>
         <img src="<?php bloginfo('template_directory'); ?>/img/paldi.svg" />
           <div class="content">
             <h2>PaldiSpot test</h2>
-            <p>Excerpt.</p>
+            <p>Reliable tests to identify your patient’s strain of Lyme disease.</p>
           </div>
         </div>
       </a>
