@@ -41,7 +41,7 @@ $category = $_REQUEST['category'] ?? false; ?>
     </div>
     <div class="answer ten columns offset-by-one">
     <p>Didn't find an answer to your question?</p>
-    <a href="<?php echo get_site_url(); ?>/clinicians/faq" class="button primary">More support</a>
+    <a href="<?php echo get_site_url(); ?>/clinicians/faq-clin" class="button primary">More support</a>
     </div>
   </div>
 </div>
