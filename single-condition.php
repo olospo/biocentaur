@@ -65,8 +65,6 @@ while ( have_posts() ) : the_post(); ?>
   </div>
 </section>
 
-<?php get_template_part('inc/know_more'); ?>
-
 <?php get_template_part('inc/footer_faq'); ?>
 
 <?php endwhile; // end of the loop. ?>

@@ -168,6 +168,13 @@ section.post + .health_conditions {
   }
 }
 
+.test_cta + .footer_faq, .health_conditions + .footer_faq {
+  padding-top: 0;
+  .container {
+    border-top: none;
+  }
+}
+
 // Related Documents
 .related {
   margin: $padding-half 0 0 0;
