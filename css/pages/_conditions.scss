@@ -11,8 +11,12 @@
     }
     text-align: center;
     h3 {
-      font: $bold 4.2rem/4.4rem $regular;
-      margin-bottom: 20px;
+      font: $bold 2.8rem/3.4rem $regular;
+      margin-bottom: 10px;
+      @media (min-width: $breakpoint-tablet) {
+        font: $bold 4.2rem/4.4rem $regular;
+        margin-bottom: 20px;
+      }
     }
     p {
       font: $normal 2.4rem/3.6rem $regular;
@@ -156,10 +160,14 @@ section.post + .health_conditions {
   padding: $padding-half 0;
   font: $normal 2.6rem/3.6rem $regular;
   .container {
+    text-align: center;
     @media (min-width: $breakpoint-tablet) {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    @media (min-width: $breakpoint-mobile) {
+      text-align: left;
     }
     h3 {
       font: $bold 3.6rem/4.6rem $regular;
@@ -291,6 +299,9 @@ section.post + .health_conditions {
       position: -webkit-sticky;
       position: sticky;
       top: 166px;
+      @media (max-width: $breakpoint-tablet) {
+        text-align: center;
+      }
     }
     p:first-of-type {
       font: $normal 2.4rem/3.2rem $regular !important;

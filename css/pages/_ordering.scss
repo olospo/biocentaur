@@ -69,7 +69,7 @@
   .next_button {
     font: $normal 2.6rem/3.6rem $regular;
     @include border-radius(10px);
-    padding: 30px 120px 30px 30px;
+    padding: 30px 80px 30px 30px;
     border: 1px solid $border;
     -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
     -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
@@ -87,10 +87,16 @@
       background: $coral-tint;
       padding: 10px;
       @include border-radius(50%);
-      float: left;
+      margin-bottom: 10px;
+      @media (min-width: $breakpoint-mobile) {
+        float: left;
+        margin-bottom: 0;
+      }
     }
     .content {
-      margin-left: 150px;
+      @media (min-width: $breakpoint-mobile) {
+        margin-left: 150px;
+      }
     }
   }
 }
@@ -182,6 +188,25 @@ p#clinician_field {
 
 span.optional {
   display: none;
+}
+@media (max-width: $breakpoint-tablet) {
+  table.shop_table {
+    max-width: 100%;
+    th.product-thumbnail, td.product-thumbnail{
+      display: none;
+    }
+    th {
+      padding: 10px;
+      font: $bold 1.5rem/2.6rem $regular;
+    }
+    td {
+      padding: 10px;
+      font: $normal 1.3rem/1.8rem $regular;
+    }
+    .input-text.qty {
+      width: 20px;
+    }
+  }
 }
 table.woocommerce-checkout-review-order-table {
   td {

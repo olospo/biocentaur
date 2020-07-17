@@ -13,11 +13,13 @@
     align-items: center;
     justify-content: center;
     @media (max-width: 500px) {
+      display: block;
       align-items: flex-start;
       justify-content: flex-start;
       .step_image {
-        max-width: 30%;
+        max-width: 100%;
         padding-right: 5%;
+        
       }
     }
     @media (max-width: $breakpoint-tablet) {
@@ -60,23 +62,17 @@
   padding: $padding-half 0;
   font: $normal 2.6rem/3.6rem $regular;
   .container {
+    text-align: center;
     @media (min-width: $breakpoint-tablet) {
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
     }
     h3 {
       font: $bold 3.6rem/4.6rem $regular;
     }
     p {
       font: $normal 2.4rem/3.4rem $regular;
-    }
-    .text {
-      margin-bottom: $padding-half;
-      @media (min-width: $breakpoint-tablet) {
-        margin-bottom: 0; 
-      }
     }
     a {
       color: $white;

@@ -84,8 +84,11 @@
     text-align: center;
     padding-bottom: 30px;
     h2 {
-      font: $bold 4.0rem/4.5rem $regular;
+      font: $bold 2.8rem/3.4rem $regular;
       margin-bottom: 30px;
+      @media (min-width: $breakpoint-tablet) {
+        font: $bold 4.0rem/4.5rem $regular;
+      }
     }
   }
   .accordionItem {
@@ -126,8 +129,8 @@
 #footer-faq-search, #archive-faq-search {
   color: $blue;
   width: 70%;
-  margin-left: -50px;
   font: $normal 1.8rem/2.6rem $regular;
+  margin-left: -50px;
   @media (min-width: $breakpoint-tablet) {
     font: $normal 2.2rem/3.4rem $regular;
   }
@@ -139,6 +142,10 @@
   &:focus {
     border: 1px solid $coral;
   }
+}
+
+.faq_page #archive-faq-search {
+  margin-left: 0;
 }
 
 #faq-search-submit, #archive-faq-submit {
