@@ -42,7 +42,10 @@ section.post + .health_conditions {
 // Block for listing all conditions
 .block__conditions {
   @include border-radius(10px);
-  padding: 20px 40px;
+  padding: 20px 20px;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 20px 40px;
+  }
   border: 1px solid $border;
   -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
   -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
@@ -52,7 +55,8 @@ section.post + .health_conditions {
     border-bottom: 1px solid $border;
     padding: 15px 0px;
     .title {
-      font: $normal 2.2rem/4.4rem $regular;
+      font: $normal 2.2rem/3rem $regular;
+      padding-right: 40px;
       @media (min-width: $breakpoint-tablet) {
         font: $normal 2.6rem/4.4rem $regular;
       }
@@ -62,8 +66,12 @@ section.post + .health_conditions {
         @include border-radius(50%);
         background: $coral-tint;
         float: left;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
+        @media (min-width: $breakpoint-tablet) {
+          height: 50px;
+          width: 50px;
+        }
         margin-right: 20px;
       }
     }
@@ -298,18 +306,28 @@ section.post + .health_conditions {
   cursor:pointer;
   position: relative;
   .content {
-    max-width: 90%;
+    max-width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 90%;
+    }
   }
   &:before {
     content: "";
-    background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+    background: url('../img/blue_arrow.svg') 0 0 no-repeat;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    right: 10px;
+    right: 5px;
     top: 10px;
-    height: 32px;
-    width: 20px;
+    height: 16px;
+    width: 9px;
     position: absolute;
+    @media (min-width: $breakpoint-tablet) {
+      background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+      height: 32px;
+      width: 20px;
+      right: 20px;
+      top: 10px;
+    }
   }
 }
 
@@ -318,13 +336,20 @@ section.post + .health_conditions {
   position: relative;
   &:before {
     content: "";
-    background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+    background: url('../img/blue_arrow.svg') 0 0 no-repeat;
     transform-origin: center center;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     -webkit-animation:spin 0.2s linear forwards;
     -moz-animation:spin 0.2s linear forwards;
     animation:spin 0.2s linear forwards;
+    right: 5px;
+    top: 10px;
+    @media (min-width: $breakpoint-tablet) {
+      background: url('../img/grey_arrow.svg') 0 0 no-repeat;
+      right: 20px;
+      top: 10px;
+    }
   } 
 }
 
@@ -394,7 +419,10 @@ section.post + .health_conditions {
 	transition-delay: 0.2s;
   box-sizing: border-box;
   .content {
-    max-width: 90%;
+    max-width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 90%;
+    }
   }
   img {
     margin-bottom: 30px;

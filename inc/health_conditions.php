@@ -17,7 +17,7 @@
       
       <article class="accordionItem close">
         <div class="title accordionItemHeading">
-          <img src="<?php the_post_thumbnail_url( 'featured-img' ); ?>" height="50px" width="50px" />
+          <img src="<?php the_post_thumbnail_url( 'featured-img' ); ?>" />
           <?php the_title(); ?>
         </div>
         
