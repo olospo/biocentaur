@@ -20,7 +20,7 @@
         </ul>
       </div>
     
-      <div class="three columns">
+      <div class="sitemap three columns">
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/individuals/">Individuals</a></h5></li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/how-it-works">How it works</a></li>
@@ -36,7 +36,7 @@
           <li><a href="<?php echo get_site_url(); ?>/customer/individual-test/">Order a test</a></li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="sitemap three columns">
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/clinicians/">Clinicians</a></h5></li>
           <li>
@@ -52,7 +52,7 @@
           <li><a href="<?php echo get_site_url(); ?>/customer/clinician-test/">Order a test</a></li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="sitemap three columns">
         <ul>
           <li class="heading">
             <h5><a href="<?php echo get_site_url(); ?>/about/">About</a></h5>

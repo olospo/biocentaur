@@ -49,10 +49,7 @@ footer {
     }
   }
   .about {
-    margin-bottom: 20px;
-    @media (min-width: $breakpoint-tablet) {
-      margin: 0; 
-    }
+    margin: 0; 
     svg {
       max-width: 60%;
       display: block;
@@ -82,6 +79,12 @@ footer {
       }
     }
   }
+  .sitemap {
+    display: none;
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
   .address {
     margin-top: $padding-half;
     @media (min-width: $breakpoint-tablet) {
@@ -91,11 +94,12 @@ footer {
   .end_links {
     color: $light-blue;
     font: $normal 1.4rem/2.8rem $regular;
-    margin: $padding-half 0 0 0;
+    margin: 0;
     border-top: 1px solid $white;
     padding: $padding-half 0 0 0;
     @media (min-width: $breakpoint-tablet) {
       padding: $padding-half 0;
+      margin: $padding-half 0 0 0;
     }
     text-align: center;
     a, strong, span.registered {
