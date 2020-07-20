@@ -107,3 +107,11 @@ var componentVisible = (function ($) {
   });
 
 })(jQuery);
+
+// Mobile Menu 
+$("li.menu-item-has-children > a").after("<div class='sub-toggle'></div>");
+
+$(".sub-toggle").click(function() {
+  $(this).siblings('ul').toggle();
+  $(this).toggleClass("open");
+});
