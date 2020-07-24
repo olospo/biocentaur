@@ -5,6 +5,10 @@
   width: 100%;
   top:0px;
   z-index: 9999;
+  @media (max-width: $breakpoint-mobile) {
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+  }
 }
 header {
   &.menu {
@@ -346,8 +350,8 @@ header {
 
 nav.mobile {
   display: none;
-  position: fixed;
   top: 90px;
+  overflow: scroll;
   @media (min-width: $breakpoint-tablet) {
     top: 166px;
   }
