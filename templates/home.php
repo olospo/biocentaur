@@ -49,7 +49,7 @@ while ( have_posts() ) : the_post(); ?>
       <div class="help_block six columns">
         <h5>Individuals</h5>
         <p>Health and wellness-related information to help you make better-informed decisions about your wellbeing.</p>
-        <a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/" class="read_more">Conditions</a>
+        <a href="<?php echo get_site_url(); ?>/individuals/our-tests" class="read_more">See tests</a>
       </div>
       <div class="help_block six columns">
         <h5>Clinicians</h5>
