@@ -1,8 +1,8 @@
 <section class="health_conditions">
   <div class="container">
     <div class="block__title ten columns offset-by-one">
-      <h3>Future health test</h3>
-      <p>Our Future health test can help determine your risk of developing the following diseases:</p>
+      <h3>PrediSpot genetic test</h3>
+      <p>Our PrediSpot genetic test can help determine your risk of developing the following diseases</p>
     </div>
     <div class="block__conditions ten columns offset-by-one">
       <?php 
