@@ -30,7 +30,7 @@
         <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/individuals/">Individuals</a></h5></li>
           <li><a href="<?php echo get_site_url(); ?>/individuals/how-it-works">How it works</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/individuals/our-tests/">Our tests</a></li>
           <li>
             Support
             <ul>
@@ -64,7 +64,7 @@
             <h5><a href="<?php echo get_site_url(); ?>/about/">About</a></h5>
             <ul>
               <li><a href="<?php echo get_site_url(); ?>/about/">About us</a></li>
-              <li><a href="#">Laboratory</a></li>
+              <!--<li><a href="#">Laboratory</a></li>-->
             </ul>
           </li>
         </ul>
