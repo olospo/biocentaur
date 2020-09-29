@@ -21,7 +21,7 @@ get_header(); ?>
       <div class="test_heading">
         <a href="<?php echo get_site_url(); ?>" class="back">Back to Biocentaur</a>
         <h1>Order your test</h1>
-        <p>You are an Individual ordering a <a href="<?php echo get_site_url(); ?>/individuals/future-health-test/">Future health test</a></p>
+        <p>You are an Individual ordering a <a href="<?php echo get_site_url(); ?>/individuals/our-tests/">PrediSpot genetic test</a></p>
       </div>
       
       <a href="<?php echo get_site_url(); ?>/basket/?add-to-cart=269" class="declaration">
