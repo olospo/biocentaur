@@ -2,7 +2,7 @@
   <div class="container">
     <div class="block__title ten columns offset-by-one">
       <h3>Health conditions</h3>
-      <p>Our <a href="/individuals/our-tests/predispot-genetic-test">PrediSpot genetic test</a> can help determine your risk of developing the following diseases</p>
+      <p>Our <a href="/individuals/our-tests/predispot-genetic-test">PrediSpot genetic test</a> can help determine your risk of developing the following diseases. Find out more about each condition here, including common symptoms and treatments.</p>
     </div>
     <div class="block__conditions ten columns offset-by-one">
       <?php 
