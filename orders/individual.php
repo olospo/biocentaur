@@ -42,8 +42,8 @@ get_header(); ?>
             <p>If you'd rather go through your personal healthcare provider, that's fine too. Download one of the letters and take it along to your appointment.</p>
             <ul>
               <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_predispot.pdf">PrediSpot genetic test</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_PaldiSpot-PrimeSpot-tests.pdf">PrimeSpot and PaldiSpot test</a></li>
-              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_SNPs-test.pdf">SNPs test</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_PaldiSpot-PrimeSpot-tests.pdf">PrimeSpot and PaldiSpot genetic tests</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/Biocentaur_GP-letter_SNPs-test.pdf">SNPs genetic test</a></li>
             </ul>
             </div>
         </div>
