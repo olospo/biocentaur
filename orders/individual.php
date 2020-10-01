@@ -21,7 +21,7 @@ get_header(); ?>
       <div class="test_heading">
         <a href="<?php echo get_site_url(); ?>" class="back">Back to Biocentaur</a>
         <h1>Order your test</h1>
-        <p>You are an Individual ordering a <a href="<?php echo get_site_url(); ?>/individuals/our-tests/">PrediSpot genetic test</a></p>
+        <p>Order your genetic test online or through your personal healthcare provider</p>
       </div>
       
       <a href="<?php echo get_site_url(); ?>/basket/?add-to-cart=269" class="declaration">
@@ -29,7 +29,7 @@ get_header(); ?>
         <img src="<?php bloginfo('template_directory'); ?>/img/order-online.svg" />
           <div class="content">
             <h2>Order online</h2>
-            <p>Order your test online and we will send you a [saliva collection kit / blood sample kit] in the mail. Send your patient sample back to us and our team of genetic experts will do the rest.</p>
+            <p>Order your PrediSpot genetic test online and we will send you a sample test kit in the mail. Send your sample back to us and our team of genetic experts will do the rest.</p>
           </div>
         </div>
       </a>
