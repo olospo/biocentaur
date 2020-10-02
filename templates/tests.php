@@ -36,6 +36,7 @@ while ( have_posts() ) : the_post(); ?>
 <?php 
   if ( is_tree(460) || is_tree(738) ) { 
     //get_template_part('inc/health_cta');
+    get_template_part('inc/individuals_tests');
     get_template_part('inc/footer_faq_clinician'); 
   } else { 
     get_template_part('inc/footer_faq'); 
