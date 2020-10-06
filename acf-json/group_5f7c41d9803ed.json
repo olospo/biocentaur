@@ -7,7 +7,7 @@
             "label": "Animation",
             "name": "animation",
             "type": "textarea",
-            "instructions": "To make YouTube videos responsive wrap the <iframe> around <div class=\"video-container\">",
+            "instructions": "To make YouTube videos responsive wrap the <code>&lt;&#x69;&#x66;&#x72;&#x61;&#x6d;&#x65;&gt;<\/code> around <code>&lt;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6c;&#x61;&#x73;&#x73;&equals;&quot;&#x76;&#x69;&#x64;&#x65;&#x6f;&#x2d;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x69;&#x6e;&#x65;&#x72;&quot;&gt;&lt;&sol;&#x64;&#x69;&#x76;&gt;<\/code>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1601980851
+    "modified": 1601983625
 }
