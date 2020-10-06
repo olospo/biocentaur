@@ -1,32 +1,28 @@
 {
-  "devDependencies" : {
-
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olospo/biocentaur.git"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "git+https:\/\/github.com\/olospo\/biocentaur.git"
+  "license": "ISC",
+  "name": "WordPress",
+  "version": "1.0.0",
+  "description": "Starter WordPress Theme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "*",
+    "gulp-load-plugins": "^2.0.3",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^4.13.1",
+    "npm": "^6.14.8"
   },
-  "license" : "ISC",
-  "name" : "WordPress",
-  "version" : "1.0.0",
-  "description" : "Starter WordPress Theme",
-  "dependencies" : {
-    "npm" : "^6.14.7",
-    "gulp-notify" : "^3.0.0",
-    "merge-stream" : "^2.0.0",
-    "gulp" : "^4.0.2",
-    "gulp-load-plugins" : "^2.0.3",
-    "gulp-sass" : "^4.1.0",
-    "node-sass" : "^4.13.1",
-    "gulp-rename" : "^2.0.0",
-    "gulp-concat" : "*",
-    "gulp-uglify" : "^3.0.2",
-    "gulp-clean-css" : "^4.3.0",
-    "gulp-autoprefixer" : "^7.0.1"
-  },
-  "author" : "Tom Brooks",
-  "optionalDependencies" : {
-
-  },
-  "homepage" : "https:\/\/github.com\/olospo\/biocentaur#readme"
+  "author": "Tom Brooks",
+  "optionalDependencies": {},
+  "homepage": "https://github.com/olospo/biocentaur#readme"
 }

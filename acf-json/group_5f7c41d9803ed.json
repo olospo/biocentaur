@@ -1,0 +1,43 @@
+{
+    "key": "group_5f7c41d9803ed",
+    "title": "Animation",
+    "fields": [
+        {
+            "key": "field_5f7c41ddd197c",
+            "label": "Animation",
+            "name": "animation",
+            "type": "textarea",
+            "instructions": "To make YouTube videos responsive wrap the <iframe> around <div class=\"video-container\">",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/individuals.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1601980851
+}

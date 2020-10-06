@@ -5,28 +5,32 @@
     </div>
     <div class="blocks twelve columns">
       <div class="test_block">
-        <img src="<?php the_field('test_icon_one',169); ?>">
-        <h3>PrediSpot genetic test</h3>
-        <p>Determine your risk of developing non-cancerous diseases.</p>
-        <a href="<?php echo get_site_url(); ?>/?page_id=871" class="button primary">Learn more</a>
+        <img src="<?php the_field('test_icon_one'); ?>">
+        <h3><?php the_field('test_title_one'); ?></h3>
+        <p><?php the_field('test_excerpt_one'); ?></p>
+        <a href="<?php the_field('learn_more_link_one'); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_one'); ?>" class="button filled">Order test</a>
       </div>
       <div class="test_block">
-        <img src="<?php the_field('test_icon_two',169); ?>">
-        <h3>PrimeSpot genetic test</h3>
-        <p>Accurately diagnose Lyme Disease and chronic fatigue syndrome.</p>
-        <a href="<?php echo get_site_url(); ?>/?page_id=877" class="button primary">Learn more</a>
+        <img src="<?php the_field('test_icon_two'); ?>">
+        <h3><?php the_field('test_title_two'); ?></h3>
+        <p><?php the_field('test_excerpt_two'); ?></p>
+        <a href="<?php the_field('learn_more_link_two'); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_two'); ?>" class="button filled">Order test</a>
       </div>
       <div class="test_block">
-        <img src="<?php the_field('test_icon_three',169); ?>">
-        <h3>SNPs genetic test</h3>
-        <p>Accurate screenings to help determine your response to treatment.</p>
-        <a href="<?php echo get_site_url(); ?>/?page_id=882" class="button primary">Learn more</a>
+        <img src="<?php the_field('test_icon_three'); ?>">
+        <h3><?php the_field('test_title_three'); ?></h3>
+        <p><?php the_field('test_excerpt_three'); ?></p>
+        <a href="<?php the_field('learn_more_link_three'); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_three'); ?>" class="button filled">Order test</a>
       </div>
       <div class="test_block">
-        <img src="<?php the_field('test_icon_four',169); ?>">
-        <h3>PaldiSpot genetic test</h3>
-        <p>Reliable tests to identify your particular strain of Lyme disease.</p>
-        <a href="<?php echo get_site_url(); ?>/?page_id=886" class="button primary">Learn more</a>
+        <img src="<?php the_field('test_icon_four'); ?>">
+        <h3><?php the_field('test_title_four'); ?></h3>
+        <p><?php the_field('test_excerpt_four'); ?></p>
+        <a href="<?php the_field('learn_more_link_four'); ?>" class="button primary">Learn more</a>
+        <a href="<?php the_field('order_test_link_four'); ?>" class="button filled">Order test</a>
       </div>
     </div>
   </div>

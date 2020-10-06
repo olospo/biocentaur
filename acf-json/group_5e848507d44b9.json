@@ -1,6 +1,6 @@
 {
     "key": "group_5e848507d44b9",
-    "title": "Clinicians - Our tests",
+    "title": "Our tests",
     "fields": [
         {
             "key": "field_5e8486c830ebf",
@@ -474,6 +474,13 @@
                 "operator": "==",
                 "value": "templates\/clinicians.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/individuals.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -482,7 +489,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1592923893
+    "modified": 1601976363
 }
