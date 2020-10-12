@@ -27,12 +27,15 @@
       <ul class="social-icons">
         <?php if(get_field('facebook_link','options')): ?>
           <li><a href="<?php the_field('facebook_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook_icon.svg" /></a></li>
-          <?php endif; ?>
-          <?php if(get_field('twitter_link','options')): ?>
+        <?php endif; ?>
+        <?php if(get_field('twitter_link','options')): ?>
           <li><a href="<?php the_field('twitter_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter_icon.svg" /></a></li>
-          <?php endif; ?>
-          <?php if(get_field('youtube_link','options')): ?>
+        <?php endif; ?>
+        <?php if(get_field('youtube_link','options')): ?>
           <li><a href="<?php the_field('youtube_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/youtube_icon.svg" /></a></li>
+        <?php endif; ?>
+        <?php if(get_field('instagram_link','options')): ?>
+          <li><a href="<?php the_field('instagram_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/instagram_icon.svg" /></a></li>
         <?php endif; ?>
       </ul>
     </div>
