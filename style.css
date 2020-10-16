@@ -76,6 +76,9 @@
 	td.product-subtotal, th.product-subtotal {
     	display: none;
 	}
+	footer .about ul.social-icons li svg {
+		width: 80px;
+	}
 		
 }
 
