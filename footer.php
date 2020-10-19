@@ -5,7 +5,7 @@
     <!-- <a href="#" class="back_to_top">Back to Top</a> -->
     <div class="row">
       <div class="about three columns">
-        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo_rev.svg" alt="Biocentaur Logo"/>
+        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo_rev.svg" alt="Biocentaur logo" class="footer_logo/>
         <p>
           <?php the_field('address','options'); ?>
         </p>
@@ -78,8 +78,15 @@
     </div>
     <div class="row">
       <div class="end_links twelve columns">
-        <strong>Biocentaur &copy; <?php echo date("Y"); ?>, all rights reserved</strong> | <a href="/cookie-policy">Cookie policy</a> | <a href="/privacy-policy">Privacy policy</a> | <a href="/accessibility">Accessibility</a> | <a href="#">Sitemap</a> | <a href="#">Terms & conditions</a><br />
-        <span class="registered">Registered number: 08540437</span> | <span class="registered">Registered office: Biocentaur LTD, 4 Beau Street, BA1 1QY Bath, UK.</span> | <span class="registered">In compliance with GDPR -EU 2016/679- / Data Protection Officer for RGCC Group: <a href="mailto:dpo@rgcc-group.com">Zoe Kassapidou</a></span>
+		    <div class="footer_block">
+			    <a href="/cookie-policy">Cookie policy</a> | <a href="/privacy-policy">Privacy policy</a> | <a href="/accessibility">Accessibility</a>
+		    </div>
+        <div class="footer_block">
+			    <strong>Biocentaur &copy; <?php echo date("Y"); ?>, all rights reserved</strong> | <span class="registered">Registered number: 08540437</span> | <span class="registered">Registered office: Biocentaur LTD, 4 Beau Street, BA1 1QY Bath, UK.</span>
+		    </div>	
+        <div class="footer_block">		  
+			     <span class="dpo">In compliance with GDPR -EU 2016/679- / Data Protection Officer for RGCC Group: <a href="mailto:dpo@rgcc-group.com">Zoe Kassapidou</a></span>
+		    </div>	
       </div>
     </div>
   </div>
