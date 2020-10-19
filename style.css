@@ -7,23 +7,66 @@
 * Version: 1.3.2
 */
 
-
 /*********************** MW IMPROVEMENTS ***********************/
+/* remove mobile CSS opacity transitions */
+.accordionItemContent p a {
+	color: #00365F;
+	text-decoration: underline;
+	text-decoration-color: #EF928E;
+}
+footer .end_links a, footer .end_links strong, footer .end_links span.registered {
+	padding: 5px 10px;
+}
+footer .end_links span.dpo a {
+	padding: 5px 0px;
+}
+.footer_block {
+	margin: 10px 0;
+}
 
-/* footer, mobile CSS opacity transitions, contact form, order test */
+/* Forms */
+.payment_method_stripe img {
+	display: initial;
+}
+section .nf-form-layout form select, section .nf-form-layout form input, section .nf-form-layout form textarea, section .woocommerce form select, section .woocommerce form input, section .woocommerce form textarea, .select2-container--default .select2-selection--single .select2-selection__rendered, .wc-stripe-elements-field, .wc-stripe-iban-element-field, .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+	padding: 15px;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-ms-border-radius: 5px !important;
+	border-radius: 5px !important;
+	border: 1px solid #adbac8 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: #00365F !important;
+}
+.nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
+	background: #00365F !important;
+	color: #ffffff !important;
+	border: 0px solid #ffffff !important; 
+}
+section .nf-form-layout form select:focus, section .nf-form-layout form input:focus, section .nf-form-layout form textarea:focus, section .woocommerce form select:focus, section .woocommerce form input:focus, section .woocommerce form textarea:focus, .wc-stripe-elements-field:focus, .wc-stripe-iban-element-field:focus {
+	border: 1px solid #00365F !important;
+	outline: 1px solid #00365F !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+	background-color: #00365F;
+}
+label abbr[title] {
+	text-decoration: none;
+}
+
 
 /* Mobile 768px */
-@media screen and (max-width: 47.9375rem) {
-	
+@media screen and (max-width: 47.9375rem) {	
 	/* Spacing, padding + margins */
 	.home.hero, .faq_page, section.page, section.post, .test_navigation {
-		margin-top: 40px;
+		/*margin-top: 40px;*/
 	}
 	.our_tests + .footer_faq .container {
-	    padding: 20px 20px 40px 20px;
+	    	padding: 20px 20px 40px 20px;
 	}
 	.fixed_header + .health_conditions, section.condition {
-    	margin-top: 20px;
+    		margin-top: 20px;
 	}
 	.footer_faq .accordionItem .title, .faq_page .accordionItem .title {
   	  	padding-right: 20px;
@@ -32,25 +75,39 @@
 		padding: 40px 0;
 	}
 	.home.hero .float {
-    	padding: 40px 10px;
+    		padding: 40px 10px;
 	}
 	.home_cta .cta__block .content {
-    	padding: 20px;
+    		padding: 20px;
 	}
 	.health_conditions .block__title {
-	    padding: 20px 0;
+	    	padding: 20px 0;
+	}
+	.footer_faq .accordionItem {
+		padding: 20px;
+	}
+	footer .end_links a, footer .end_links strong, footer .end_links span.registered {
+    		padding: 5px 5px;
+	}
+	footer .about svg.footer_logo {
+		margin: 0px auto 20px auto;
+		margin-left: calc(50% + -5%);
+		transform: translateX(-50%);
 	}
 	
 	/* Typography */
 	.block__conditions article .title, .health_conditions .block__title p, .home_info p, .condition .content p:first-of-type, .faq_page .filter p {
-	    font: 400 1.8rem/2.8rem "Dosis", Helvetica, Arial, sans-serif !important;
+	    	font: 400 1.8rem/2.8rem "Dosis", Helvetica, Arial, sans-serif !important;
 	}
 	section.hero .content h1 {
-	    font: 600 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
+	    	font: 600 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
 	}
 	.test_cta .container {
 		text-align: center;
 		font: 400 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
+	}
+	footer .end_links {
+    		font: 400 1.4rem/2.4rem "Dosis", Helvetica, Arial, sans-serif;
 	}
 	
 	/* UI */
@@ -58,14 +115,14 @@
 		width: 60px;
 	}
 	.declaration .next_button {
-	    padding: 30px;
-    	background-position: right 30px top 40px;
+	    	padding: 30px;
+    		background-position: right 30px top 40px;
 	}
 	.test_navigation ul li {
-	    padding: 0px;
+	    	padding: 0px;
 	}
 	.test_navigation ul li:after {
-    	padding: 0px 2px;
+    		padding: 0px 2px;
 	}
 	.test_navigation ul li {
 		margin-left: 4px;
@@ -75,18 +132,36 @@
 		box-shadow: 0 0px 30px -10px #00365F;
 	}
 	td.product-subtotal, th.product-subtotal {
-    	display: none;
+    		display: none;
 	}
 	footer .about ul.social-icons li svg {
 		width: 80px;
 	}
-		
+	
+	/* Mobile main nav */
+	nav.mobile ul li.menu-item-has-children a {
+    		margin-right: 0;
+	}
+	nav.mobile ul li ul.sub-menu {
+		margin: 0;
+	}
+	nav.mobile ul li ul.sub-menu li {
+    		padding-left: 0;
+	}
+	nav.mobile ul li ul.sub-menu li a {
+    		padding-left: 10px;
+	}
+	nav.mobile ul li ul.sub-menu li ul.sub-menu a {
+    		padding-left: 20px;
+	}
+	nav.mobile [aria-current="page"] {
+		background: #e1e1ff !important;
+	}	
 }
 
 
 /* iPhone 5/SE */
-@media screen and (max-width: 20rem) {
-	
+@media screen and (max-width: 20rem) {	
 	/* Typography */
 	.home_cta .cta__block .content p, .footer_faq .accordionItem .title, .faq_page .accordionItem .title {
 		font: 400 1.8rem/2.8rem "Dosis", Helvetica, Arial, sans-serif;
@@ -97,10 +172,9 @@
 	
 	/* Spacing, padding + margins */
 	.button {
-	    padding: 15px 60px 15px 20px;
+	    	padding: 15px 60px 15px 20px;
 	}
 	.footer_faq .filter h2 {
-    	padding: 0 20px;
+    		padding: 0 20px;
 	}
-
 }
