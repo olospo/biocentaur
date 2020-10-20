@@ -8,6 +8,13 @@
 */
 
 /*********************** MW IMPROVEMENTS ***********************/
+.anchor-link {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}
+
 /* remove mobile CSS opacity transitions */
 .accordionItemContent p a {
 	color: #00365F;
