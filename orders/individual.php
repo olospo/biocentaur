@@ -34,7 +34,7 @@ get_header(); ?>
         </div>
       </a>
       
-      <div class="declaration" id="via-clinician">
+      <div class="declaration"><a name="via-clinician" class="anchor-link"></a>
         <div class="next_button">
           <img src="<?php bloginfo('template_directory'); ?>/img/order-clinician.svg" />
             <div class="content">
