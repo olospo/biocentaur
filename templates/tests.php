@@ -4,6 +4,7 @@ get_header();
 $bgImg = get_field('background_image');
 
 $order = get_field('order_link');
+$order_anchor = get_field('order_anchor');
 $faq = get_field('faq_link');
 
 $orderText = get_field('order_text');
@@ -21,7 +22,7 @@ while ( have_posts() ) : the_post(); ?>
   <div class="container flex">
     <aside class="five columns offset-by-one">
       <img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
-      <a href="<?php echo $order; ?>" class="button filled"><?php echo $orderText; ?></a>
+      <a href="<?php echo $order; ?>#<?php if ($order_anchor) : echo $order_anchor; endif; ?>" class="button filled"><?php echo $orderText; ?></a>
       <a href="<?php echo $faq; ?>" class="button primary"><?php echo $faqText; ?></a>
     </aside>
     <div class="content five columns">
