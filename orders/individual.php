@@ -28,7 +28,7 @@ get_header(); ?>
         <div class="next_button">
         <img src="<?php bloginfo('template_directory'); ?>/img/order-online.svg" />
           <div class="content">
-            <h2>Order online</h2>
+            <h2>Order your PrediSpot genetic test online</h2>
             <p>Order your <b>PrediSpot genetic test</b> online and we will send you a sample test kit in the mail. Send your sample back to us and our team of genetic experts will do the rest.</p>
           </div>
         </div>
