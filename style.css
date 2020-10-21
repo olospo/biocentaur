@@ -90,13 +90,13 @@ label abbr[title] {
 	.health_conditions .block__title {
 	    	padding: 20px 0;
 	}
-	.footer_faq .accordionItem {
+	.footer_faq .accordionItem, .faq_page .accordionItem {
 		padding: 20px;
 	}
 	footer .end_links a, footer .end_links strong, footer .end_links span.registered {
     		padding: 5px 5px;
 	}
-	footer .about svg.footer_logo {
+	footer .about svg#Layer_1 {
 		margin: 0px auto 20px auto;
 		margin-left: calc(50% + -5%);
 		transform: translateX(-50%);
