@@ -106,6 +106,9 @@ section {
     @media (min-width: $breakpoint-tablet) {
       margin-top: 160px;
     }
+    &.single_post {
+      margin-top: 0;
+    }
     padding: $padding-half 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;
@@ -579,6 +582,114 @@ section.hero{
     color: $blue;
   }
 }
+
+// News 
+
+.hero.small {
+  margin-top: 90px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 140px;
+  }
+}
+
+section.news {
+  padding: 0 0 $padding-half 0;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 0 $padding-half 0;
+  }
+  .news_listing {
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  article {
+    background: $white;
+    border: 1px solid #dee2e5;
+    @include border-radius(10px);
+    margin-bottom: $padding-half;
+    -webkit-box-shadow: 0 15px 20px -3px #e6ecf0;
+    -moz-box-shadow: 0 15px 20px -3px #e6ecf0;
+    box-shadow: 0 15px 20px -3px #e6ecf0;
+    &:nth-child(3n+4) {
+      margin-left: 0;
+      clear: left;
+    }
+    h3 {
+      font: $bold 2.6rem/4.4rem $regular;
+    }
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+    .date {
+      display: block;
+      color: $blue;
+      font: $normal 1.6rem/2.0rem $regular;
+      margin-bottom: 20px;
+    }
+    .image {
+      overflow: hidden;
+      @include border-radius(10px 10px 0px 0px);
+      margin-bottom: 0;
+      img {
+        transition: transform .5s;
+        transform: scale(1.02);
+      }
+    }
+    &:hover {
+      .image {
+        img {
+          transition: transform .5s;
+          transform: scale(1.1);
+        }
+      }
+    }
+    .content {
+      @include border-radius(0px 0px 10px 10px);
+      color: $black;
+      padding: 25px;
+      h3 {
+        margin-bottom: 0px;
+      }
+      a.read-more {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }  
+}
+
+.back {
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: -60px;
+    margin-bottom: 20px;
+  }
+  a {
+    font: $normal 1.8rem/4.4rem $regular;
+    background: url('../img/coral_arrow_small.svg') left center no-repeat;
+    padding-left: 20px;
+  }
+}
+
+ul.archive {
+  margin: 0 0 $padding-half 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      color: $blue;
+      text-decoration: none;
+      padding: 10px 0px;
+      border-bottom: 1px solid $border;
+    }
+  }
+}
+
 
 // Screen Reader
 
