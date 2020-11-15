@@ -5,7 +5,7 @@
     <!-- <a href="#" class="back_to_top">Back to Top</a> -->
     <div class="row">
       <div class="about three columns">
-        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo_rev.svg" alt="Biocentaur logo" class="footer_logo/>
+        <img src="<?php bloginfo('template_directory'); ?>/img/biocentaur_logo_rev.svg" alt="Biocentaur logo" class="footer_logo" />
         <p>
           <?php the_field('address','options'); ?>
         </p>
