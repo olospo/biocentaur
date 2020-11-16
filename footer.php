@@ -72,6 +72,9 @@
           </li>
         </ul>
         <ul>
+          <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/news/">News</a></h5></li>
+        </ul>
+        <ul>
           <li class="heading"><h5><a href="<?php echo get_site_url(); ?>/contact/">Contact</a></h5></li>
         </ul>
       </div>
