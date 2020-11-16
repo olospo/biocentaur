@@ -36,17 +36,10 @@ if(!empty($thecontent)) { ?>
     </aside>
     <div class="content nine columns extra_gutter">
       <h1><?php the_title(); ?></h1>
-      <p class="date"><strong>Posted:</strong> <?php the_time('j F Y'); ?></p>
+      <span class="date"><strong>Posted:</strong> <?php the_time('jS F Y'); ?></span>
       
       <?php the_content(); ?>
-<!--
-      <div class="previous_post one-half column">
-        <?php previous_post_link( '%link', '< Previous post'); ?>
-      </div>
-      <div class="next_post one-half column">
-        <?php next_post_link( '%link', 'Next post >'); ?>
-      </div>
--->
+
     </div>
   </div>
 </section>
