@@ -1,10 +1,10 @@
 <?php /* Archive */
 get_header(); ?>
 
-<section class="hero single">
+<section class="hero small">
   <div class="container">
     <div class="content ten columns offset-by-one">
-      <h1><?php the_archive_title() ?></h1>
+      <h1>News - <?php the_archive_title() ?></h1>
     </div>
   </div>
 </section>
@@ -12,8 +12,7 @@ get_header(); ?>
 <section class="news">
   <div class="container">
     <div class="twelve columns">
-      <div class="main_content">
-        <div class="twelve columns">
+      <div class="news_listing">
           <?php if ( have_posts() ) : while (have_posts()) : the_post();  ?>
             <?php get_template_part('inc/article'); ?>
           <?php endwhile; ?>
@@ -24,7 +23,6 @@ get_header(); ?>
         <?php else : ?>
         <!-- No posts found -->
         <?php endif; wp_reset_query(); ?>
-      </div>
     </div>
   </div>
 </section>

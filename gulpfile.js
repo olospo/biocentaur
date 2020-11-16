@@ -1,3 +1,4 @@
+const { series, parallel } = require('gulp');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minify = require('gulp-clean-css');
@@ -7,25 +8,32 @@ var plugins = require("gulp-load-plugins")({
   replaceString: /\bgulp[\-.]/
 });
 
+// Input and Output folders
 var input = './css/**/*.scss';
 var output = './css/';
-
 var jsinput = './js/vendor/*.js';
 var jsoutput = './js/';
 
-gulp.task('styles', function() {
+// CSS
+function css(cb) {
   gulp.src(input)
-    // Error reporting
-    .pipe(sass().on('error', sass.logError))
-    // Minify
-    .pipe(minify())
-    // Save
-    .pipe(gulp.dest(output))
-});
+  // Compile Sass
+  .pipe(sass())
+  // Error reporting
+  .on("error", plugins.notify.onError(function (error) {
+    return error.message;
+  }))
+  // Minify
+  .pipe(minify())
+  // Save
+  .pipe(gulp.dest(output))
+  
+  cb();
+}
 
-// JS Scripts
-gulp.task('scripts', function () {
-  return gulp.src(jsinput)
+// Javascript
+function javascript(cb) {
+  gulp.src(jsinput)
     .pipe(plugins.concat('/application.js'))
     .on("error", plugins.notify.onError(function (error) {
       return error.message;
@@ -36,11 +44,17 @@ gulp.task('scripts', function () {
       return error.message;
     }))
     .pipe(gulp.dest(jsoutput));
-});
+  cb();
+}
 
-//Watch task
+// Tasks
+exports.css = css;
+exports.javascript = javascript;
+exports.build = parallel(javascript, css);
+
+// Watch task
 gulp.task('watch', function(done) {
-  gulp.watch(input, gulp.series('styles'));
-  gulp.watch(jsinput, gulp.series('scripts'));
+  gulp.watch(input, gulp.series('css'));
+  gulp.watch(jsinput, gulp.series('javascript'));
   done();
 });
