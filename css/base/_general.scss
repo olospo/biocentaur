@@ -536,34 +536,34 @@ section.hero{
 }
 
 .nav-links {
-    text-align: center;
-    font: $bold 1.6rem/2.2rem $regular;
-    span.current {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px;
-      width: 25px;
+  text-align: center;
+  font: $bold 1.6rem/2.2rem $regular;
+  span.current {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    width: 25px;
+    background: $blue;
+    @include border-radius(10px);
+    border: 1px solid $blue;
+    color: $white;
+  }
+  a.page-numbers {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    width: 25px;
+    background: $white;
+    @include border-radius(10px);
+    border: 1px solid $blue;
+    color: $blue;
+    text-decoration: none;
+    &:hover {
       background: $blue;
-      @include border-radius(10px);
-      border: 1px solid $blue;
       color: $white;
     }
-    a.page-numbers {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px;
-      width: 25px;
-      background: $white;
-      @include border-radius(10px);
-      border: 1px solid $blue;
-      color: $blue;
-      text-decoration: none;
-      &:hover {
-        background: $blue;
-        color: $white;
-      }
-    }
   }
+}
 
 .search_item {
   margin: 10px 0px;
@@ -622,7 +622,10 @@ section.news {
       clear: left;
     }
     h3 {
-      font: $bold 2.6rem/3.8rem $regular;
+      font: $bold 2.0rem/3.2rem $regular;
+      @media (min-width: $breakpoint-tablet) {
+        font: $bold 2.6rem/3.6rem $regular;
+      }
     }
     a {
       color: $blue;
@@ -660,7 +663,7 @@ section.news {
       padding: 25px 25px 60px 25px;
       flex-grow: 1;
       h3 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       a.read_more {
         color: $blue;
