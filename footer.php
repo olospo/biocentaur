@@ -82,7 +82,7 @@
     <div class="row">
       <div class="end_links twelve columns">
 		    <div class="footer_block">
-			    <a href="/cookie-policy">Cookie policy</a> | <a href="/privacy-policy">Privacy policy</a> | <a href="/accessibility">Accessibility</a>
+			    <a href="/cookie-policy">Cookie policy</a> | <a href="/privacy-policy">Privacy policy</a> | <a href="/accessibility">Accessibility</a> | <a href="/terms-conditions">Terms and conditions</a>
 		    </div>
         <div class="footer_block">
 			    <strong>Biocentaur &copy; <?php echo date("Y"); ?>, all rights reserved</strong> | <span class="registered">Registered number: 08540437</span> | <span class="registered">Registered office: Biocentaur LTD, 4 Beau Street, BA1 1QY Bath, UK.</span>
