@@ -66,14 +66,11 @@ label abbr[title] {
 /* Mobile 768px */
 @media screen and (max-width: 47.9375rem) {	
 	/* Spacing, padding + margins */
-	.home.hero, .faq_page, section.page, section.post, .test_navigation {
-		/*margin-top: 40px;*/
-	}
 	.our_tests + .footer_faq .container {
-	    	padding: 20px 20px 40px 20px;
+	    padding: 20px 20px 40px 20px;
 	}
 	.fixed_header + .health_conditions {
-    		margin-top: 20px;
+    	margin-top: 20px;
 	}
 	.footer_faq .accordionItem .title, .faq_page .accordionItem .title {
   	  	padding-right: 20px;
@@ -82,39 +79,51 @@ label abbr[title] {
 		padding: 40px 0;
 	}
 	.home.hero .float {
-    		padding: 40px 10px;
+    	padding: 40px 10px;
 	}
-	.home_cta .cta__block .content {
-    		padding: 20px;
+	.home_cta .cta__block .content, .footer_faq .accordionItem, .faq_page .accordionItem {
+    	padding: 20px;
 	}
 	.health_conditions .block__title {
-	    	padding: 20px 0;
-	}
-	.footer_faq .accordionItem, .faq_page .accordionItem {
-		padding: 20px;
+	    padding: 20px 0;
 	}
 	footer .end_links a, footer .end_links strong, footer .end_links span.registered {
-    		padding: 5px 5px;
+    	padding: 5px 5px;
 	}
 	footer .about svg#Layer_1 {
 		margin: 0px auto 20px auto;
 		margin-left: calc(50% + -5%);
 		transform: translateX(-50%);
 	}
+	section h1, section.hero .content h1 {
+		margin-bottom: 1em;
+	}
+	.footer_faq .filter {
+   		padding-bottom: 10px;
+	}
+	.health_conditions .block__title h3, section h3, .faq_page .filter h1 {
+		margin-bottom: 20px;
+	}
 	
 	/* Typography */
 	.block__conditions article .title, .health_conditions .block__title p, .home_info p, .condition .content p:first-of-type, .faq_page .filter p {
-	    	font: 400 1.8rem/2.8rem "Dosis", Helvetica, Arial, sans-serif !important;
+	    font: 400 1.8rem/2.8rem "Dosis", Helvetica, Arial, sans-serif !important;
 	}
-	section.hero .content h1 {
-	    	font: 600 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
+	section.hero .content h1, .home_info h3 {
+	    font: 600 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
+	}
+	.page-template-news section.hero .content h1, .illustration_steps .step .step_text h2 {
+	    font: 600 2.8rem/3.4rem "Dosis", Helvetica, Arial, sans-serif;
 	}
 	.test_cta .container {
 		text-align: center;
 		font: 400 2.2rem/3rem "Dosis", Helvetica, Arial, sans-serif;
 	}
 	footer .end_links {
-    		font: 400 1.4rem/2.4rem "Dosis", Helvetica, Arial, sans-serif;
+    	font: 400 1.4rem/2.4rem "Dosis", Helvetica, Arial, sans-serif;
+	}
+	section.post.individual_tests p:first-of-type, .single_test .container.flex p:first-of-type {
+		font: 400 1.8rem/2.8rem Dosis,Helvetica,Arial,sans-serif !important;
 	}
 	
 	/* UI */
@@ -122,14 +131,14 @@ label abbr[title] {
 		width: 60px;
 	}
 	.declaration .next_button {
-	    	padding: 30px;
-    		background-position: right 30px top 40px;
+	    padding: 30px;
+    	background-position: right 30px top 40px;
 	}
 	.test_navigation ul li {
-	    	padding: 0px;
+	    padding: 0px;
 	}
 	.test_navigation ul li:after {
-    		padding: 0px 2px;
+    	padding: 0px 2px;
 	}
 	.test_navigation ul li {
 		margin-left: 4px;
@@ -139,27 +148,38 @@ label abbr[title] {
 		box-shadow: 0 0px 30px -10px #00365F;
 	}
 	td.product-subtotal, th.product-subtotal {
-    		display: none;
+    	display: none;
 	}
 	footer .about ul.social-icons li svg {
-		width: 80px;
+		width: 60px;
+	}
+	.condition aside svg {
+		max-width: 22.5%;
+    	margin-bottom: -65px;
+	}
+	.condition .breadcrumbs {
+		padding-left: 32.5%;
+		margin-bottom: 15vw;
+	}
+	#archive-faq-search, #footer-faq-search {
+		width: 85%;
 	}
 	
 	/* Mobile main nav */
 	nav.mobile ul li.menu-item-has-children a {
-    		margin-right: 0;
+    	margin-right: 0;
 	}
 	nav.mobile ul li ul.sub-menu {
 		margin: 0;
 	}
 	nav.mobile ul li ul.sub-menu li {
-    		padding-left: 0;
+    	padding-left: 0;
 	}
 	nav.mobile ul li ul.sub-menu li a {
-    		padding-left: 10px;
+    	padding-left: 10px;
 	}
 	nav.mobile ul li ul.sub-menu li ul.sub-menu a {
-    		padding-left: 20px;
+    	padding-left: 20px;
 	}
 	nav.mobile [aria-current="page"] {
 		background: #e1e1ff !important;
@@ -179,9 +199,9 @@ label abbr[title] {
 	
 	/* Spacing, padding + margins */
 	.button {
-	    	padding: 15px 60px 15px 20px;
+	    padding: 15px 60px 15px 20px;
 	}
 	.footer_faq .filter h2 {
-    		padding: 0 20px;
+    	padding: 0 20px;
 	}
 }
