@@ -70,6 +70,15 @@ label abbr[title] {
 	text-decoration: none;
 }
 
+p.mailchimp-newsletter {
+  margin-top: 20px;
+}
+
+#customer_details .col-1 input.input-checkbox {
+  width: auto;
+  display: inline-block;
+}
+
 
 /* Mobile 768px */
 @media screen and (max-width: 47.9375rem) {	
