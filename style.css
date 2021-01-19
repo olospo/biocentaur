@@ -35,7 +35,7 @@ footer .end_links span.dpo a {
 .payment_method_stripe img {
 	display: initial;
 }
-section .nf-form-layout form select, section .nf-form-layout form input, section .nf-form-layout form textarea, section .woocommerce form select, section .woocommerce form input, section .woocommerce form textarea, .select2-container--default .select2-selection--single .select2-selection__rendered, .wc-stripe-elements-field, .wc-stripe-iban-element-field, .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+section .nf-form-layout form select, section .nf-form-layout form input, section .nf-form-layout form textarea, section .woocommerce form select, section .woocommerce form input, section .woocommerce form textarea, .wc-stripe-elements-field, .wc-stripe-iban-element-field, .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
 	padding: 15px;
 	-webkit-border-radius: 5px !important;
 	-moz-border-radius: 5px !important;
@@ -45,6 +45,14 @@ section .nf-form-layout form select, section .nf-form-layout form input, section
 	background: transparent !important;
 	box-shadow: none !important;
 	color: #00365F !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	padding: 10px;
+	border: 0px solid #adbac8 !important;
+	color: #00365F !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 25px;
 }
 .nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
 	background: #00365F !important;

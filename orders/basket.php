@@ -17,15 +17,11 @@ get_header(); ?>
 <section class="test_content">
   <div class="container">
     <div class="ten columns offset-by-one">
-      
       <div class="test_heading">
         <a href="<?php echo get_site_url(); ?>" class="back">Back to Biocentaur</a>
         <h1><?php echo the_title(); ?></h1>
       </div>
       <?php echo do_shortcode('[woocommerce_cart]'); ?>
-      <div class="legal">
-      <a href="<?php echo get_site_url(); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php echo get_site_url(); ?>/terms-conditions">Terms & Conditions</a>
-      </div>
     </div>
   </div>
 </section>
