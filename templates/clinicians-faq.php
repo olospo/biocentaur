@@ -1,4 +1,7 @@
 <?php /* Template Name: FAQ - Clinicians */
+
+/* This template is not being used currently. All FAQs have been combined and is using the Individuals-FAQ template to display them */
+
 get_header();
 $searchterm = $_REQUEST['faq_searchterm'] ?? "";
 $category = $_REQUEST['category'] ?? false;

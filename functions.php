@@ -358,14 +358,6 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   $args = array(
     'post_type' => 'faq',
     'posts_per_page' => $posts_per_page,
-    'tax_query'     => array(
-      array(
-        'taxonomy'  => 'question_cat',
-        'field'     => 'id',
-        'terms'     => 20
-        // 'terms'     => 25
-      )
-    ), 
   );
 
   if($searchterm !== "") {
