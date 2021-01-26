@@ -41,7 +41,7 @@
               <li><a href="<?php echo get_site_url(); ?>/individuals/support/health-conditions/">Health conditions</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo get_site_url(); ?>/individuals/faq-ind">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/faq/">FAQs</a></li>
           <li><a href="<?php echo get_site_url(); ?>/customer/individual-test/">Order a test</a></li>
         </ul>
       </div>
@@ -57,7 +57,7 @@
               <li><a href="<?php echo get_site_url(); ?>/clinicians/our-tests/paldispot-test/">PaldiSpot test</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo get_site_url(); ?>/clinicians/faq-clin">FAQs</a></li>
+          <li><a href="<?php echo get_site_url(); ?>/faq/">FAQs</a></li>
           <li><a href="<?php echo get_site_url(); ?>/customer/clinician-test/">Order a test</a></li>
         </ul>
       </div>
