@@ -19,7 +19,6 @@ $category = $_REQUEST['category'] ?? false;
           $terms = get_terms(array(
               'taxonomy' => 'question_cat',
               'hide_empty' => false,
-              'parent' => '25',
           ));
           $selected = ($category === 'all' || !$category) ? 'checked="checked"': "";
   
@@ -38,7 +37,7 @@ $category = $_REQUEST['category'] ?? false;
         </form>
     </div>
     <div class="faq-archive ten columns offset-by-one" id="faq-archive-content">
-      <?php the_faq_content( 20, true ); ?>
+      <?php the_faq_content( 10, true ); ?>
     </div>
   </div>
 </section>
