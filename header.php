@@ -39,7 +39,7 @@
           <li><a href="<?php the_field('instagram_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/instagram_icon.svg" /></a></li>
         <?php endif; ?>
         <?php if(get_field('linkedin_link','options')): ?>
-        <li><a href="<?php the_field('linkedin_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/linkedin_icon.svg" /></a></li>
+        <li><a href="<?php the_field('linkedin_link','options'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/linkedin.svg" /></a></li>
       <?php endif; ?>
       </ul>
     </div>
