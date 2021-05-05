@@ -399,64 +399,6 @@ function the_faq_content( $posts_per_page, $pagination = true ) {
   endif;
 }
 
-// FAQ functions
-function the_faq_content_clinician( $posts_per_page, $pagination = true ) {
-  
-  $searchterm = $_REQUEST['faq_searchterm'] ?? "";
-  $category = $_REQUEST['category'] ?? false;
-
-  $args = array(
-    'post_type' => 'faq',
-    'posts_per_page' => $posts_per_page,
-    'tax_query'     => array(
-      array(
-        'taxonomy'  => 'question_cat',
-        'field'     => 'id',
-        'terms'     => 19
-        // 'terms'     => 26
-      )
-    ), 
-  );
-
-  if($searchterm !== "") {
-    $args['s'] = $searchterm; 
-  }
-  if ($category && $category !== 'all') {
-    $args['tax_query'] = array(
-      array(
-        'post_type' => 'faq',
-        'taxonomy' => 'question_cat',
-        'field'    => 'slug',
-        'terms'    => $category,
-      ),
-    );
-  }
-  
-  $args['post_status'] = 'publish';
-  $args['paged'] = $pagination ? get_query_var( 'paged', 1 ) : 1;
-  $args['paged'] = $_REQUEST['selected_page'] ?? $args['paged'];
-  $args['post_type'] = 'faq';
-
-  $faq_query = new WP_Query( $args ); 
-
-  if ( $faq_query->have_posts() ) : 
-
-      while ( $faq_query->have_posts() ) : $faq_query->the_post(); 
-          get_template_part( 'inc/faq' );
-      endwhile;
-
-      if ($pagination) {
-          // Previous/next page navigation.
-          posts_navigation($faq_query);
-      }
-      
-      wp_reset_postdata();
-  
-  else : 
-      echo "<div class='no_results'>Sorry, no FAQs match your search.</div>"; 
-  endif;
-}
-
 // Add Ajax Functions
 add_action("wp_ajax_smart_filter", "smartFilter");
 add_action("wp_ajax_nopriv_smart_filter", "smartFilter");
