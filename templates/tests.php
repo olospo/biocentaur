@@ -24,7 +24,7 @@ while ( have_posts() ) : the_post(); ?>
     <aside class="five columns offset-by-one">
       <img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
       <?php if ($order): ?><a href="<?php echo $order; ?>" class="button filled" download><?php echo $orderText; ?></a><?php endif; ?>
-      <?php if ($order_id): ?><a href="<?php echo get_site_url(); ?>/?add-to-cart=<?php echo $order_id; ?>" class="button filled"><?php echo $orderText; ?></a><?php endif; ?>
+      <?php if ($order_id): ?><a href="<?php the_permalink(); ?>/?add-to-cart=<?php echo $order_id; ?>" class="button filled"><?php echo $orderText; ?></a><?php endif; ?>
       <a href="<?php echo $faq; ?>" class="button primary"><?php echo $faqText; ?></a>
       
       <?php if ($medical_form): ?>
