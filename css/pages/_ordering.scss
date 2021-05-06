@@ -22,17 +22,23 @@
       @media (min-width: $breakpoint-tablet) {
         float:left;
       }
-      margin: 0 10px;
+      margin: 0 5px;
       &:first-child {
         margin: 0 10px 0 0;
       }
       a {
-        
+        background: #fafbfd;
+        padding: 1rem;
+        @include border-radius(5px);
+        border: 1px solid $border;
       }
       &.is-active, &:hover {
         a {
-          color: $coral;
-          text-decoration: none;
+          border: 1px solid $border;
+          background: #00365F;
+          color: $white;
+          text-decoration: underline;
+          text-decoration-color: $coral;
         }
       }
     }
@@ -53,7 +59,10 @@
   }
   address {
     font: $normal 1.8rem/2.4rem $regular;
-    margin-bottom: 20px;
+    background: #f6f8fc;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #e6eaef;
   }
   header {
     padding: 10px 0;
@@ -69,13 +78,22 @@
     float: left;
     margin-left: 10px;
   }
+  a.button {
+    color: $white;
+    border: 1px solid $blue;
+    @include border-radius(10px);
+    background: $blue url('../img/white_arrow.svg') right 15px center no-repeat;
+    &:hover {
+      background: $blue url('../img/white_arrow.svg') right 20px center no-repeat;
+    }
+  }
   form {
     p {
       margin-bottom: 20px !important;
     }
     label {
       display: block;
-      color: $black !important;
+      color: #00365f !important;
       margin-bottom: 10px;
     }
     input {
@@ -367,7 +385,8 @@ a.checkout-button {
   margin-bottom: 20px;
   padding: 10px;
   text-align: center;
-  color: $black;
+  color: #00365f;
+  font-size: initial;
 }
 
 a.remove {
@@ -513,6 +532,24 @@ body.woocommerce-page {
       margin-left: 0;
     }
   }
+}
+
+.stripe-icon.replaced-svg {
+  width: 40px;
+}
+
+.woocommerce-password-strength.bad {
+  background: #ffd2d8;
+}
+.woocommerce-password-strength.good {
+  background: #f3e964;
+}
+.woocommerce-password-strength.strong {
+  background: #c9e4ca;
+}
+
+.woocommerce form .form-row .required {
+  color: red;
 }
 
 .legal {
