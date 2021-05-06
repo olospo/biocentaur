@@ -5,8 +5,6 @@ get_header(); ?>
 <section class="test_navigation">
   <div class="container">
     <ul>
-      <li>Customer</li>
-      <li>Test</li>
       <li>Basket</li>
       <li>Checkout</li>
       <li class="active">Confirm</li>
