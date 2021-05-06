@@ -14,6 +14,9 @@
     top: -200px;
     visibility: hidden;
 }
+.woofc-area .woofc-area-mid .woofc-undo .woofc-undo-inner {
+    color: #00365f;
+}
 
 /* remove mobile CSS opacity transitions */
 .accordionItemContent p a {
