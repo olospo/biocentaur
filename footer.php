@@ -45,7 +45,6 @@
             </ul>
           </li>
           <li><a href="<?php echo get_site_url(); ?>/faq/">FAQs</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/customer/individual-test/">Order a test</a></li>
         </ul>
       </div>
       <div class="sitemap three columns">
@@ -61,7 +60,6 @@
             </ul>
           </li>
           <li><a href="<?php echo get_site_url(); ?>/faq/">FAQs</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/customer/clinician-test/">Order a test</a></li>
         </ul>
       </div>
       <div class="sitemap three columns">

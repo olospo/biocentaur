@@ -1,5 +1,229 @@
 // Ordering
 
+.medical_form {
+  padding: 20px;
+  @include border-radius(10px);
+  border: 1px solid $border;
+  font: $normal 1.6rem/3.0rem $regular !important;
+  margin: 20px 0 0 0;
+  background: $light_blue;
+}
+.woocommerce-MyAccount-navigation {
+  ul {
+    font-size: 0;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    li {
+      display: block;
+      font: $bold 1.8rem/2.4rem $regular;
+      @media (min-width: $breakpoint-tablet) {
+        float:left;
+      }
+      margin: 0 10px;
+      &:first-child {
+        margin: 0 10px 0 0;
+      }
+      a {
+        
+      }
+      &.is-active, &:hover {
+        a {
+          color: $coral;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.woocommerce-MyAccount-content {
+  padding: 30px;
+  @include border-radius(10px);
+  border: 1px solid $border;
+  background: $white;
+  overflow-y: hidden;
+  -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+  box-shadow: 0px 15px 20px -3px #e6ecf0;
+  strong {
+    font-weight: 600;
+  }
+  address {
+    font: $normal 1.8rem/2.4rem $regular;
+    margin-bottom: 20px;
+  }
+  header {
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    h3 {
+      margin-bottom: 0;
+      float: left;
+    }
+  }
+  a.edit {
+    font: $normal 1.4rem/1.8rem $regular;
+    float: left;
+    margin-left: 10px;
+  }
+  form {
+    p {
+      margin-bottom: 20px !important;
+    }
+    label {
+      display: block;
+      color: $black !important;
+      margin-bottom: 10px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+    span em {
+      margin: 10px 0;
+      display: block;
+      font: $normal 1.6rem/2.4rem $regular;
+      color: #7693ab;
+    }
+    legend {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// My Account Login/Register
+#customer_login {
+  .col-1, .col-2 {
+    @media (min-width: $breakpoint-desktop) {
+      width: 48%;
+      float: left;
+    }
+    overflow: hidden;  
+    padding: 30px;
+    background: $white;
+    @include border-radius(10px);
+    border: 1px solid $border;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
+    box-shadow: 0px 15px 20px -3px #e6ecf0;
+    p.form-row {
+      margin-bottom: 0;
+    }
+    .woocommerce-form-login, .woocommerce-form-register {
+      margin: 0;
+      padding: 0;
+      border: none;
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+      }
+    }
+    input[type="checkbox"] {
+      margin: 0px 5px 0px 0px !important;
+      width: auto;
+    }
+    label.woocommerce-form__label-for-checkbox {
+      font: $normal 1.6rem/2.4rem $regular;
+    }
+  }
+  .col-1 {
+    margin-right: 4%;
+    @media (max-width: $breakpoint-desktop) {
+      margin-bottom: 40px;
+      margin-right: 0%;
+    }
+    p {
+      font: $normal 1.6rem/2.4rem $regular;
+    }
+  }
+  .col-2 {
+    p {
+      font: $normal 1.6rem/2.4rem $regular;
+      margin-bottom: 20px;
+    }
+    .mailchimp-newsletter {
+      margin: 0px 0px 20px 0px;
+    }
+    #mailchimp-gdpr-fields {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Slideout Cart
+.woofc-area {
+  font-family: $regular !important;
+  color: $blue !important;
+  .woofc-area-top {
+    background: $blue !important;
+    color: $white !important;
+    text-transform: none !important;
+    font: $bold 2.0rem/3.2rem $regular !important;
+    padding: 10px 60px 10px 20px !important;
+    height: auto !important;
+  }
+  .woofc-item-remove, .woofc-no-item {
+    color: $blue !important;
+  }
+  .woofc-item-info .woofc-item-title, .woofc-item-info .woofc-item-title a {
+    color: $blue !important;
+  }
+  .woofc-item.woofc-item-undo .woofc-item-inner {
+    border: 1px solid $blue !important;
+    color: $blue !important;
+    a {
+      color: $blue !important;
+    }
+  }
+  .woofc-area-bot {
+    .woofc-total {
+      color: $blue !important;
+    }
+  }
+  .woofc-action {
+    a {
+      height: auto !important;
+      cursor: pointer;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 15px 20px 15px 20px !important;
+      margin: 5px 0px;
+      font: $bold 1.6rem/1.6rem $regular !important;
+      text-decoration: none;
+      text-transform: none !important;
+      -webkit-transition: all ease .5s;
+      -moz-transition: all ease .5s;
+      -o-transition: all ease .5s;
+      transition: all ease .5s;
+      color: $white !important;
+      border: 2px solid $blue !important;
+      float: right;
+      background: $blue !important;
+      &:hover {
+        color: $blue !important;
+        background: $white !important;
+      }
+    }
+  }
+  .woofc-continue {
+    span {
+      color: $blue !important;
+      border-bottom: 1px solid $blue !important;
+    }
+  }
+}
+
 .test_navigation {
   background: #e6eaef;
   padding: 10px;
@@ -178,12 +402,17 @@ a.remove {
   }
 }
 
-p#clinician_field {
-  border: 1px solid $coral;
-  @include border-radius(10px);
-  padding: 10px;
-  background: $white-bg;
+#clinician_heading_field {
   margin-top: 20px;
+}
+
+p#clinician_field {
+  border: 3px solid $coral;
+  @include border-radius(10px);
+  padding: 15px;
+  background: $light_blue;
+  margin-top: 20px;
+
 }
 
 span.optional {

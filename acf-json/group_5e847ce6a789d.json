@@ -3,26 +3,11 @@
     "title": "Tests - Single",
     "fields": [
         {
-            "key": "field_5e847cf31cdc9",
-            "label": "Order link",
-            "name": "order_link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url"
-        },
-        {
-            "key": "field_5f8eeb030547a",
-            "label": "Order anchor",
+            "key": "field_5fb25c3adafeb",
+            "label": "Order ID",
             "name": "order_anchor",
-            "type": "text",
-            "instructions": "",
+            "type": "number",
+            "instructions": "Product ID to add to cart",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -32,13 +17,53 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "#",
+            "prepend": "",
             "append": "",
-            "maxlength": ""
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6092b1903ca57",
+            "label": "GP Letter",
+            "name": "order_link",
+            "type": "file",
+            "instructions": "Upload the PDF for the relevant GP letter",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6092b4ff5f6a1",
+            "label": "Medical Form",
+            "name": "medical_form",
+            "type": "file",
+            "instructions": "Medical order form for users to download.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5ef49944c5f89",
-            "label": "Order text",
+            "label": "Order button text",
             "name": "order_text",
             "type": "text",
             "instructions": "",
@@ -76,7 +101,7 @@
         },
         {
             "key": "field_5ef4994bc5f8a",
-            "label": "FAQ text",
+            "label": "FAQ button text",
             "name": "faq_text",
             "type": "text",
             "instructions": "",
@@ -128,12 +153,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1605524753
+    "modified": 1620228441
 }

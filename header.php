@@ -57,19 +57,11 @@
     <nav class="secondary nine columns">
       
       <?php if (is_tree(460) || is_tree(738) || 'condition' == get_post_type()) { // Individuals and/or children ?>
-        <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'individuals', 'container'=> false, 'menu_class'=> false ) ); ?>
       <?php } elseif (is_tree(169)) { // Clinicians and/or children ?>
-        <a href="<?php echo get_site_url(); ?>/customer/clinician-test/" class="button primary">Order a test</a>
         <?php wp_nav_menu( array( 'theme_location' => 'clinicians', 'container'=> false, 'menu_class'=> false ) ); ?>
-      <?php } elseif (is_tree(500)) { } elseif (is_singular( 'product' )) { // Ordering process ?> 
-
       <?php } else { // Other pages ?>
-        <a href="<?php echo get_site_url(); ?>/customer/" class="button primary">Order a test</a>
-        <ul>
-          <li><a href="<?php echo get_site_url(); ?>/individuals">Individuals</a></li>
-          <li><a href="<?php echo get_site_url(); ?>/clinicians">Clinicians</a></li>
-        </ul>
+        <?php wp_nav_menu( array( 'theme_location' => 'sub', 'container'=> false, 'menu_class'=> false ) ); ?>
       <?php } ?>
       <!-- Mobile Menu Trigger -->
       

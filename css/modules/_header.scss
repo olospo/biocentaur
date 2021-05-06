@@ -161,12 +161,12 @@ header {
         display: inline-block;
         &.current_page_item a, &.current-menu-item a, &.current-page-ancestor a, &.current-post-ancestor a, &.current-menu-parent a, &.current-category-ancestor a, &.current_page_parent a { 
           color: $blue;
-          margin: 15px 20px;
+          padding: 15px 20px;
           font-weight: bold;
         }
         &:hover a {
           color: $blue;
-          margin: 15px 20px;
+          padding: 15px 20px;
         }
         &.current-page-ancestor.menu-item-229 a {
           font-weight: normal;
@@ -178,12 +178,12 @@ header {
           display: block;
           color: $blue;
           text-decoration: none;
-          margin: 15px 20px;
+          padding: 15px 20px;
         }
         &.menu-item-has-children {
           a {
             background: url('../img/menu_arrow.svg') right center no-repeat;
-            padding-right: 20px;
+            margin-right: 20px;
           }
           ul {
             li {
@@ -296,6 +296,40 @@ header {
                 content: "Reliable tests to identify your patient’s strain of Lyme disease.";
               }
             }
+          }
+        }
+        &.menu_button {
+          a {
+            @include border-radius(4px);
+            border: 1px solid $mid-blue;
+            margin: 0 10px;
+            &:hover {
+              background: $blue;
+              color: $white;
+            }
+          }
+          
+        }
+        &.woofc-menu-item {
+          margin: 0;
+          display: inline-block;
+          a {
+            margin: 0;
+            display: block;
+            @include border-radius(4px);
+            background: $blue;
+            color: $white !important;
+            border: 1px solid transparent !important;
+            &:hover {
+              background: $blue;
+              border: 1px solid transparent !important;
+            }
+          }
+          .woofc-menu-item-inner::after {
+            background: $mid-blue;
+            color: $white;
+            top: -4px;
+            left: 8px;
           }
         }
       }

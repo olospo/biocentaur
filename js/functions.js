@@ -10,6 +10,14 @@ $(window).resize(function() { // Hide Mobile Menu if Browser window goes above 7
   }
 });
 
+// Menu Button text change
+if ($("body").hasClass("logged-in")) {
+  $(".menu_button a").html("My Account");
+}
+else {
+  $(".menu_button a").html("Login / Register");
+}
+
 // Accordian
 function accordion_ajax() {
   var accItem = document.getElementsByClassName('accordionItem');

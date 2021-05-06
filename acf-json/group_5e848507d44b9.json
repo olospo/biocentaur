@@ -101,10 +101,10 @@
         },
         {
             "key": "field_5e84877630ec6",
-            "label": "Order test link",
-            "name": "order_test_link_one",
-            "type": "page_link",
-            "instructions": "",
+            "label": "Order ID",
+            "name": "order_id_one",
+            "type": "number",
+            "instructions": "Product ID to add to cart",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -112,11 +112,13 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5e84871630ec0",
@@ -217,10 +219,10 @@
         },
         {
             "key": "field_5e848adc49519",
-            "label": "Order test link",
-            "name": "order_test_link_two",
-            "type": "page_link",
-            "instructions": "",
+            "label": "Order ID",
+            "name": "order_id_two",
+            "type": "number",
+            "instructions": "Product ID to add to cart",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -228,11 +230,13 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5e84871c30ec1",
@@ -333,10 +337,10 @@
         },
         {
             "key": "field_5e848aeb4951a",
-            "label": "Order test link",
-            "name": "order_test_link_three",
-            "type": "page_link",
-            "instructions": "",
+            "label": "Order ID",
+            "name": "order_id_three",
+            "type": "number",
+            "instructions": "Product ID to add to cart",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -344,11 +348,13 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5ef21654106a0",
@@ -450,9 +456,9 @@
         {
             "key": "field_5ef2166f106a5",
             "label": "Order test link",
-            "name": "order_test_link_four",
-            "type": "page_link",
-            "instructions": "",
+            "name": "order_id_four",
+            "type": "number",
+            "instructions": "Product ID to add to cart",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -460,11 +466,13 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -491,5 +499,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1601976363
+    "modified": 1620229376
 }

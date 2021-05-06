@@ -5,8 +5,6 @@ get_header(); ?>
 <section class="test_navigation">
   <div class="container">
     <ul>
-      <li>Customer</li>
-      <li>Test</li>
       <li><a href="<?php echo get_site_url(); ?>/basket/">Basket</a></li>
       <li class="active">Checkout</li>
       <li>Confirm</li>

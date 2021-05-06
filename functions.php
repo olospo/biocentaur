@@ -4,6 +4,7 @@ function theme_setup() {
   // Menus
   register_nav_menu( 'main', 'Main Menu' );
   register_nav_menu( 'mobile_main', 'Mobile Main Menu' );
+  register_nav_menu( 'sub', 'Sub Menu' );
   register_nav_menu( 'individuals', 'Individuals Menu' );
   register_nav_menu( 'clinicians', 'Clinicians Menu' );
   // RSS Feed

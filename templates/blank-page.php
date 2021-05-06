@@ -1,4 +1,4 @@
-<?php /* Page */
+<?php /* Template Name: Blank Page */
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -19,11 +19,5 @@ get_header(); ?>
 </section>
 
 <?php endwhile; // end of the loop. ?>
-
-<?php get_template_part('inc/health_conditions'); // Health Conditions Accordion ?>
-
-<?php get_template_part('inc/know_more'); // Know More section ?>
-
-<?php get_template_part('inc/footer_faq'); // Footer FAQ ?>
 
 <?php get_footer(); ?>
