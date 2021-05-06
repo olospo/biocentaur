@@ -14,7 +14,7 @@
     top: -200px;
     visibility: hidden;
 }
-.woofc-area .woofc-area-mid .woofc-undo .woofc-undo-inner {
+.woofc-area .woofc-area-mid .woofc-undo .woofc-undo-inner, .woofc-area .woofc-area-mid .woofc-undo .woofc-undo-inner a {
     color: #00365f;
 }
 
