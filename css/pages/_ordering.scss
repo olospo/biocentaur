@@ -43,6 +43,7 @@
   @include border-radius(10px);
   border: 1px solid $border;
   background: $white;
+  overflow-x: scroll;
   overflow-y: hidden;
   -webkit-box-shadow: 0px 15px 20px -3px #e6ecf0;
   -moz-box-shadow: 0px 15px 20px -3px #e6ecf0;
