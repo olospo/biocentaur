@@ -57,10 +57,10 @@ while ( have_posts() ) : the_post(); ?>
 <section class="test_cta">
   <div class="container">
     <div class="text seven columns offset-by-one">
-    Our predictive genetic tests help determine if you are at an increased risk of developing <?php the_title(); ?>
+    Our PrediSpot genetic test can help determine if you are at an increased risk of developing <?php the_title(); ?>
     </div>
     <div class="three columns">
-      <a href="<?php echo get_site_url(); ?>/customer/individual-test/" class="button filled white">Order a test</a>
+      <a href="<?php echo get_site_url(); ?>/individuals/our-tests/predispot-genetic-test/" class="button filled white">Order a test</a>
     </div>
   </div>
 </section>
