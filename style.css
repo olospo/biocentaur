@@ -91,6 +91,21 @@ input[type="radio"] {
 ul.woocommerce-PaymentMethods.payment_methods.methods li {
     list-style: none;
 }
+.woocommerce-form-login input {
+    width: 100%;
+}
+.woocommerce-form-login-toggle {
+    background: #f6f8fc;
+    padding: 20px;
+    margin: 0 0 40px 0;
+    border: 1px solid #00365f;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #00365f;
+}
+input#rememberme {
+    width: auto;
+}
 
 
 /* Mobile 768px */
