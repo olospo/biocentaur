@@ -18,6 +18,18 @@
     color: #00365f;
 }
 
+/* search results */
+.search-results h1 span {
+    background: #e6eaef;
+    padding: 0px 10px;
+}
+
+@media (min-width: 768px) {
+	.single-faq section.hero.service .background, .single-faq section.hero.single .background {
+		padding: 0;
+	}
+}
+
 /* remove mobile CSS opacity transitions */
 .accordionItemContent p a {
 	color: #00365F;
